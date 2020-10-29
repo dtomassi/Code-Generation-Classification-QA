@@ -105,13 +105,14 @@ of both these data sets. These datasets would provide all the snippets
 in Python3 Programming Language.
 
 \section{Baseline Model}
-\subsection{Diagram}
 \begin{figure}
     \centering
     \includegraphics[height=10cm,width=4cm]{ModelPipeline.pdf}
     \caption{The overall pipeline of our project}
     \label{fig:my_label}
 \end{figure}
+
+
 
 \subsection{Model Description}
 This project is a binary classification task which will be under supervised learning by having a label for each pair of question and code snippet. Since we use the CoNALA dataset, the CoNaLa will provide the intent
@@ -160,7 +161,7 @@ output layer with a single neuron, sigmoid activation function can
 help to make 0 or 1 predictions for the two classes (correct and
 incorrect) in the problem. 
 
-\subsection{Model related and training details}
+\subsection{Model related training details}
 In order to increase the performance of our training deep learning model, we can use the Adam optimizer. The Adam optimizer combines the effectiveness of AdaGrad, which improves performance on problems with sparse gradients, as well as RMSProp, which maintains parameter learning rates that are adapted based on how quickly the weights of the model are changing, which means it does well on noisy data (nonstandard words, missing punctuation, abbreviations, etc.). To summarize, it can modify the weight decay and learning rate of a model separately, which results in vastly improved general performance. Since we are working with a standard classification problem, we can use binary cross entropy as the loss function in order to determine how well the model classifies the data. In order to figure out the optimal architecture for the model, we will perform extensive hyper parameter search for finding the optimal hyper parameters. We will also use regularization within our classification sub model (the Dense Feed Forward Neural Network) for avoiding over-fitting.
 
 Finally, in order to reduce time for training, we can potentially implement early stopping in the seq2seq model so that we break from the training loop early if the current validation loss happens to exceed the previous loss for determining whether a code snippet matches the rephrased task question or not in order to avoid overfitting.
@@ -180,6 +181,12 @@ Finally, for the last method, we intend to generate a completely new dataset by 
 \subsection{Additional test experiment as a real-life demo}
 As a separate method of evaluating the model, we also plan to ask classmates to provide inputs (a snippet of code and a question about the code) for our classifier and report the overall accuracy of the total resulting outputs as well as the largest number of times our model consecutively determines the correct answer. This is more of a fun demonstration we plan to execute in class.
 
+\begin{figure}
+    \centering
+    \includegraphics[height=20cm,width=10cm]{ModelArchitecture.png}
+    \caption{The baseline model of our project}
+    \label{fig:my_label}
+\end{figure}
 
 \section{References}
 Yin, Pengcheng and Deng, Bowen and Chen, Edgar and Vasilescu, Bogdan and Neubig, Graham. Learning to Mine Aligned Code and Natural Language Pairs from Stack Overflow. 2018. https://doi.org/10.1145/3196398.3196408 \\ \\
