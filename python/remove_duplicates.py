@@ -21,16 +21,14 @@ def main():
     no_answer_questions = 0
     count = 0
     for key, val in question_ids.items():
+        count += len(question_ids[key])
         top_answers = remove_duplicate_answers(question_ids[key])
-        print("top answers: " + str(top_answers))
-        #print("similar answers that were removed: " + str(similar_answers))
-        print()
         if len(top_answers) == 0:
             no_answer_questions += 1
         else:
             curated_answers.append(top_answers)
 
-    print('Number of answers processed: ', len(curated_answers))
+    print('Number of answers processed: ', count)
     print('Number of no answer questions: ', no_answer_questions)
     with open('curated_mined.json', 'w+') as curated_file:
         json.dump(curated_answers, curated_file, indent=4)
