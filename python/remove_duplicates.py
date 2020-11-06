@@ -2,10 +2,9 @@ import json
 from collections import Counter
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-# Change conala_mined_fp to where it is on your machine.
-
 
 def main():
+    # Change conala_mined_fp to where it is on your machine.
     conala_mined_fp = 'conala-mined.jsonl'
     with open(conala_mined_fp) as f:
         data = [json.loads(x) for x in f.readlines()]
@@ -62,11 +61,12 @@ def remove_duplicate_answers(answers):
                 else:
                     similar_answers.append(corpus[j])
 
+    filtered_answers = []
     for answer in top_answers:
-        if answer['prob'] < PROB_THRESHOLD:
-            top_answers.remove(answer)
+        if answer['prob'] >= PROB_THRESHOLD:
+            filtered_answers.append(answer)
 
-    return top_answers
+    return filtered_answers
 
 
 def get_cosine_sim(corpus):
