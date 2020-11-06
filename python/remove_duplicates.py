@@ -10,7 +10,6 @@ def main():
     with open(conala_mined_fp) as f:
         data = [json.loads(x) for x in f.readlines()]
 
-
     question_ids = {}
     for datum in data:
         q_id = datum['question_id']
@@ -19,74 +18,55 @@ def main():
         else:
             question_ids[q_id] = [datum]
 
-
-    """for key, val in question_ids.items():
-        print("key: " + str(key) + " val: " + str(val))
-        print()"""
-
-
-
-        #use TF using vectorization
-        #then, calculate cosine similarity after we get these vectors
-
-
-        #questions_ids[34705205][i]['prob']
-        # TODO: Refactor into function
-        # TODO: Loop over all question IDs
-        # question_dataset = []
-        # for question_id in question_ids:
-        #   question_dataset[question_id] = []
-        # TODO: Write to new JSON file
-        # TODO: Combine this new JSON file with train.json for a larger dataset
+    curated_answers = []
+    no_answer_questions = 0
     count = 0
     for key, val in question_ids.items():
-
-        print("current key: " + str(key))
-        corpus = [x['snippet'] for x in question_ids[key]]
-        corpus = sorted(question_ids[key], key=lambda x: x['prob'], reverse=True)
-
-        similarity_matrix = get_cosine_sim([snippet['snippet'] for snippet in corpus])
-        top_answers = [corpus[0]]
-        similar_answers = []
-
-
-        N = 3
-        SIM_THRESHOLD = 0.5
-        PROB_THRESHOLD = 0.5
-        for i in range(0, len(similarity_matrix[0])):
-            if len(top_answers) == N:
-                break
-            for j in range(0, len(similarity_matrix)):
-                if i != j:
-                    if len(top_answers) == N:
-                        break
-                    #compare probabilities here
-                    #always append to top answers if less than similarity threshold
-
-                    if similarity_matrix[i][j] <= SIM_THRESHOLD:
-                        #check probability of snippet j in the corpus
-                        top_answers.append(corpus[j])
-                    else:
-                        #print(similarity_matrix[i][j])
-                        similar_answers.append(corpus[j])
-
-
-        for answer in top_answers:
-            if answer['prob'] < PROB_THRESHOLD:
-                #print("top answers that are not similar but fell below threshold: " + str(answer))
-                top_answers.remove(answer)
-
+        top_answers = remove_duplicate_answers(question_ids[key])
         print("top answers: " + str(top_answers))
         #print("similar answers that were removed: " + str(similar_answers))
         print()
+        if len(top_answers) == 0:
+            no_answer_questions += 1
+        else:
+            curated_answers.append(top_answers)
 
-        #can uncomment this to run through whole loop
-        if key == 40016359:
+    print('Number of answers processed: ', len(curated_answers))
+    print('Number of no answer questions: ', no_answer_questions)
+    with open('curated_mined.json', 'w+') as curated_file:
+        json.dump(curated_answers, curated_file, indent=4)
+
+
+def remove_duplicate_answers(answers):
+    corpus = [x['snippet'] for x in answers]
+    corpus = sorted(answers, key=lambda x: x['prob'], reverse=True)
+
+    similarity_matrix = get_cosine_sim([snippet['snippet'] for snippet in corpus])
+    top_answers = [corpus[0]]
+    similar_answers = []
+
+    N = 3
+    SIM_THRESHOLD = 0.5
+    PROB_THRESHOLD = 0.5
+    for i in range(0, len(similarity_matrix[0])):
+        if len(top_answers) == N:
             break
+        for j in range(0, len(similarity_matrix)):
+            if i != j:
+                if len(top_answers) == N:
+                    break
+                # Compare similarities here.
+                # Always append to top answers if less than similarity threshold
+                if similarity_matrix[i][j] <= SIM_THRESHOLD:
+                    top_answers.append(corpus[j])
+                else:
+                    similar_answers.append(corpus[j])
 
+    for answer in top_answers:
+        if answer['prob'] < PROB_THRESHOLD:
+            top_answers.remove(answer)
 
-
-
+    return top_answers
 
 
 def get_cosine_sim(corpus):
