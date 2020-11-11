@@ -1,4 +1,6 @@
 import json
+import pickle
+
 from collections import Counter
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
@@ -17,16 +19,24 @@ def main():
         else:
             question_ids[q_id] = [datum]
 
+    # Load vocab and create vectorizer.
+    # Change vocab_fp to where it is on your machine.
+    vocab_fp = 'Vocab_all.pkl'
+    with open(vocab_fp, 'rb') as vocab_file:
+        vocab = pickle.load(vocab_file)
+    vectorizer = CountVectorizer(vocabulary=vocab)
+
     curated_answers = []
     no_answer_questions = 0
     count = 0
     for key, val in question_ids.items():
         count += len(question_ids[key])
-        top_answers = remove_duplicate_answers(question_ids[key])
+        top_answers = remove_duplicate_answers(question_ids[key], vectorizer)
         if len(top_answers) == 0:
             no_answer_questions += 1
         else:
             curated_answers.append(top_answers)
+        print('count', count)
 
     print('Number of answers processed: ', count)
     print('Number of no answer questions: ', no_answer_questions)
@@ -34,11 +44,11 @@ def main():
         json.dump(curated_answers, curated_file, indent=4)
 
 
-def remove_duplicate_answers(answers):
+def remove_duplicate_answers(answers, vectorizer):
     corpus = [x['snippet'] for x in answers]
     corpus = sorted(answers, key=lambda x: x['prob'], reverse=True)
 
-    similarity_matrix = get_cosine_sim([snippet['snippet'] for snippet in corpus])
+    similarity_matrix = get_cosine_sim([snippet['snippet'] for snippet in corpus], vectorizer)
     top_answers = [corpus[0]]
     similar_answers = []
 
@@ -67,31 +77,14 @@ def remove_duplicate_answers(answers):
     return filtered_answers
 
 
-def get_cosine_sim(corpus):
-    vectors = [t for t in get_vectors(corpus)]
+def get_cosine_sim(corpus, vectorizer):
+    vectors = [t for t in get_vectors(corpus, vectorizer)]
     return cosine_similarity(vectors)
 
-def get_vectors(corpus):
-    #corpus = [t for t in corpus]
-    print("corpus: " + str(corpus))
-    vectorizer = CountVectorizer()
 
-    try:
-        X = vectorizer.fit_transform(corpus)
-
-    except ValueError as e:
-        print("we have a value error- no vocab detected")
-        corpus_vocab = list(set(corpus))
-        print("the new corpus without duplicate vocab")
-        new_vectorizer = CountVectorizer(vocabulary=corpus_vocab)
-        Y = new_vectorizer.fit_transform(corpus)
-        print("features: " + str(new_vectorizer.get_feature_names()))
-        return Y.toarray()
-
-
-    print("features: " + str(vectorizer.get_feature_names()))
+def get_vectors(corpus, vectorizer):
+    X = vectorizer.fit_transform(corpus)
     return X.toarray()
-
 
 
 main()
