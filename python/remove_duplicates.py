@@ -76,6 +76,20 @@ def remove_duplicate_answers(answers, vectorizer):
 
     return filtered_answers
 
+def remove_duplicate_questions(questions, vectorizer):
+    corpus = [x for x in questions]
+    similarity_matrix = get_cosine_sim(set([snippet['intent'] for snippet in corpus]), vectorizer)
+    SIM_THRESHOLD = 0.9
+
+    c = 0
+    for i in range(0, len(similarity_matrix[0])):
+        for j in range(0, len(similarity_matrix)):
+            if i != j:
+                # Check if there are any duplicate questions.
+                if similarity_matrix[i][j] > SIM_THRESHOLD:
+                    c += 1
+                    print(corpus[i]['intent'],' | ' , corpus[j]['intent'], ' - ', similarity_matrix[i][j])
+    print(c)
 
 def get_cosine_sim(corpus, vectorizer):
     vectors = [t for t in get_vectors(corpus, vectorizer)]
