@@ -15,6 +15,7 @@ import string
 import pickle
 import gensim
 from tqdm import tqdm
+import matplotlib.pyplot as plt
 from sklearn.feature_extraction.text import CountVectorizer
 from nltk.corpus import stopwords
 from collections import Counter
@@ -32,7 +33,7 @@ class LemmaTokenizer(object):
 
 all_stopwords = list(set(gensim.parsing.preprocessing.STOPWORDS))
 STOPWORDS = all_stopwords + ['python','create','use','convert','insert','drop','way','variable',\
-'row','loop','check','print','generate','line','run','differ','sort','multiple','data','change','add','return','remove']
+'row','loop','check','print','generate','line','run','differ','sort','multiple','data','change','add','return','remove','value']
 p = PorterStemmer()
 
 CONALA_MINED_FILE = "data/conala-corpus/conala-mined.jsonl"
@@ -100,12 +101,24 @@ def vocab_stats(corpus):
 	freq_distribution = Counter(dict(zip(vocab, counts)))
 	return vocab,freq_distribution
 
+def plot_distr(vocab):
+	labels,sizes = zip(*vocab)
+	fig1, ax1 = plt.subplots()
+	ax1.pie(list(sizes), labels=list(labels), autopct='%1.1f%%',shadow=True, startangle=90)
+	ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+	plt.show()
+
 def main():
+	
 	start  = time.time()
 	intents = get_intents()
+	
 	print(intents[:20])
+	
 	vocab,freq_distribution = vocab_stats(intents[:])
 	print(freq_distribution.most_common(50))
+	plot_distr(freq_distribution.most_common(10))
+
 	print(f"Time taken: {(time.time() - start)/60.00:.3f} minutes")
 
 if __name__ == '__main__':
