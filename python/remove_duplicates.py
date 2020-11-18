@@ -7,11 +7,9 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 def main():
     # Change conala_mined_fp to where it is on your machine.
-    #conala_mined_fp = '/home/david/downloads/conala-corpus/conala-mined.jsonl'
-    conala_mined_fp = '/home/david/github/Code-Generation-Classification-QA/python/conala-all.json'
+    conala_mined_fp = 'conala-mined.jsonl'
     with open(conala_mined_fp) as f:
-        #data = [json.loads(x) for x in f.readlines()]
-        data = json.load(f)
+        data = [json.loads(x) for x in f.readlines()]
 
     question_ids = {}
     for datum in data:
@@ -21,14 +19,12 @@ def main():
         else:
             question_ids[q_id] = [datum]
 
-
     # Load vocab and create vectorizer.
     # Change vocab_fp to where it is on your machine.
     vocab_fp = 'Vocab_all.pkl'
     with open(vocab_fp, 'rb') as vocab_file:
         vocab = pickle.load(vocab_file)
     vectorizer = CountVectorizer(vocabulary=vocab)
-
 
     curated_answers = []
     no_answer_questions = 0
@@ -55,8 +51,7 @@ def main():
 
 
 def remove_duplicate_answers(answers, vectorizer):
-    corpus = [x for x in answers]
-    #corpus = sorted(answers, key=lambda x: x['prob'], reverse=True)
+    corpus = sorted(answers, key=lambda x: x['prob'], reverse=True)
 
     similarity_matrix = get_cosine_sim([snippet['snippet'] for snippet in corpus], vectorizer)
     top_answers = [corpus[0]]
@@ -64,7 +59,7 @@ def remove_duplicate_answers(answers, vectorizer):
 
     N = 3
     SIM_THRESHOLD = 0.5
-    PROB_THRESHOLD = 0.08
+    PROB_THRESHOLD = 0.5
     for i in range(0, len(similarity_matrix[0])):
         if len(top_answers) == N:
             break
@@ -79,10 +74,10 @@ def remove_duplicate_answers(answers, vectorizer):
                 else:
                     similar_answers.append(corpus[j])
 
-#    filtered_answers = []
-#    for answer in top_answers:
-#        if answer['prob'] >= PROB_THRESHOLD:
-#            filtered_answers.append(answer)
+    filtered_answers = []
+    for answer in top_answers:
+       if answer['prob'] >= PROB_THRESHOLD:
+           filtered_answers.append(answer)
 
     return filtered_answers
 
