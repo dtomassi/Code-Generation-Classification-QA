@@ -7,9 +7,11 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 def main():
     # Change conala_mined_fp to where it is on your machine.
-    conala_mined_fp = 'conala-mined.jsonl'
+    #conala_mined_fp = '/home/david/downloads/conala-corpus/conala-mined.jsonl'
+    conala_mined_fp = '/home/david/github/Code-Generation-Classification-QA/python/conala-all.json'
     with open(conala_mined_fp) as f:
-        data = [json.loads(x) for x in f.readlines()]
+        #data = [json.loads(x) for x in f.readlines()]
+        data = json.load(f)
 
     question_ids = {}
     for datum in data:
@@ -19,12 +21,14 @@ def main():
         else:
             question_ids[q_id] = [datum]
 
+
     # Load vocab and create vectorizer.
     # Change vocab_fp to where it is on your machine.
     vocab_fp = 'Vocab_all.pkl'
     with open(vocab_fp, 'rb') as vocab_file:
         vocab = pickle.load(vocab_file)
     vectorizer = CountVectorizer(vocabulary=vocab)
+
 
     curated_answers = []
     no_answer_questions = 0
@@ -44,9 +48,15 @@ def main():
         json.dump(curated_answers, curated_file, indent=4)
 
 
+    # Look at question similarity.
+    with open('conala-all-data.json') as f:
+        all_data = json.load(f)
+    remove_duplicate_questions(data)
+
+
 def remove_duplicate_answers(answers, vectorizer):
-    corpus = [x['snippet'] for x in answers]
-    corpus = sorted(answers, key=lambda x: x['prob'], reverse=True)
+    corpus = [x for x in answers]
+    #corpus = sorted(answers, key=lambda x: x['prob'], reverse=True)
 
     similarity_matrix = get_cosine_sim([snippet['snippet'] for snippet in corpus], vectorizer)
     top_answers = [corpus[0]]
@@ -54,7 +64,7 @@ def remove_duplicate_answers(answers, vectorizer):
 
     N = 3
     SIM_THRESHOLD = 0.5
-    PROB_THRESHOLD = 0.5
+    PROB_THRESHOLD = 0.08
     for i in range(0, len(similarity_matrix[0])):
         if len(top_answers) == N:
             break
@@ -69,15 +79,16 @@ def remove_duplicate_answers(answers, vectorizer):
                 else:
                     similar_answers.append(corpus[j])
 
-    filtered_answers = []
-    for answer in top_answers:
-        if answer['prob'] >= PROB_THRESHOLD:
-            filtered_answers.append(answer)
+#    filtered_answers = []
+#    for answer in top_answers:
+#        if answer['prob'] >= PROB_THRESHOLD:
+#            filtered_answers.append(answer)
 
     return filtered_answers
 
-def remove_duplicate_questions(questions, vectorizer):
+def remove_duplicate_questions(questions):
     corpus = [x for x in questions]
+    vectorizer = CountVectorizer()
     similarity_matrix = get_cosine_sim(set([snippet['intent'] for snippet in corpus]), vectorizer)
     SIM_THRESHOLD = 0.9
 
