@@ -55,27 +55,24 @@ def main():
 
 
             if len(new_snippet_list) <= 5:
-                #print("intent: " + str(val))
+                print("intent: " + str(val))
                 print("snippet: " + str(snippet), end = '')
-                #print("before filtering: " + str(snippet_list))
                 if len(new_snippet_list) >= 1:
-                    #print("after filtering list: " + str(new_snippet_list))
                     cleaned_snippet = "\n".join(new_snippet_list)
                     print("cleaned snippet: " + cleaned_snippet)
 
-                count += 1
-                print()
-                print()
+                    count += 1
+                    print()
+                    print()
 
 
+                    data = {
+                        "snippet": str(cleaned_snippet),
+                        "intent": str(val),
+                        "question_id": int(key)
+                    }
 
-            data = {
-                "snippet": str(cleaned_snippet),
-                "intent": str(val),
-                "question_id": int(key)
-            }
-
-            data_list.append(data)
+                    data_list.append(data)
 
 
         json.dump(data_list, data_file, indent=4)
