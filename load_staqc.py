@@ -2,7 +2,8 @@ import pickle
 import json
 import re
 
-#add to a function
+#TODO: remove extra punctuation like ">>>, "", and things like "..." from snippet lists
+#before checking the snippet size threshold
 
 def main():
 
@@ -21,9 +22,8 @@ def main():
 
     task_file.close()
     snippet_file.close()
-    #print("file contents are: " + str(file_contents))
 
-    #print(file_contents[0])
+
     task_dict = {}
     task_dict = file_contents[0]
     snippet_dict = {}
@@ -32,20 +32,18 @@ def main():
 
     count = 0
     cleaned_snippet = ""
+    SNIPPET_SIZE_THRESHOLD = 5
 
 
-    """remove newline chars, check if snippet only length 5 or less
-    remove comments, empty strings"""
+    """opens the file and cleans the data, then, splits remaining data by newline,
+    removes empty elements and whitespace. Then, checks if snippet less than or equal to threshold size"""
 
     with open("staqc.json", "w+") as data_file:
         for key, val in task_dict.items():
 
-            #snippet_separate = list(filter(None, snippet_separate))
             snippet = snippet_dict[key]
             new_snippet = clean_data(snippet)
 
-            #split the list, remove empty elements, and leading and trailing whitespace, and
-            #pure whitespace
             snippet_list = snippet_dict[key].split("\n")
             new_snippet_list = new_snippet.split("\n")
             new_snippet_list = list(filter(None, new_snippet_list))
@@ -53,8 +51,7 @@ def main():
                 new_snippet_list[i] = new_snippet_list[i].strip()
 
 
-
-            if len(new_snippet_list) <= 5:
+            if len(new_snippet_list) <= SNIPPET_SIZE_THRESHOLD:
                 print("intent: " + str(val))
                 print("snippet: " + str(snippet), end = '')
                 if len(new_snippet_list) >= 1:
@@ -65,7 +62,7 @@ def main():
                     print()
                     print()
 
-
+                    #JSON object for each intent/snippet pair
                     data = {
                         "snippet": str(cleaned_snippet),
                         "intent": str(val),
@@ -81,18 +78,12 @@ def main():
     print("snippets that can be used: " + str(count))
     data_file.close()
 
-#print("before filtering: " + snippet_dict[key], end = '')
-
-#snippet_together = "\n".join(new_snippet_separate)
-#print("snippet after filtering: " + snippet_together)
-#print()
 
 
+
+
+"""this function removes docstring comments, trailing and leading whitespaces and all one line comments."""
 def clean_data(code_snippet):
-
-    #removes docstring comments- fix up
-    #removes all trailing and leading whitespaces
-    #removes all one line comments
 
     code_snippet = code_snippet.strip()
     code_snippet = re.sub("#.*", '', code_snippet)
