@@ -2,8 +2,6 @@ import pickle
 import json
 import re
 
-#TODO: remove extra punctuation like ">>>, "", and things like "..." from snippet lists
-#before checking the snippet size threshold
 
 def main():
 
@@ -24,7 +22,7 @@ def main():
     """opens the file and cleans the data, then, splits remaining data by newline,
     removes empty elements and whitespace. Then, checks if snippet less than or equal to threshold size"""
 
-    with open("staqc.json", "w+") as data_file:
+    with open("new_staqc.json", "w+") as data_file:
         for key, val in task_dict.items():
 
             snippet = snippet_dict[key]
@@ -38,15 +36,9 @@ def main():
 
 
             if len(new_snippet_list) <= SNIPPET_SIZE_THRESHOLD:
-                print("intent: " + str(val))
-                print("snippet: " + str(snippet), end = '')
                 if len(new_snippet_list) >= 1:
                     cleaned_snippet = "\n".join(new_snippet_list)
-                    print("cleaned snippet: " + cleaned_snippet)
-
                     count += 1
-                    print()
-                    print()
 
                     #JSON object for each intent/snippet pair
                     data = {
@@ -62,22 +54,53 @@ def main():
 
 
     print("snippets that can be used: " + str(count))
-    data_file.close()
-
-
-
 
 
 """this function removes docstring comments, trailing and leading whitespaces and all one line comments."""
 def clean_data(code_snippet):
-
+    # Remove comments
     code_snippet = code_snippet.strip()
     code_snippet = re.sub("#.*", '', code_snippet)
     code_snippet = re.sub('"""[\s\S]*?"""', '', code_snippet)
 
-    return code_snippet
+    # Remove >>> and ... and returns
+    # Example:
+    # >>> for i in range(3):
+    # ...   print(i)
+    # 0
+    # 1
+    # 2
+    # Becomes:
+    # for i in range(3):
+    #   print(i)
 
+    # Arrow and dot removal lambdas
+    arrow_removal = lambda x: re.sub('^\s*>>>\s*', '', x)
+    dot_removal = lambda x: re.sub('\s*^\.\.\.\s*', '', x)
 
+    # Look to see if using interpreter format and remove value return lines.
+    # Example:
+    # >>> 1 + 1
+    # 2
+
+    code_snippet_split = code_snippet.split('\n')
+    cleaned_snippet_list = [code_snippet_split[0]]
+    if re.search('^\s*>>>\s*', code_snippet_split[0]):
+        for line in code_snippet_split[1:]:
+            if re.search('^\s*>>>\s*|\s*^\.\.\.\s*', line):
+                cleaned_snippet_list.append(line)
+    cleaned_snippet = '\n'.join(cleaned_snippet_list)
+
+    # Remove >>>
+    cleaned_snippet = '\n'.join(list(filter(lambda x: x != '' and x != ' ', [arrow_removal(x) for x in cleaned_snippet.split('\n')])))
+    if cleaned_snippet != code_snippet:
+        cleaned_snippet = '\n'.join(list(filter(lambda x: x != '' and x != ' ', [dot_removal(x) for x in cleaned_snippet.split('\n')])))
+
+    # If >>> is removed then remove ...
+    if cleaned_snippet != code_snippet:
+        cleaned_snippet_split = cleaned_snippet.split('\n')
+
+    return cleaned_snippet
 
 
 main()
