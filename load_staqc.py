@@ -8,26 +8,12 @@ import re
 def main():
 
     #opening the questions file
-    task_file = open("python_how_to_do_it_qid_by_classifier_unlabeled_single_code_answer_qid_to_title.pickle", 'rb')
-    snippet_file = open("python_how_to_do_it_qid_by_classifier_unlabeled_single_code_answer_qid_to_code.pickle", 'rb')
-    file_contents = []
-    snippet_file_contents = []
+    with open("python_how_to_do_it_qid_by_classifier_unlabeled_single_code_answer_qid_to_title.pickle", 'rb') as task_file:
+        task_dict = pickle.load(task_file)
 
-    while True:
-        try:
-            file_contents.append(pickle.load(task_file))
-            snippet_file_contents.append(pickle.load(snippet_file))
-        except EOFError:
-            break
+    with open("python_how_to_do_it_qid_by_classifier_unlabeled_single_code_answer_qid_to_code.pickle", 'rb') as snippet_file:
+        snippet_dict = pickle.load(snippet_file)
 
-    task_file.close()
-    snippet_file.close()
-
-
-    task_dict = {}
-    task_dict = file_contents[0]
-    snippet_dict = {}
-    snippet_dict = snippet_file_contents[0]
     data_list = []
 
     count = 0
