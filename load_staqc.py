@@ -82,14 +82,14 @@ def clean_data(code_snippet):
     # Example:
     # >>> 1 + 1
     # 2
-
     code_snippet_split = code_snippet.split('\n')
     cleaned_snippet_list = [code_snippet_split[0]]
+    cleaned_snippet = code_snippet
     if re.search('^\s*>>>\s*', code_snippet_split[0]):
         for line in code_snippet_split[1:]:
             if re.search('^\s*>>>\s*|\s*^\.\.\.\s*', line):
                 cleaned_snippet_list.append(line)
-    cleaned_snippet = '\n'.join(cleaned_snippet_list)
+        cleaned_snippet = '\n'.join(cleaned_snippet_list)
 
     # Remove >>>
     cleaned_snippet = '\n'.join(list(filter(lambda x: x != '' and x != ' ', [arrow_removal(x) for x in cleaned_snippet.split('\n')])))
