@@ -44,7 +44,8 @@ def main():
                     data = {
                         "snippet": str(cleaned_snippet),
                         "intent": str(val),
-                        "question_id": int(key)
+                        "question_id": int(key),
+                        "class": 1
                     }
 
                     data_list.append(data)
