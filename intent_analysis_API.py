@@ -33,20 +33,27 @@ class LemmaTokenizer(object):
 
 all_stopwords = list(set(gensim.parsing.preprocessing.STOPWORDS))
 STOPWORDS = all_stopwords + ['python','create','use','convert','insert','drop','way','variable',\
-'row','loop','check','print','generate','line','run','differ','sort','multiple','data','change','add','return','remove','value']
+'row','loop','check','print','generate','line','run','differ','sort','multiple','data','change','add',\
+'return','remove','value',"function","array","values",'column','columns','element','number',\
+'object','key','dataframe','plot','class','item','character','text',\
+'image','model','window','method','format','base','index','window','read','efficient','write','iterate','split']
+
 p = PorterStemmer()
 
-CONALA_MINED_FILE = "data/conala-corpus/conala-mined.jsonl"
-TRAIN_FILE = "data/conala-corpus/conala-train.json"
-TEST_FILE = "data/conala-corpus/conala-test.json"
+CONALA_MINED_FILE = "../data/conala-corpus/conala-mined.jsonl"
+TRAIN_FILE = "../data/conala-corpus/conala-train.json"
+TEST_FILE = "../data/conala-corpus/conala-test.json"
 
 table = str.maketrans("","",string.punctuation)
+
+STOPWORDS = [p.stem(t) for t in STOPWORDS]
+
 
 def cleanup(intent):
 	intent = intent.lower().translate(table)
 	tokens = nltk.word_tokenize(intent)
-	final_tokens = [token for token in tokens if token not in STOPWORDS]
-	final_tokens = [p.stem(t) for t in final_tokens]
+	final_tokens = [p.stem(t) for t in tokens]
+	final_tokens = [token for token in final_tokens if token not in STOPWORDS]
 	final_intent = ' '.join(final_tokens)
 	return final_intent
 
@@ -117,7 +124,7 @@ def main():
 	
 	vocab,freq_distribution = vocab_stats(intents[:])
 	print(freq_distribution.most_common(50))
-	plot_distr(freq_distribution.most_common(10))
+	plot_distr(freq_distribution.most_common(20))
 
 	print(f"Time taken: {(time.time() - start)/60.00:.3f} minutes")
 
