@@ -33,16 +33,21 @@ class LemmaTokenizer(object):
 
 all_stopwords = list(set(gensim.parsing.preprocessing.STOPWORDS))
 STOPWORDS = all_stopwords + ['python','create','use','convert','insert','drop','way','variable',\
-'row','loop','check','print','generate','line','run','differ','sort','multiple','data','change','add',\
+'row','loop','check','print','line','run','differ','sort','multiple','data','change','add',\
 'return','remove','value',"function","array","values",'column','columns','element','number',\
 'object','key','dataframe','plot','class','item','character','text',\
-'image','model','window','method','format','base','index','window','read','efficient','write','iterate','split']
+'image','model','window','method','format','base','index','window','read','efficient','write','iterate','split','match',\
+'specific','extract','expression','module','replace','output','field','code','word','generate','parse','query']
 
+REPLACE_WITH = {'command':'sys/os/subprocess','dict':'dictionari','url':'urllib','regular':'regex','re':'regex','argument':'argparse/subprocess/sys'\
+,'select':'SQL'}
 p = PorterStemmer()
 
-CONALA_MINED_FILE = "../data/conala-corpus/conala-mined.jsonl"
-TRAIN_FILE = "../data/conala-corpus/conala-train.json"
-TEST_FILE = "../data/conala-corpus/conala-test.json"
+#CONALA_MINED_FILE = "../data/conala-corpus/conala-mined.jsonl"
+#TRAIN_FILE = "../data/conala-corpus/conala-train.json"
+#TEST_FILE = "../data/conala-corpus/conala-test.json"
+
+FILE = "../data/combined-dataset.json"
 
 table = str.maketrans("","",string.punctuation)
 
@@ -53,7 +58,8 @@ def cleanup(intent):
 	intent = intent.lower().translate(table)
 	tokens = nltk.word_tokenize(intent)
 	final_tokens = [p.stem(t) for t in tokens]
-	final_tokens = [token for token in final_tokens if token not in STOPWORDS]
+	final_tokens = [final_token for token,final_token in zip(tokens,final_tokens) if (final_token not in STOPWORDS)]
+	final_tokens = [REPLACE_WITH.get(final_token,final_token) for final_token in final_tokens] #replace common terms
 	final_intent = ' '.join(final_tokens)
 	return final_intent
 
@@ -61,33 +67,15 @@ def get_intents(recreate = False):
 
 	if recreate or not os.path.isfile("intents_parsed.pkl"):
 		intents = []
-		with jsonlines.open(CONALA_MINED_FILE,'r') as f:
-			all_recs = list(f)
+		orig_intents = []
+		with open(FILE,'r') as f:
+			all_recs = json.load(f)
+			orig_intents = [rec['intent'] for rec in all_recs]
 
-		#mined_intents = [rec['intent'].lower().translate(table) for rec in all_recs]
-		mined_intents = [cleanup(rec['intent']) for rec in tqdm(all_recs)]
+		print("TOTAL INTENTS: ",len(orig_intents))
+		print("Original intents: \n",orig_intents[:20])
+		intents = [cleanup(intent) for intent in tqdm(orig_intents[:])]
 
-		print(f"MINED intents: {len(mined_intents)}")
-
-		with open(TRAIN_FILE,'r') as f:
-			train_recs = json.load(f)
-
-		#train_intents = [rec['intent'].lower().translate(table) for rec in train_recs]
-		train_intents = [cleanup(rec['intent']) for rec in tqdm(train_recs)]
-
-		print(f"TRAIN intents: {len(train_intents)}")
-		with open(TEST_FILE,'r') as f:
-			test_recs = json.load(f)
-
-		#test_intents = [rec['intent'].lower().translate(table) for rec in test_recs]
-		test_intents = [cleanup(rec['intent']) for rec in tqdm(test_recs)]
-
-		print(f"TEST intents: {len(test_intents)}")
-
-		intents = mined_intents + train_intents + test_intents
-		print(f"Combining all 3 together, we obtain {len(intents)} many intents")
-
-	
 		with open("intents_parsed.pkl",'wb') as f:
 			pickle.dump(intents,f)
 
@@ -106,25 +94,34 @@ def vocab_stats(corpus):
 	vocab = vectorizer.get_feature_names()
 	counts = X.sum(axis=0).A1
 	freq_distribution = Counter(dict(zip(vocab, counts)))
-	return vocab,freq_distribution
+	return vocab,freq_distribution,sum(counts)
 
-def plot_distr(vocab):
+def plot_distr(vocab,count):
 	labels,sizes = zip(*vocab)
+	total = sum(sizes)
 	fig1, ax1 = plt.subplots()
 	ax1.pie(list(sizes), labels=list(labels), autopct='%1.1f%%',shadow=True, startangle=90)
 	ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+	plt.title(f"Vocabulary size: {count}")
+	plt.legend(
+    loc='upper left',
+    labels=['%s, %d, %1.1f%%' % (
+         l, s,(float(s) / total) * 100) for l, s in zip(labels, sizes)],
+    prop={'size': 11},
+    bbox_to_anchor=(0.0, 1),
+    bbox_transform=fig1.transFigure)
 	plt.show()
 
 def main():
 	
 	start  = time.time()
-	intents = get_intents()
+	intents = get_intents(recreate=  True)
 	
-	print(intents[:20])
+	print("PARSED intents:\n",intents[:20])
 	
-	vocab,freq_distribution = vocab_stats(intents[:])
+	vocab,freq_distribution,total_vocab_count = vocab_stats(intents[:])
 	print(freq_distribution.most_common(50))
-	plot_distr(freq_distribution.most_common(20))
+	plot_distr(freq_distribution.most_common(20),total_vocab_count)
 
 	print(f"Time taken: {(time.time() - start)/60.00:.3f} minutes")
 
