@@ -6,4 +6,4 @@ $ git clone https://github.com/stanfordnlp/GloVe
 $ cd glove && make
 ```
 
-After that, add the file `all.sh` to the folder and follow the directions in the how-to file.
+After that, add the file `all.sh` to the folder and follow the directions in the [how-to folder](https://github.com/Sairamvinay/Code-Generation-Classification-QA/tree/Embeddings/how-to).
