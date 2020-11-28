@@ -1,0 +1,62 @@
+File: conala-vectors.txt
+
+-------Similarity Tests-------
+Similarity between 'print' and 'in': 0.46724018
+Similarity between 'for' and 'in': 0.97996384
+Similarity between 'if' and 'else': 0.6402562
+
+-------Tokens Most Similar to Input-------
+Most Similar words to the token 'for': 
+--Word-- 			--Similarity Score--
+'in'				0.9799637794494629
+'L'				0.9237304925918579
+'item'				0.842049241065979
+'if'				0.8396195769309998
+'enumerate'			0.8224983811378479
+'i'				0.8184360265731812
+'myList'			0.7861554026603699
+'lst'				0.7786458730697632
+'l'				0.7592521905899048
+'dict'				0.7438334226608276
+
+File: staqc-vectors.txt
+
+-------Similarity Tests-------
+Similarity between 'print' and 'in': 0.50340897
+Similarity between 'for' and 'in': 0.9576115
+Similarity between 'if' and 'else': 0.7274656
+
+-------Tokens Most Similar to Input-------
+Most Similar words to the token 'for': 
+--Word-- 			--Similarity Score--
+'in'				0.9576115012168884
+'enumerate'			0.8072044849395752
+'i'				0.763953685760498
+'if'				0.7412946820259094
+'j'				0.7119805812835693
+''ABCDEFG','			0.7045336961746216
+'my_list'			0.7010572552680969
+'item'				0.6957401037216187
+'"grouper(3,'			0.676302969455719
+'l'				0.6702522039413452
+
+File: all-vectors.txt
+
+-------Similarity Tests-------
+Similarity between 'print' and 'in': 0.5286533
+Similarity between 'for' and 'in': 0.96577746
+Similarity between 'if' and 'else': 0.74128956
+
+-------Tokens Most Similar to Input-------
+Most Similar words to the token 'for': 
+--Word-- 			--Similarity Score--
+'in'				0.9657773375511169
+'enumerate'			0.7927774786949158
+'i'				0.7430611848831177
+'zip'				0.7362812161445618
+'j'				0.7251703143119812
+'item'				0.7188673615455627
+''ABCDEFG','			0.7052368521690369
+'if'				0.6969798803329468
+'l'				0.6663864254951477
+'my_list'			0.6484035849571228

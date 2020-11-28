@@ -1,0 +1,69 @@
+File: conala-all
+
+-------Model Summary--------
+Word2Vec(vocab=615, size=100, alpha=0.025)
+
+-------Similarity Tests-------
+Similarity between 'print' and 'in': 0.5698032
+Similarity between 'for' and 'in': 0.99839973
+Similarity between 'if' and 'else': 0.9200234
+
+-------Tokens Most Similar to Input-------
+Most Similar words to the token 'for': 
+--Word-- 			--Similarity Score--
+'in'				0.9983998537063599
+'if'				0.9719471335411072
+'i'				0.9591372013092041
+'item'				0.9561119079589844
+'y'				0.9545836448669434
+'d'				0.944848895072937
+'range'				0.9444460868835449
+'x'				0.9433406591415405
+'k'				0.9424149990081787
+'v'				0.9355092644691467
+File: staqc
+
+-------Model Summary--------
+Word2Vec(vocab=6998, size=100, alpha=0.025)
+
+-------Similarity Tests-------
+Similarity between 'print' and 'in': 0.26476827
+Similarity between 'for' and 'in': 0.22172193
+Similarity between 'if' and 'else': 0.53699267
+
+-------Tokens Most Similar to Input-------
+Most Similar words to the token 'for': 
+--Word-- 			--Similarity Score--
+'enumerate'			0.7521294355392456
+'zip'				0.6046844720840454
+'items'				0.5290977954864502
+'append'			0.5165042877197266
+'next'				0.5091671943664551
+'iter'				0.5053380131721497
+'reversed'			0.5039099454879761
+'iteritems'			0.4985063970088959
+'itertools'			0.4975414276123047
+'words'				0.4946443438529968
+File: combined-dataset
+
+-------Model Summary--------
+Word2Vec(vocab=7166, size=100, alpha=0.025)
+
+-------Similarity Tests-------
+Similarity between 'print' and 'in': 0.27086958
+Similarity between 'for' and 'in': 0.19372007
+Similarity between 'if' and 'else': 0.5477992
+
+-------Tokens Most Similar to Input-------
+Most Similar words to the token 'for': 
+--Word-- 			--Similarity Score--
+'enumerate'			0.7332974672317505
+'zip'				0.5719045400619507
+'lx'				0.5642836093902588
+'listed'			0.5519553422927856
+'iteritems'			0.5295024514198303
+'list1'				0.5238666534423828
+'next'				0.5138826966285706
+'new_d'				0.5130211114883423
+'iter'				0.5129674673080444
+'el'				0.5040303468704224

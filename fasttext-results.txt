@@ -1,0 +1,73 @@
+File: conala-all
+
+-------Model Summary--------
+FastText(vocab=615, size=100, alpha=0.025)
+
+-------Similarity Tests-------
+Similarity between 'print' and 'in': 0.738541
+Similarity between 'for' and 'in': 0.99879587
+Similarity between 'if' and 'else': 0.89585674
+
+-------Tokens Most Similar to Input-------
+Most Similar words to the token 'for': 
+--Word-- 			--Similarity Score--
+'in'				0.9987958669662476
+'L'				0.9912670850753784
+'i'				0.9848599433898926
+'k'				0.9819899797439575
+'if'				0.9718416333198547
+'v'				0.9704782366752625
+'y'				0.9689213633537292
+'x'				0.9683284759521484
+'d'				0.9641331434249878
+'list'				0.9613128304481506
+
+
+File: staqc
+
+-------Model Summary--------
+FastText(vocab=6998, size=100, alpha=0.025)
+
+-------Similarity Tests-------
+Similarity between 'print' and 'in': 0.21344884
+Similarity between 'for' and 'in': 0.18535045
+Similarity between 'if' and 'else': 0.61155665
+
+-------Tokens Most Similar to Input-------
+Most Similar words to the token 'for': 
+--Word-- 			--Similarity Score--
+'fork'				0.8629963397979736
+'forward'			0.8039488196372986
+'fo'				0.7907164096832275
+'force'				0.7749261856079102
+'enumerate'			0.7316827178001404
+'listens_for'			0.7127230763435364
+'ndenumerate'			0.6945766806602478
+'foreach'			0.6580148935317993
+'found'				0.6538128852844238
+'enum'				0.6419187784194946
+
+
+File: combined-dataset
+
+-------Model Summary--------
+FastText(vocab=7166, size=100, alpha=0.025)
+
+-------Similarity Tests-------
+Similarity between 'print' and 'in': 0.26195398
+Similarity between 'for' and 'in': 0.16549376
+Similarity between 'if' and 'else': 0.5969734
+
+-------Tokens Most Similar to Input-------
+Most Similar words to the token 'for': 
+--Word-- 			--Similarity Score--
+'xor'				0.8855270147323608
+'fork'				0.8644670248031616
+'forward'			0.8138583898544312
+'force'				0.7885071635246277
+'fo'				0.7777422666549683
+'enumerate'			0.7120052576065063
+'listens_for'			0.708308219909668
+'foreach'			0.6900779008865356
+'ndenumerate'			0.6860765218734741
+'found'				0.6505920886993408
