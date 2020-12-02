@@ -1,0 +1,2048 @@
+['run', 'Popen', 'STARTUPINFO', 'STARTUPINFO', 'dwFlags', 'STARTUPINFO', 'hStdInput', 'STARTUPINFO', 'hStdOutput', 'STARTUPINFO', 'hStdError', 'STARTUPINFO', 'wShowWindow', 'STARTUPINFO', 'lpAttributeList', 'STD_INPUT_HANDLE', 'STD_OUTPUT_HANDLE', 'STD_ERROR_HANDLE', 'SW_HIDE', 'STARTF_USESTDHANDLES', 'STARTF_USESHOWWINDOW', 'CREATE_NEW_CONSOLE', 'CREATE_NEW_PROCESS_GROUP', 'ABOVE_NORMAL_PRIORITY_CLASS', 'BELOW_NORMAL_PRIORITY_CLASS', 'HIGH_PRIORITY_CLASS', 'IDLE_PRIORITY_CLASS', 'NORMAL_PRIORITY_CLASS', 'REALTIME_PRIORITY_CLASS', 'CREATE_NO_WINDOW', 'DETACHED_PROCESS', 'CREATE_DEFAULT_ERROR_MODE', 'CREATE_BREAKAWAY_FROM_JOB', 'call', 'check_call', 'check_output', 'getstatusoutput', 'getoutput']
+['request', 'urlopen', 'request', 'install_opener', 'request', 'build_opener', '', '', '])', 'request', 'pathname2url', 'request', 'url2pathname', 'request', 'getproxies', 'request', 'Request', 'request', 'OpenerDirector', 'request', 'BaseHandler', 'request', 'HTTPDefaultErrorHandler', 'request', 'HTTPRedirectHandler', 'request', 'HTTPCookieProcessor', 'request', 'ProxyHandler', 'request', 'HTTPPasswordMgr', 'request', 'HTTPPasswordMgrWithDefaultRealm', 'request', 'HTTPPasswordMgrWithPriorAuth', 'request', 'AbstractBasicAuthHandler', 'request', 'HTTPBasicAuthHandler', 'request', 'ProxyBasicAuthHandler', 'request', 'AbstractDigestAuthHandler', 'request', 'HTTPDigestAuthHandler', 'request', 'ProxyDigestAuthHandler', 'request', 'HTTPHandler', 'request', 'HTTPSHandler', 'request', 'FileHandler', 'request', 'DataHandler', 'request', 'FTPHandler', 'request', 'CacheFTPHandler', 'request', 'UnknownHandler', 'request', 'HTTPErrorProcessor', 'request', 'urlretrieve', 'request', 'urlcleanup', 'request', 'URLopener', 'open', 'request', 'URLopener', 'retrieve', 'request', 'URLopener', 'open_unknown', 'request', 'URLopener', 'version', 'request', 'FancyURLopener', 'request', 'FancyURLopener', 'prompt_user_passwd', 'response', 'addinfourl', 'url', 'response', 'addinfourl', 'headers', 'response', 'addinfourl', 'status', 'response', 'addinfourl', 'geturl', 'response', 'addinfourl', 'info', 'response', 'addinfourl', 'code', 'response', 'addinfourl', 'getstatus', 'error', 'URLError', 'error', 'HTTPError', 'error', 'ContentTooShortError', 'parse', 'urlparse', 'parse', 'parse_qs', 'parse', 'parse_qsl', 'parse', 'urlunparse', 'parse', 'urlsplit', 'parse', 'urlunsplit', 'parse', 'urljoin', 'parse', 'urldefrag', 'parse', 'unwrap', 'parse', 'SplitResult', 'geturl', 'parse', 'DefragResult', 'parse', 'ParseResult', 'parse', 'SplitResult', 'parse', 'DefragResultBytes', 'parse', 'ParseResultBytes', 'parse', 'SplitResultBytes', 'parse', 'quote', 'parse', 'quote_plus', 'parse', 'quote_from_bytes', 'parse', 'unquote', 'parse', 'unquote_plus', 'parse', 'unquote_to_bytes', 'parse', 'urlencode', 'robotparser', 'RobotFileParser', 'robotparser', 'RobotFileParser', 'set_url', 'robotparser', 'RobotFileParser', 'read', 'robotparser', 'RobotFileParser', 'parse', 'robotparser', 'RobotFileParser', 'can_fetch', 'robotparser', 'RobotFileParser', 'mtime', 'robotparser', 'RobotFileParser', 'modified', 'robotparser', 'RobotFileParser', 'crawl_delay', 'robotparser', 'RobotFileParser', 'request_rate', 'robotparser', 'RobotFileParser', 'site_maps']
+['connector', 'connect', 'MySQLConnection', 'MySQLConnection', 'close', 'MySQLConnection', 'commit', 'MySQLConnection', 'config', 'MySQLConnection', 'connect', 'MySQLConnection', 'cursor', 'MySQLConnection', 'cmd_change_user', 'MySQLConnection', 'cmd_debug', 'MySQLConnection', 'cmd_init_db', 'MySQLConnection', 'cmd_ping', 'MySQLConnection', 'cmd_process_info', 'MySQLConnection', 'cmd_process_kill', 'MySQLConnection', 'cmd_query', 'MySQLConnection', 'cmd_query_iter', 'MySQLConnection', 'cmd_quit', 'MySQLConnection', 'cmd_refresh', 'MySQLConnection', 'cmd_reset_connection', 'MySQLConnection', 'cmd_shutdown', 'MySQLConnection', 'cmd_statistics', 'MySQLConnection', 'disconnect', 'MySQLConnection', 'get_row', 'MySQLConnection', 'get_rows', 'MySQLConnection', 'get_server_info', 'MySQLConnection', 'get_server_version', 'MySQLConnection', 'is_connected', 'MySQLConnection', 'isset_client_flag', 'MySQLConnection', 'ping', 'MySQLConnection', 'reconnect', 'MySQLConnection', 'reset_session', 'MySQLConnection', 'rollback', 'MySQLConnection', 'set_charset_collation', 'MySQLConnection', 'set_client_flags', 'MySQLConnection', 'shutdown', 'MySQLConnection', 'start_transaction', 'MySQLConnection', 'autocommit', 'MySQLConnection', 'unread_results ', 'MySQLConnection', 'can_consume_results', 'MySQLConnection', 'charset Property', 'MySQLConnection', 'collation Property', 'MySQLConnection', 'connection_id ', 'MySQLConnection', 'database ', 'MySQLConnection', 'get_warnings ', 'MySQLConnection', 'in_transaction ', 'MySQLConnection', 'raise_on_warnings ', 'MySQLConnection', 'server_host ', 'MySQLConnection', 'server_port ', 'MySQLConnection', 'sql_mode', 'MySQLConnection', 'time_zone ', 'MySQLConnection', 'unix_socket', 'MySQLConnection', 'user Property', 'connector', 'connect', 'cursor', 'connector', 'connect', 'cursor', 'callproc', 'connector', 'connect', 'cursor', 'close', 'connector', 'connect', 'cursor', 'execute', 'connector', 'connect', 'cursor', 'executemany', 'connector', 'connect', 'cursor', 'fetchall', 'connector', 'connect', 'cursor', 'fetchmany', 'connector', 'connect', 'cursor', 'fetchone', 'connector', 'connect', 'cursor', 'fetchwarnings', 'connector', 'connect', 'cursor', 'stored_results', 'connector', 'connect', 'cursor', 'column_names ', 'connector', 'connect', 'cursor', 'description', 'connector', 'connect', 'cursor', 'lastrowid', 'connector', 'connect', 'cursor', 'rowcount', 'connector', 'connect', 'cursor', 'statement ', 'connector', 'connect', 'cursor', 'with_rows']
+API NAMES
+['pandas', 'numpy', 'matplotlib', 'pyplot', 'file', 're', 'six', 'list', 'plt', 'tuple', 'subprocess', 'threading', 'urllib', 'sys', 'pickle', 'requests', 'series', 'dictionary', 'time', 'typing', 'json', 'warnings', 'os', 'datatime', 'collections', 'np', 'logging', 'copy', 'pd', 'set', 'funtools', 'mysql', 'math', 'itertools', 'df', 'sqlite3', 'argparse', 'string']
+
+
+
+
+
+METHODS
+NUM API METHODS: 4957
+['active_count', '', 'core.groupby.DataFrameGroupBy.count', 'time.microsecond', 'record.getfield', 'generic.getfield', 'align', 'distutils.misc_util.is_sequence', 'matrix.getH', 'tseries.offsets.FY5253Quarter.apply', 'ndarray.argmin', 'Cursor.executescript', 'tseries.offsets.CustomBusinessMonthEnd.kwds', 'tseries.offsets.CustomBusinessDay.normalize', 'recarray.tobytes', 'ma.MaskedArray.__len__', 'POSIX_FADV_SEQUENTIAL', 'code', 'to_records', 'cat.codes']
+Combining all 3 together, we obtain 43967 many code snippets
+
+1.
+
+CODE
+
+from bs4 import BeautifulSoup
+import json
+soup = BeautifulSoup(driver.page_source)
+dict_from_json = json.loads(soup.find("body").text)
+
+PARSED OUTPUT
+
+NAME 	 from
+NAME 	 bs4
+NAME 	 import
+NAME 	 BeautifulSoup
+NEWLINE 	 
+
+NAME 	 import
+NAME 	 json
+NEWLINE 	 
+
+NAME 	 soup
+OP 	 =
+NAME 	 BeautifulSoup
+OP 	 (
+NAME 	 driver
+OP 	 .
+NAME 	 page_source
+OP 	 )
+NEWLINE 	 
+
+NAME 	 dict_from_json
+OP 	 =
+NAME 	 json
+OP 	 .
+NAME 	 loads
+OP 	 (
+NAME 	 soup
+OP 	 .
+NAME 	 find
+OP 	 (
+STRING 	 "body"
+OP 	 )
+OP 	 .
+NAME 	 text
+OP 	 )
+NEWLINE 	 
+ENDMARKER 	 
+All variable/function names:
+ ['BeautifulSoup', 'driver', 'dict_from_json', 'soup', 'bs4', 'page_source']
+
+2.
+
+CODE
+
+np.fromfunction(f, shape=(d1, d2))
+
+PARSED OUTPUT
+
+NAME 	 np
+OP 	 .
+NAME 	 fromfunction
+OP 	 (
+NAME 	 f
+OP 	 ,
+NAME 	 shape
+OP 	 =
+OP 	 (
+NAME 	 d1
+OP 	 ,
+NAME 	 d2
+OP 	 )
+OP 	 )
+NEWLINE 	 
+ENDMARKER 	 
+All variable/function names:
+ ['f', 'd2', 'd1']
+
+3.
+
+CODE
+
+buildbot sendchange --master {MASTERHOST}:{PORT} --auth {USER}:{PASS}
+--who {USER} {FILENAMES..}
+
+PARSED OUTPUT
+
+NAME 	 buildbot
+NAME 	 sendchange
+OP 	 -
+OP 	 -
+NAME 	 master
+OP 	 {
+NAME 	 MASTERHOST
+OP 	 }
+OP 	 :
+OP 	 {
+NAME 	 PORT
+OP 	 }
+OP 	 -
+OP 	 -
+NAME 	 auth
+OP 	 {
+NAME 	 USER
+OP 	 }
+OP 	 :
+OP 	 {
+NAME 	 PASS
+OP 	 }
+NEWLINE 	 
+
+OP 	 -
+OP 	 -
+NAME 	 who
+OP 	 {
+NAME 	 USER
+OP 	 }
+OP 	 {
+NAME 	 FILENAMES
+OP 	 .
+OP 	 .
+OP 	 }
+NEWLINE 	 
+ENDMARKER 	 
+All variable/function names:
+ ['master', 'sendchange', 'auth', 'PASS', 'MASTERHOST', 'FILENAMES', 'PORT', 'USER', 'buildbot']
+
+4.
+
+CODE
+
+import time
+time.gmtime(0)
+
+PARSED OUTPUT
+
+NAME 	 import
+NAME 	 time
+NEWLINE 	 
+
+NAME 	 time
+OP 	 .
+NAME 	 gmtime
+OP 	 (
+NUMBER 	 0
+OP 	 )
+NEWLINE 	 
+ENDMARKER 	 
+All variable/function names:
+ []
+
+5.
+
+CODE
+
+re.sub(re.compile('^\n', re.MULTILINE), '', s)
+
+PARSED OUTPUT
+
+NAME 	 re
+OP 	 .
+NAME 	 sub
+OP 	 (
+NAME 	 re
+OP 	 .
+NAME 	 compile
+OP 	 (
+STRING 	 '^\n'
+OP 	 ,
+NAME 	 re
+OP 	 .
+NAME 	 MULTILINE
+OP 	 )
+OP 	 ,
+STRING 	 ''
+OP 	 ,
+NAME 	 s
+OP 	 )
+NEWLINE 	 
+ENDMARKER 	 
+All variable/function names:
+ ['s']
+
+6.
+
+CODE
+
+font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+
+PARSED OUTPUT
+
+NAME 	 font
+OP 	 -
+NAME 	 family
+OP 	 :
+STRING 	 "Helvetica Neue"
+OP 	 ,
+NAME 	 Helvetica
+OP 	 ,
+NAME 	 Arial
+OP 	 ,
+NAME 	 sans
+OP 	 -
+NAME 	 serif
+OP 	 ;
+NEWLINE 	 
+ENDMARKER 	 
+All variable/function names:
+ ['Arial', 'sans', 'font', 'family', 'serif', 'Helvetica']
+
+7.
+
+CODE
+
+$ echo $(( (0x7FFFFFFF >> 31) + 1 ))
+1
+
+PARSED OUTPUT
+
+ERRORTOKEN 	 $
+NAME 	 echo
+ERRORTOKEN 	  
+ERRORTOKEN 	 $
+OP 	 (
+OP 	 (
+OP 	 (
+NUMBER 	 0x7FFFFFFF
+OP 	 >>
+NUMBER 	 31
+OP 	 )
+OP 	 +
+NUMBER 	 1
+OP 	 )
+OP 	 )
+NEWLINE 	 
+
+NUMBER 	 1
+NEWLINE 	 
+ENDMARKER 	 
+All variable/function names:
+ ['echo']
+
+8.
+
+CODE
+
+1 * * * * python /home/prkumar/Desktop/python/sample.py >> /home/prkumar/Desktop/python/output.log
+
+PARSED OUTPUT
+
+NUMBER 	 1
+OP 	 *
+OP 	 *
+OP 	 *
+OP 	 *
+NAME 	 python
+OP 	 /
+NAME 	 home
+OP 	 /
+NAME 	 prkumar
+OP 	 /
+NAME 	 Desktop
+OP 	 /
+NAME 	 python
+OP 	 /
+NAME 	 sample
+OP 	 .
+NAME 	 py
+OP 	 >>
+OP 	 /
+NAME 	 home
+OP 	 /
+NAME 	 prkumar
+OP 	 /
+NAME 	 Desktop
+OP 	 /
+NAME 	 python
+OP 	 /
+NAME 	 output
+OP 	 .
+NAME 	 log
+NEWLINE 	 
+ENDMARKER 	 
+All variable/function names:
+ ['prkumar', 'home', 'python', 'Desktop', 'output', 'py']
+
+9.
+
+CODE
+
+import locale
+loc = locale.getlocale()
+locale.getdefaultlocale()
+
+PARSED OUTPUT
+
+NAME 	 import
+NAME 	 locale
+NEWLINE 	 
+
+NAME 	 loc
+OP 	 =
+NAME 	 locale
+OP 	 .
+NAME 	 getlocale
+OP 	 (
+OP 	 )
+NEWLINE 	 
+
+NAME 	 locale
+OP 	 .
+NAME 	 getdefaultlocale
+OP 	 (
+OP 	 )
+NEWLINE 	 
+ENDMARKER 	 
+All variable/function names:
+ ['locale', 'getlocale', 'getdefaultlocale']
+
+10.
+
+CODE
+
+import getpass
+print getpass.getuser()
+
+PARSED OUTPUT
+
+NAME 	 import
+NAME 	 getpass
+NEWLINE 	 
+
+NAME 	 print
+NAME 	 getpass
+OP 	 .
+NAME 	 getuser
+OP 	 (
+OP 	 )
+NEWLINE 	 
+ENDMARKER 	 
+All variable/function names:
+ ['getpass', 'getuser']
+
+11.
+
+CODE
+
+import subprocess
+direct_output = subprocess.check_output('ls', shell=True)
+
+PARSED OUTPUT
+
+NAME 	 import
+NAME 	 subprocess
+NEWLINE 	 
+
+NAME 	 direct_output
+OP 	 =
+NAME 	 subprocess
+OP 	 .
+NAME 	 check_output
+OP 	 (
+STRING 	 'ls'
+OP 	 ,
+NAME 	 shell
+OP 	 =
+NAME 	 True
+OP 	 )
+NEWLINE 	 
+ENDMARKER 	 
+All variable/function names:
+ ['direct_output', 'shell']
+
+12.
+
+CODE
+
+[callable(elem) for elem in inputiterator]
+
+PARSED OUTPUT
+
+OP 	 [
+NAME 	 callable
+OP 	 (
+NAME 	 elem
+OP 	 )
+NAME 	 for
+NAME 	 elem
+NAME 	 in
+NAME 	 inputiterator
+OP 	 ]
+NEWLINE 	 
+ENDMARKER 	 
+All variable/function names:
+ ['elem', 'inputiterator']
+
+13.
+
+CODE
+
+field_name_contains = "translated_field" + get_languaage() + "__icontains")
+kwargs = {field_name_contains: "some value"}
+q = Q(**kwargs)
+
+PARSED OUTPUT
+
+NAME 	 field_name_contains
+OP 	 =
+STRING 	 "translated_field"
+OP 	 +
+NAME 	 get_languaage
+OP 	 (
+OP 	 )
+OP 	 +
+STRING 	 "__icontains"
+OP 	 )
+NEWLINE 	 
+
+NAME 	 kwargs
+OP 	 =
+OP 	 {
+NAME 	 field_name_contains
+OP 	 :
+STRING 	 "some value"
+OP 	 }
+NEWLINE 	 
+
+NAME 	 q
+OP 	 =
+NAME 	 Q
+OP 	 (
+OP 	 **
+NAME 	 kwargs
+OP 	 )
+Faulty snippet,field_name_contains = "translated_field" + get_languaage() + "__icontains")
+kwargs = {field_name_contains: "some value"}
+q = Q(**kwargs)
+
+14.
+
+CODE
+
+from subprocess import check_output
+user_name = check_output('whoami').strip()
+print user_name
+
+PARSED OUTPUT
+
+NAME 	 from
+NAME 	 subprocess
+NAME 	 import
+NAME 	 check_output
+NEWLINE 	 
+
+NAME 	 user_name
+OP 	 =
+NAME 	 check_output
+OP 	 (
+STRING 	 'whoami'
+OP 	 )
+OP 	 .
+NAME 	 strip
+OP 	 (
+OP 	 )
+NEWLINE 	 
+
+NAME 	 print
+NAME 	 user_name
+NEWLINE 	 
+ENDMARKER 	 
+All variable/function names:
+ ['user_name']
+
+15.
+
+CODE
+
+a.T.ravel()
+a.ravel('F')
+a
+a.T.ravel()
+
+PARSED OUTPUT
+
+NAME 	 a
+OP 	 .
+NAME 	 T
+OP 	 .
+NAME 	 ravel
+OP 	 (
+OP 	 )
+NEWLINE 	 
+
+NAME 	 a
+OP 	 .
+NAME 	 ravel
+OP 	 (
+STRING 	 'F'
+OP 	 )
+NEWLINE 	 
+
+NAME 	 a
+NEWLINE 	 
+
+NAME 	 a
+OP 	 .
+NAME 	 T
+OP 	 .
+NAME 	 ravel
+OP 	 (
+OP 	 )
+NEWLINE 	 
+ENDMARKER 	 
+All variable/function names:
+ ['a']
+
+16.
+
+CODE
+
+re.compile(r'\b(yes|y)\b')
+
+PARSED OUTPUT
+
+NAME 	 re
+OP 	 .
+NAME 	 compile
+OP 	 (
+STRING 	 r'\b(yes|y)\b'
+OP 	 )
+NEWLINE 	 
+ENDMARKER 	 
+All variable/function names:
+ []
+
+17.
+
+CODE
+
+<a href="{% url 'users' info.user_id info.full_name %}?tab=tags">
+
+PARSED OUTPUT
+
+OP 	 <
+NAME 	 a
+NAME 	 href
+OP 	 =
+STRING 	 "{% url 'users' info.user_id info.full_name %}?tab=tags"
+OP 	 >
+NEWLINE 	 
+ENDMARKER 	 
+All variable/function names:
+ ['a', 'href']
+
+18.
+
+CODE
+
+import urllib.parse
+urllib.parse.urlencode([('a', 'b'), ('c', 'd')])
+urllib.parse.urlencode([('c', 'd'), ('a', 'b')])
+
+PARSED OUTPUT
+
+NAME 	 import
+NAME 	 urllib
+OP 	 .
+NAME 	 parse
+NEWLINE 	 
+
+NAME 	 urllib
+OP 	 .
+NAME 	 parse
+OP 	 .
+NAME 	 urlencode
+OP 	 (
+OP 	 [
+OP 	 (
+STRING 	 'a'
+OP 	 ,
+STRING 	 'b'
+OP 	 )
+OP 	 ,
+OP 	 (
+STRING 	 'c'
+OP 	 ,
+STRING 	 'd'
+OP 	 )
+OP 	 ]
+OP 	 )
+NEWLINE 	 
+
+NAME 	 urllib
+OP 	 .
+NAME 	 parse
+OP 	 .
+NAME 	 urlencode
+OP 	 (
+OP 	 [
+OP 	 (
+STRING 	 'c'
+OP 	 ,
+STRING 	 'd'
+OP 	 )
+OP 	 ,
+OP 	 (
+STRING 	 'a'
+OP 	 ,
+STRING 	 'b'
+OP 	 )
+OP 	 ]
+OP 	 )
+NEWLINE 	 
+ENDMARKER 	 
+All variable/function names:
+ []
+
+19.
+
+CODE
+
+tempfile.mkstemp(suffix="", prefix=template, dir=None, text=False)
+
+PARSED OUTPUT
+
+NAME 	 tempfile
+OP 	 .
+NAME 	 mkstemp
+OP 	 (
+NAME 	 suffix
+OP 	 =
+STRING 	 ""
+OP 	 ,
+NAME 	 prefix
+OP 	 =
+NAME 	 template
+OP 	 ,
+NAME 	 dir
+OP 	 =
+NAME 	 None
+OP 	 ,
+NAME 	 text
+OP 	 =
+NAME 	 False
+OP 	 )
+NEWLINE 	 
+ENDMARKER 	 
+All variable/function names:
+ ['tempfile', 'template', 'mkstemp', 'suffix']
+
+20.
+
+CODE
+
+import pandas as pd
+merged_df = pd.merge(sortedregsubjdf, sortedcentralitiesdf, on='Name')
+
+PARSED OUTPUT
+
+NAME 	 import
+NAME 	 pandas
+NAME 	 as
+NAME 	 pd
+NEWLINE 	 
+
+NAME 	 merged_df
+OP 	 =
+NAME 	 pd
+OP 	 .
+NAME 	 merge
+OP 	 (
+NAME 	 sortedregsubjdf
+OP 	 ,
+NAME 	 sortedcentralitiesdf
+OP 	 ,
+NAME 	 on
+OP 	 =
+STRING 	 'Name'
+OP 	 )
+NEWLINE 	 
+ENDMARKER 	 
+All variable/function names:
+ ['on', 'sortedregsubjdf', 'merged_df', 'sortedcentralitiesdf']
+
+21.
+
+CODE
+
+driver.switch_to.window(driver.window_handles[-1])
+
+PARSED OUTPUT
+
+NAME 	 driver
+OP 	 .
+NAME 	 switch_to
+OP 	 .
+NAME 	 window
+OP 	 (
+NAME 	 driver
+OP 	 .
+NAME 	 window_handles
+OP 	 [
+OP 	 -
+NUMBER 	 1
+OP 	 ]
+OP 	 )
+NEWLINE 	 
+ENDMARKER 	 
+All variable/function names:
+ ['switch_to', 'window', 'driver', 'window_handles']
+
+22.
+
+CODE
+
+from . import db
+
+PARSED OUTPUT
+
+NAME 	 from
+OP 	 .
+NAME 	 import
+NAME 	 db
+NEWLINE 	 
+ENDMARKER 	 
+All variable/function names:
+ ['db']
+
+23.
+
+CODE
+
+and       del       from      not       while as        elif
+global    or        with assert    else      if        pass      yield
+break     except    import    print class     exec      in
+raise continue  finally   is        return def       for       lambda
+try
+
+PARSED OUTPUT
+
+NAME 	 and
+NAME 	 del
+NAME 	 from
+NAME 	 not
+NAME 	 while
+NAME 	 as
+NAME 	 elif
+NEWLINE 	 
+
+NAME 	 global
+NAME 	 or
+NAME 	 with
+NAME 	 assert
+NAME 	 else
+NAME 	 if
+NAME 	 pass
+NAME 	 yield
+NEWLINE 	 
+
+NAME 	 break
+NAME 	 except
+NAME 	 import
+NAME 	 print
+NAME 	 class
+NAME 	 exec
+NAME 	 in
+NEWLINE 	 
+
+NAME 	 raise
+NAME 	 continue
+NAME 	 finally
+NAME 	 is
+NAME 	 return
+NAME 	 def
+NAME 	 for
+NAME 	 lambda
+NEWLINE 	 
+
+NAME 	 try
+NEWLINE 	 
+ENDMARKER 	 
+All variable/function names:
+ []
+
+24.
+
+CODE
+
+'{:,.2f}'.format(abs(value))
+
+PARSED OUTPUT
+
+STRING 	 '{:,.2f}'
+OP 	 .
+NAME 	 format
+OP 	 (
+NAME 	 abs
+OP 	 (
+NAME 	 value
+OP 	 )
+OP 	 )
+NEWLINE 	 
+ENDMARKER 	 
+All variable/function names:
+ ['value']
+
+25.
+
+CODE
+
+unicode_html = myfile.read().decode('utf-8', 'ignore')
+soup = BeautifulSoup (unicode_html)
+
+PARSED OUTPUT
+
+NAME 	 unicode_html
+OP 	 =
+NAME 	 myfile
+OP 	 .
+NAME 	 read
+OP 	 (
+OP 	 )
+OP 	 .
+NAME 	 decode
+OP 	 (
+STRING 	 'utf-8'
+OP 	 ,
+STRING 	 'ignore'
+OP 	 )
+NEWLINE 	 
+
+NAME 	 soup
+OP 	 =
+NAME 	 BeautifulSoup
+OP 	 (
+NAME 	 unicode_html
+OP 	 )
+NEWLINE 	 
+ENDMARKER 	 
+All variable/function names:
+ ['unicode_html', 'BeautifulSoup', 'myfile', 'soup']
+
+26.
+
+CODE
+
+import matplotlib.pyplot as plt
+plt.figure(figsize=(16, 10), dpi=100)
+plt.savefig(filename)
+
+PARSED OUTPUT
+
+NAME 	 import
+NAME 	 matplotlib
+OP 	 .
+NAME 	 pyplot
+NAME 	 as
+NAME 	 plt
+NEWLINE 	 
+
+NAME 	 plt
+OP 	 .
+NAME 	 figure
+OP 	 (
+NAME 	 figsize
+OP 	 =
+OP 	 (
+NUMBER 	 16
+OP 	 ,
+NUMBER 	 10
+OP 	 )
+OP 	 ,
+NAME 	 dpi
+OP 	 =
+NUMBER 	 100
+OP 	 )
+NEWLINE 	 
+
+NAME 	 plt
+OP 	 .
+NAME 	 savefig
+OP 	 (
+NAME 	 filename
+OP 	 )
+NEWLINE 	 
+ENDMARKER 	 
+All variable/function names:
+ ['dpi', 'filename', 'figsize']
+
+27.
+
+CODE
+
+if not all(isinstance(i, int) for i in [days, months, years]):
+
+PARSED OUTPUT
+
+NAME 	 if
+NAME 	 not
+NAME 	 all
+OP 	 (
+NAME 	 isinstance
+OP 	 (
+NAME 	 i
+OP 	 ,
+NAME 	 int
+OP 	 )
+NAME 	 for
+NAME 	 i
+NAME 	 in
+OP 	 [
+NAME 	 days
+OP 	 ,
+NAME 	 months
+OP 	 ,
+NAME 	 years
+OP 	 ]
+OP 	 )
+OP 	 :
+NEWLINE 	 
+ENDMARKER 	 
+All variable/function names:
+ ['i', 'years', 'months', 'days']
+
+28.
+
+CODE
+
+import networkx as nx
+net = nx.Graph()
+net.add_edge("user_42", "user_9", trust=9)
+net.adj
+
+PARSED OUTPUT
+
+NAME 	 import
+NAME 	 networkx
+NAME 	 as
+NAME 	 nx
+NEWLINE 	 
+
+NAME 	 net
+OP 	 =
+NAME 	 nx
+OP 	 .
+NAME 	 Graph
+OP 	 (
+OP 	 )
+NEWLINE 	 
+
+NAME 	 net
+OP 	 .
+NAME 	 add_edge
+OP 	 (
+STRING 	 "user_42"
+OP 	 ,
+STRING 	 "user_9"
+OP 	 ,
+NAME 	 trust
+OP 	 =
+NUMBER 	 9
+OP 	 )
+NEWLINE 	 
+
+NAME 	 net
+OP 	 .
+NAME 	 adj
+NEWLINE 	 
+ENDMARKER 	 
+All variable/function names:
+ ['adj', 'net', 'add_edge', 'networkx', 'trust', 'nx', 'Graph']
+
+29.
+
+CODE
+
+(?<=\))(\s?\w)+$
+
+PARSED OUTPUT
+
+OP 	 (
+ERRORTOKEN 	 ?
+OP 	 <=
+ERRORTOKEN 	 \
+OP 	 )
+OP 	 )
+OP 	 (
+ERRORTOKEN 	 \
+NAME 	 s
+ERRORTOKEN 	 ?
+ERRORTOKEN 	 \
+NAME 	 w
+OP 	 )
+OP 	 +
+ERRORTOKEN 	 $
+Faulty snippet,(?<=\))(\s?\w)+$
+
+30.
+
+CODE
+
+from kdtree import KDTree
+data = [(1,2,3),(4,0,1),(5,3,1),(10,5,4),(9,8,9),(4,2,4)]
+tree = KDTree.construct_from_data(data)
+nearest = tree.query(query_point=(5,4,3), t=1)
+
+PARSED OUTPUT
+
+NAME 	 from
+NAME 	 kdtree
+NAME 	 import
+NAME 	 KDTree
+NEWLINE 	 
+
+NAME 	 data
+OP 	 =
+OP 	 [
+OP 	 (
+NUMBER 	 1
+OP 	 ,
+NUMBER 	 2
+OP 	 ,
+NUMBER 	 3
+OP 	 )
+OP 	 ,
+OP 	 (
+NUMBER 	 4
+OP 	 ,
+NUMBER 	 0
+OP 	 ,
+NUMBER 	 1
+OP 	 )
+OP 	 ,
+OP 	 (
+NUMBER 	 5
+OP 	 ,
+NUMBER 	 3
+OP 	 ,
+NUMBER 	 1
+OP 	 )
+OP 	 ,
+OP 	 (
+NUMBER 	 10
+OP 	 ,
+NUMBER 	 5
+OP 	 ,
+NUMBER 	 4
+OP 	 )
+OP 	 ,
+OP 	 (
+NUMBER 	 9
+OP 	 ,
+NUMBER 	 8
+OP 	 ,
+NUMBER 	 9
+OP 	 )
+OP 	 ,
+OP 	 (
+NUMBER 	 4
+OP 	 ,
+NUMBER 	 2
+OP 	 ,
+NUMBER 	 4
+OP 	 )
+OP 	 ]
+NEWLINE 	 
+
+NAME 	 tree
+OP 	 =
+NAME 	 KDTree
+OP 	 .
+NAME 	 construct_from_data
+OP 	 (
+NAME 	 data
+OP 	 )
+NEWLINE 	 
+
+NAME 	 nearest
+OP 	 =
+NAME 	 tree
+OP 	 .
+NAME 	 query
+OP 	 (
+NAME 	 query_point
+OP 	 =
+OP 	 (
+NUMBER 	 5
+OP 	 ,
+NUMBER 	 4
+OP 	 ,
+NUMBER 	 3
+OP 	 )
+OP 	 ,
+NAME 	 t
+OP 	 =
+NUMBER 	 1
+OP 	 )
+NEWLINE 	 
+ENDMARKER 	 
+All variable/function names:
+ ['kdtree', 'data', 'tree', 'construct_from_data', 't', 'KDTree', 'nearest', 'query_point']
+
+31.
+
+CODE
+
+SELECT * FROM table WHERE name LIKE '%smith%';
+
+PARSED OUTPUT
+
+NAME 	 SELECT
+OP 	 *
+NAME 	 FROM
+NAME 	 table
+NAME 	 WHERE
+NAME 	 name
+NAME 	 LIKE
+STRING 	 '%smith%'
+OP 	 ;
+NEWLINE 	 
+ENDMARKER 	 
+All variable/function names:
+ ['LIKE', 'WHERE', 'FROM', 'SELECT']
+
+32.
+
+CODE
+
+def foo(name, val):
+globals()[name] = val
+
+PARSED OUTPUT
+
+NAME 	 def
+NAME 	 foo
+OP 	 (
+NAME 	 name
+OP 	 ,
+NAME 	 val
+OP 	 )
+OP 	 :
+NEWLINE 	 
+
+NAME 	 globals
+OP 	 (
+OP 	 )
+OP 	 [
+NAME 	 name
+OP 	 ]
+OP 	 =
+NAME 	 val
+NEWLINE 	 
+ENDMARKER 	 
+All variable/function names:
+ ['foo', 'val']
+
+33.
+
+CODE
+
+from serial import *
+usb = Serial('/dev/ttyUSB0', 57600)
+usb.timeout = 1
+while True:
+print(usb.readline())
+
+PARSED OUTPUT
+
+NAME 	 from
+NAME 	 serial
+NAME 	 import
+OP 	 *
+NEWLINE 	 
+
+NAME 	 usb
+OP 	 =
+NAME 	 Serial
+OP 	 (
+STRING 	 '/dev/ttyUSB0'
+OP 	 ,
+NUMBER 	 57600
+OP 	 )
+NEWLINE 	 
+
+NAME 	 usb
+OP 	 .
+NAME 	 timeout
+OP 	 =
+NUMBER 	 1
+NEWLINE 	 
+
+NAME 	 while
+NAME 	 True
+OP 	 :
+NEWLINE 	 
+
+NAME 	 print
+OP 	 (
+NAME 	 usb
+OP 	 .
+NAME 	 readline
+OP 	 (
+OP 	 )
+OP 	 )
+NEWLINE 	 
+ENDMARKER 	 
+All variable/function names:
+ ['Serial', 'serial', 'usb', 'timeout']
+
+34.
+
+CODE
+
+import turtle
+foo = turtle.Turtle()
+bar = turtle.Turtle()
+foo.forward(100)
+bar.left(90)
+
+PARSED OUTPUT
+
+NAME 	 import
+NAME 	 turtle
+NEWLINE 	 
+
+NAME 	 foo
+OP 	 =
+NAME 	 turtle
+OP 	 .
+NAME 	 Turtle
+OP 	 (
+OP 	 )
+NEWLINE 	 
+
+NAME 	 bar
+OP 	 =
+NAME 	 turtle
+OP 	 .
+NAME 	 Turtle
+OP 	 (
+OP 	 )
+NEWLINE 	 
+
+NAME 	 foo
+OP 	 .
+NAME 	 forward
+OP 	 (
+NUMBER 	 100
+OP 	 )
+NEWLINE 	 
+
+NAME 	 bar
+OP 	 .
+NAME 	 left
+OP 	 (
+NUMBER 	 90
+OP 	 )
+NEWLINE 	 
+ENDMARKER 	 
+All variable/function names:
+ ['Turtle', 'left', 'foo', 'turtle', 'forward']
+
+35.
+
+CODE
+
+my_list = [-10,-10,-10,-20,-10,-10]
+from collections import Counter
+counter = Counter(my_list)
+min(counter, key=counter.get)
+
+PARSED OUTPUT
+
+NAME 	 my_list
+OP 	 =
+OP 	 [
+OP 	 -
+NUMBER 	 10
+OP 	 ,
+OP 	 -
+NUMBER 	 10
+OP 	 ,
+OP 	 -
+NUMBER 	 10
+OP 	 ,
+OP 	 -
+NUMBER 	 20
+OP 	 ,
+OP 	 -
+NUMBER 	 10
+OP 	 ,
+OP 	 -
+NUMBER 	 10
+OP 	 ]
+NEWLINE 	 
+
+NAME 	 from
+NAME 	 collections
+NAME 	 import
+NAME 	 Counter
+NEWLINE 	 
+
+NAME 	 counter
+OP 	 =
+NAME 	 Counter
+OP 	 (
+NAME 	 my_list
+OP 	 )
+NEWLINE 	 
+
+NAME 	 min
+OP 	 (
+NAME 	 counter
+OP 	 ,
+NAME 	 key
+OP 	 =
+NAME 	 counter
+OP 	 .
+NAME 	 get
+OP 	 )
+NEWLINE 	 
+ENDMARKER 	 
+All variable/function names:
+ ['counter', 'key', 'my_list']
+
+36.
+
+CODE
+
+if (
+("this phrase" in textfile or "that phrase" in textfile) and not (
+"not this phrase" in textfile or "not that phrase" in textfile)
+):
+return True
+
+PARSED OUTPUT
+
+NAME 	 if
+OP 	 (
+NL 	 
+
+OP 	 (
+STRING 	 "this phrase"
+NAME 	 in
+NAME 	 textfile
+NAME 	 or
+STRING 	 "that phrase"
+NAME 	 in
+NAME 	 textfile
+OP 	 )
+NAME 	 and
+NAME 	 not
+OP 	 (
+NL 	 
+
+STRING 	 "not this phrase"
+NAME 	 in
+NAME 	 textfile
+NAME 	 or
+STRING 	 "not that phrase"
+NAME 	 in
+NAME 	 textfile
+OP 	 )
+NL 	 
+
+OP 	 )
+OP 	 :
+NEWLINE 	 
+
+NAME 	 return
+NAME 	 True
+NEWLINE 	 
+ENDMARKER 	 
+All variable/function names:
+ ['textfile']
+
+37.
+
+CODE
+
+import os
+f = open(os.path.join(OUTPUT_DIR, 'file.txt'), 'w')
+f.write('This is the new file.')
+f.close()
+
+PARSED OUTPUT
+
+NAME 	 import
+NAME 	 os
+NEWLINE 	 
+
+NAME 	 f
+OP 	 =
+NAME 	 open
+OP 	 (
+NAME 	 os
+OP 	 .
+NAME 	 path
+OP 	 .
+NAME 	 join
+OP 	 (
+NAME 	 OUTPUT_DIR
+OP 	 ,
+STRING 	 'file.txt'
+OP 	 )
+OP 	 ,
+STRING 	 'w'
+OP 	 )
+NEWLINE 	 
+
+NAME 	 f
+OP 	 .
+NAME 	 write
+OP 	 (
+STRING 	 'This is the new file.'
+OP 	 )
+NEWLINE 	 
+
+NAME 	 f
+OP 	 .
+NAME 	 close
+OP 	 (
+OP 	 )
+NEWLINE 	 
+ENDMARKER 	 
+All variable/function names:
+ ['f', 'OUTPUT_DIR']
+
+38.
+
+CODE
+
+data = pd.read_csv("data.txt").T
+data.groupby(lambda x: x[:6], axis=0).plot()
+
+PARSED OUTPUT
+
+NAME 	 data
+OP 	 =
+NAME 	 pd
+OP 	 .
+NAME 	 read_csv
+OP 	 (
+STRING 	 "data.txt"
+OP 	 )
+OP 	 .
+NAME 	 T
+NEWLINE 	 
+
+NAME 	 data
+OP 	 .
+NAME 	 groupby
+OP 	 (
+NAME 	 lambda
+NAME 	 x
+OP 	 :
+NAME 	 x
+OP 	 [
+OP 	 :
+NUMBER 	 6
+OP 	 ]
+OP 	 ,
+NAME 	 axis
+OP 	 =
+NUMBER 	 0
+OP 	 )
+OP 	 .
+NAME 	 plot
+OP 	 (
+OP 	 )
+NEWLINE 	 
+ENDMARKER 	 
+All variable/function names:
+ ['data', 'x']
+
+39.
+
+CODE
+
+import sys
+def main():
+print  "hell0\n"
+main()
+
+PARSED OUTPUT
+
+NAME 	 import
+NAME 	 sys
+NEWLINE 	 
+
+NAME 	 def
+NAME 	 main
+OP 	 (
+OP 	 )
+OP 	 :
+NEWLINE 	 
+
+NAME 	 print
+STRING 	 "hell0\n"
+NEWLINE 	 
+
+NAME 	 main
+OP 	 (
+OP 	 )
+NEWLINE 	 
+ENDMARKER 	 
+All variable/function names:
+ ['main']
+
+40.
+
+CODE
+
+from subprocess import check_output
+from os import getlogin
+c = check_output("users")
+users = set(c.split())
+print(all(user in {getlogin(),'(unknown)' } for user in users))
+
+PARSED OUTPUT
+
+NAME 	 from
+NAME 	 subprocess
+NAME 	 import
+NAME 	 check_output
+NEWLINE 	 
+
+NAME 	 from
+NAME 	 os
+NAME 	 import
+NAME 	 getlogin
+NEWLINE 	 
+
+NAME 	 c
+OP 	 =
+NAME 	 check_output
+OP 	 (
+STRING 	 "users"
+OP 	 )
+NEWLINE 	 
+
+NAME 	 users
+OP 	 =
+NAME 	 set
+OP 	 (
+NAME 	 c
+OP 	 .
+NAME 	 split
+OP 	 (
+OP 	 )
+OP 	 )
+NEWLINE 	 
+
+NAME 	 print
+OP 	 (
+NAME 	 all
+OP 	 (
+NAME 	 user
+NAME 	 in
+OP 	 {
+NAME 	 getlogin
+OP 	 (
+OP 	 )
+OP 	 ,
+STRING 	 '(unknown)'
+OP 	 }
+NAME 	 for
+NAME 	 user
+NAME 	 in
+NAME 	 users
+OP 	 )
+OP 	 )
+NEWLINE 	 
+ENDMARKER 	 
+All variable/function names:
+ ['c', 'user', 'users']
+
+41.
+
+CODE
+
+class AB(object):
+__slots__ = ('a', 'b')
+
+PARSED OUTPUT
+
+NAME 	 class
+NAME 	 AB
+OP 	 (
+NAME 	 object
+OP 	 )
+OP 	 :
+NEWLINE 	 
+
+NAME 	 __slots__
+OP 	 =
+OP 	 (
+STRING 	 'a'
+OP 	 ,
+STRING 	 'b'
+OP 	 )
+NEWLINE 	 
+ENDMARKER 	 
+All variable/function names:
+ ['AB', '__slots__']
+
+42.
+
+CODE
+
+enumerated = [range(start, end) for start,end in zip(breaks, breaks[1:])] + [[breaks[-1]]]
+enumerated
+
+PARSED OUTPUT
+
+NAME 	 enumerated
+OP 	 =
+OP 	 [
+NAME 	 range
+OP 	 (
+NAME 	 start
+OP 	 ,
+NAME 	 end
+OP 	 )
+NAME 	 for
+NAME 	 start
+OP 	 ,
+NAME 	 end
+NAME 	 in
+NAME 	 zip
+OP 	 (
+NAME 	 breaks
+OP 	 ,
+NAME 	 breaks
+OP 	 [
+NUMBER 	 1
+OP 	 :
+OP 	 ]
+OP 	 )
+OP 	 ]
+OP 	 +
+OP 	 [
+OP 	 [
+NAME 	 breaks
+OP 	 [
+OP 	 -
+NUMBER 	 1
+OP 	 ]
+OP 	 ]
+OP 	 ]
+NEWLINE 	 
+
+NAME 	 enumerated
+NEWLINE 	 
+ENDMARKER 	 
+All variable/function names:
+ ['start', 'breaks', 'end', 'enumerated']
+
+43.
+
+CODE
+
+log('{}FUNC: {} ARGS: {}'.format('PID: {} '.format(args[0].pid)
+if args and hasattr(args[0], "pid") else '',
+func.__name__, args))
+
+PARSED OUTPUT
+
+NAME 	 log
+OP 	 (
+STRING 	 '{}FUNC: {} ARGS: {}'
+OP 	 .
+NAME 	 format
+OP 	 (
+STRING 	 'PID: {} '
+OP 	 .
+NAME 	 format
+OP 	 (
+NAME 	 args
+OP 	 [
+NUMBER 	 0
+OP 	 ]
+OP 	 .
+NAME 	 pid
+OP 	 )
+NL 	 
+
+NAME 	 if
+NAME 	 args
+NAME 	 and
+NAME 	 hasattr
+OP 	 (
+NAME 	 args
+OP 	 [
+NUMBER 	 0
+OP 	 ]
+OP 	 ,
+STRING 	 "pid"
+OP 	 )
+NAME 	 else
+STRING 	 ''
+OP 	 ,
+NL 	 
+
+NAME 	 func
+OP 	 .
+NAME 	 __name__
+OP 	 ,
+NAME 	 args
+OP 	 )
+OP 	 )
+NEWLINE 	 
+ENDMARKER 	 
+All variable/function names:
+ ['pid', 'func', 'args']
+
+44.
+
+CODE
+
+arr.loc[arr.A.isin([3,6,9])]
+
+PARSED OUTPUT
+
+NAME 	 arr
+OP 	 .
+NAME 	 loc
+OP 	 [
+NAME 	 arr
+OP 	 .
+NAME 	 A
+OP 	 .
+NAME 	 isin
+OP 	 (
+OP 	 [
+NUMBER 	 3
+OP 	 ,
+NUMBER 	 6
+OP 	 ,
+NUMBER 	 9
+OP 	 ]
+OP 	 )
+OP 	 ]
+NEWLINE 	 
+ENDMARKER 	 
+All variable/function names:
+ ['arr']
+
+45.
+
+CODE
+
+media = reduce(lambda x, y: x + y, [form.media for form in forms])
+
+PARSED OUTPUT
+
+NAME 	 media
+OP 	 =
+NAME 	 reduce
+OP 	 (
+NAME 	 lambda
+NAME 	 x
+OP 	 ,
+NAME 	 y
+OP 	 :
+NAME 	 x
+OP 	 +
+NAME 	 y
+OP 	 ,
+OP 	 [
+NAME 	 form
+OP 	 .
+NAME 	 media
+NAME 	 for
+NAME 	 form
+NAME 	 in
+NAME 	 forms
+OP 	 ]
+OP 	 )
+NEWLINE 	 
+ENDMARKER 	 
+All variable/function names:
+ ['y', 'x', 'forms', 'media', 'form']
+
+46.
+
+CODE
+
+import boto3
+s3 = boto3.resource('s3')
+bucket = s3.Bucket(bucket_name)
+obj = bucket.Object(key_name).get()
+body = obj.get('Body')
+
+PARSED OUTPUT
+
+NAME 	 import
+NAME 	 boto3
+NEWLINE 	 
+
+NAME 	 s3
+OP 	 =
+NAME 	 boto3
+OP 	 .
+NAME 	 resource
+OP 	 (
+STRING 	 's3'
+OP 	 )
+NEWLINE 	 
+
+NAME 	 bucket
+OP 	 =
+NAME 	 s3
+OP 	 .
+NAME 	 Bucket
+OP 	 (
+NAME 	 bucket_name
+OP 	 )
+NEWLINE 	 
+
+NAME 	 obj
+OP 	 =
+NAME 	 bucket
+OP 	 .
+NAME 	 Object
+OP 	 (
+NAME 	 key_name
+OP 	 )
+OP 	 .
+NAME 	 get
+OP 	 (
+OP 	 )
+NEWLINE 	 
+
+NAME 	 body
+OP 	 =
+NAME 	 obj
+OP 	 .
+NAME 	 get
+OP 	 (
+STRING 	 'Body'
+OP 	 )
+NEWLINE 	 
+ENDMARKER 	 
+All variable/function names:
+ ['Bucket', 'obj', 'Object', 'resource', 'bucket_name', 'boto3', 'key_name', 'bucket', 's3', 'body']
+
+47.
+
+CODE
+
+def search(needle, haystack):
+a_list = [1,2,3,4,[42,'Meaning of life']]
+print search('Meaning of life', a_list)
+print search('Anything else', a_list)
+
+PARSED OUTPUT
+
+NAME 	 def
+NAME 	 search
+OP 	 (
+NAME 	 needle
+OP 	 ,
+NAME 	 haystack
+OP 	 )
+OP 	 :
+NEWLINE 	 
+
+NAME 	 a_list
+OP 	 =
+OP 	 [
+NUMBER 	 1
+OP 	 ,
+NUMBER 	 2
+OP 	 ,
+NUMBER 	 3
+OP 	 ,
+NUMBER 	 4
+OP 	 ,
+OP 	 [
+NUMBER 	 42
+OP 	 ,
+STRING 	 'Meaning of life'
+OP 	 ]
+OP 	 ]
+NEWLINE 	 
+
+NAME 	 print
+NAME 	 search
+OP 	 (
+STRING 	 'Meaning of life'
+OP 	 ,
+NAME 	 a_list
+OP 	 )
+NEWLINE 	 
+
+NAME 	 print
+NAME 	 search
+OP 	 (
+STRING 	 'Anything else'
+OP 	 ,
+NAME 	 a_list
+OP 	 )
+NEWLINE 	 
+ENDMARKER 	 
+All variable/function names:
+ ['a_list', 'needle', 'haystack']
+
+48.
+
+CODE
+
+func_start = time.time()
+print 'Function finishes in: %.3f ms' % ((time.time() - func_start) * 1000)
+
+PARSED OUTPUT
+
+NAME 	 func_start
+OP 	 =
+NAME 	 time
+OP 	 .
+NAME 	 time
+OP 	 (
+OP 	 )
+NEWLINE 	 
+
+NAME 	 print
+STRING 	 'Function finishes in: %.3f ms'
+OP 	 %
+OP 	 (
+OP 	 (
+NAME 	 time
+OP 	 .
+NAME 	 time
+OP 	 (
+OP 	 )
+OP 	 -
+NAME 	 func_start
+OP 	 )
+OP 	 *
+NUMBER 	 1000
+OP 	 )
+NEWLINE 	 
+ENDMARKER 	 
+All variable/function names:
+ ['func_start']
+
+49.
+
+CODE
+
+with open('file_name.txt','w') as f:
+res = itertools.permutations('abcdefghijklmnopqrstuvwxyz',5)
+for i in res:
+f.write(''.join(i)+'\n')
+
+PARSED OUTPUT
+
+NAME 	 with
+NAME 	 open
+OP 	 (
+STRING 	 'file_name.txt'
+OP 	 ,
+STRING 	 'w'
+OP 	 )
+NAME 	 as
+NAME 	 f
+OP 	 :
+NEWLINE 	 
+
+NAME 	 res
+OP 	 =
+NAME 	 itertools
+OP 	 .
+NAME 	 permutations
+OP 	 (
+STRING 	 'abcdefghijklmnopqrstuvwxyz'
+OP 	 ,
+NUMBER 	 5
+OP 	 )
+NEWLINE 	 
+
+NAME 	 for
+NAME 	 i
+NAME 	 in
+NAME 	 res
+OP 	 :
+NEWLINE 	 
+
+NAME 	 f
+OP 	 .
+NAME 	 write
+OP 	 (
+STRING 	 ''
+OP 	 .
+NAME 	 join
+OP 	 (
+NAME 	 i
+OP 	 )
+OP 	 +
+STRING 	 '\n'
+OP 	 )
+NEWLINE 	 
+ENDMARKER 	 
+All variable/function names:
+ ['f', 'i', 'res']
+
+50.
+
+CODE
+
+import os
+os.environ['THE_ENVIRONMENT_VARIABLE_NAME']
+
+PARSED OUTPUT
+
+NAME 	 import
+NAME 	 os
+NEWLINE 	 
+
+NAME 	 os
+OP 	 .
+NAME 	 environ
+OP 	 [
+STRING 	 'THE_ENVIRONMENT_VARIABLE_NAME'
+OP 	 ]
+NEWLINE 	 
+ENDMARKER 	 
+All variable/function names:
+ []
+334 many tokens overall
+134 many variable/function names
+Time taken: 0.004 minutes
