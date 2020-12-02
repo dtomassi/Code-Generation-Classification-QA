@@ -8,74 +8,109 @@ import builtins
 import ast
 import re
 import pickle
+import os
 from tqdm import tqdm
 
+SPECIAL_FILES = ['mysql.txt','subprocess.txt','urllib.txt']
 def is_keyword(name):
     return name in keyword.kwlist
 
 def is_builtin(name):
     return name in builtins.__dict__
 
-CONALA_MINED_FILE = "data/conala-corpus/conala-mined.jsonl"
-TRAIN_FILE = "data/conala-corpus/conala-train.json"
-TEST_FILE = "data/conala-corpus/conala-test.json"
+def getApiCalls():
+	api_names = ['pandas','numpy','matplotlib','pyplot']
+	for names in os.listdir(API_Folder):
+		api_names.append(names[:-4])
 
-class AnalysisNodeVisitor(ast.NodeVisitor):
-    def visit_Import(self,node):
-        ast.NodeVisitor.generic_visit(self, node)
+	api_methods = []
+	for filename in os.listdir(API_Folder):
+		if filename in SPECIAL_FILES:
+			with open(API_Folder + filename) as f:
+				methods = list(f)
+				methods = [m.strip('\n') for m in methods]
+				new_methods = []
+				for m in methods:
+					if '.' in m:
+						splitted_methods = m.split('.') #in case of method cases like: connector.connect().cursor().fetchall() ; get: connector, connect, cursor, fetchall seperately 
+						for sub_m in splitted_methods:
+							#in case of the connect() case above
+							if '(' in sub_m:
+								new_methods.append(sub_m[:sub_m.index('(')])
+							#in case of the connector case above
+							else:
+								new_methods.append(sub_m)
 
-    def visit_ImportFrom(self,node):
-        ast.NodeVisitor.generic_visit(self, node)
+					else:
+						if '(' in m:
+							new_methods.append(m[:m.index('(')])
+						else:
+							new_methods.append(m)
 
-    def visit_Assign(self,node):
-        print('Node type: Assign and fields: ', node._fields)
-        ast.NodeVisitor.generic_visit(self, node)
-    
-    def visit_BinOp(self, node):
-        print('Node type: BinOp and fields: ', node._fields)
-        ast.NodeVisitor.generic_visit(self, node)
+			print(new_methods)
+			api_methods += new_methods	
 
-    def visit_Expr(self, node):
-        print('Node type: Expr and fields: ', node._fields)
-        ast.NodeVisitor.generic_visit(self, node)
 
-    def visit_Num(self,node):
-        print('Node type: Num and fields: ', node._fields)
+		else:
+			with open(API_Folder + filename) as f:
 
-    def visit_Name(self,node):
-        print('Node type: Name and fields: ', node._fields)
-        ast.NodeVisitor.generic_visit(self, node)
+				methods = list(f)
+				methods = [m.strip('\n') for m in methods]
+				new_methods = []
+				for m in methods:
+					if '(' in m:
+						new_methods.append(m[:m.index('(')])
 
-    def visit_Str(self, node):
-        print('Node type: Str and fields: ', node._fields)
+					else:
+						new_methods.append(m)
+						 
+				#ensure that just the name of the method is captured: for example: loads() in the file -> loads
+
+			api_methods += new_methods
+
+	print("API NAMES")
+	print(api_names)
+	print('\n'*4)
+
+	print("METHODS")
+	api_methods = list(set(api_methods))
+	print("NUM API METHODS:",len(api_methods))
+	print(api_methods[:20])
+	return api_names,api_methods
+
+FILE = "../data/combined-dataset.json"
+API_Folder = 'API Method txt library/'
+
+#check a token, if the token is one of the APIs (the filenames from the API_FOLDER), 
+#then save that API name and then just observe the file associated with the API
+api_names,api_methods = getApiCalls()
+
+def is_api_call(token):
+	return (token in api_names) or (token in api_methods)
 
 def parse_code(snippet,to_print = False):
 	
 
 	all_names = []
-	builtin_fns = []
 	all_tokens = []
-	lasttoken = ''
 	
 	if to_print:
+		print("\nCODE\n")
 		print(snippet)
+		print("\nPARSED OUTPUT\n")
 
-	p = ast.parse(snippet)
-	print(ast.dump(p))
-	v = AnalysisNodeVisitor()
-	v.visit(p)
-
-	
-	for token in tokenize.generate_tokens(io.StringIO(snippet).readline):
-		ttype, token_val, start, end, line = token
-		all_tokens.append(token_val)
-
-		if to_print:
-			print(tokenize.tok_name[ttype],'\t',token_val)
-		if ttype == tokenize.NAME:
-			if not is_builtin(token_val) and not is_keyword(token_val):
-				all_names.append(token_val)
-
+	try:
+		for token in tokenize.generate_tokens(io.StringIO(snippet).readline):
+			ttype, token_val, start, end, line = token
+			all_tokens.append(token_val)
+			if to_print:
+				print(tokenize.tok_name[ttype],'\t',token_val)
+			if ttype == tokenize.NAME:
+				if not is_builtin(token_val) and not is_keyword(token_val) and not is_api_call(token_val):
+					all_names.append(token_val)
+	except:
+		print(f"Faulty snippet,{snippet}")
+		return [],[]
 	all_names = list(set(all_names))
 	if to_print:
 		print("All variable/function names:\n",all_names)
@@ -88,26 +123,10 @@ def parse_code(snippet,to_print = False):
 def get_snippets():
 	#parse the Conala mined files
 	snippets = []
-	with jsonlines.open(CONALA_MINED_FILE,'r') as f:
-		all_recs = list(f)
+	with open(FILE,'r') as f:
+		all_recs = json.load(f)
+		snippets = [rec['snippet'] for rec in all_recs]
 
-
-	mined_snippets = [rec["snippet"] for rec in all_recs]
-	print(f"MINED snippets: {len(mined_snippets)}")
-
-	with open(TRAIN_FILE,'r') as f:
-		train_recs = json.load(f)
-
-	train_snips = [rec["snippet"] for rec in train_recs]
-
-	print(f"TRAIN snippets: {len(train_snips)}")
-	with open(TEST_FILE,'r') as f:
-		test_recs = json.load(f)
-
-	test_snips = [rec["snippet"] for rec in test_recs]
-	print(f"TEST snippets: {len(test_snips)}")
-
-	snippets = mined_snippets + train_snips + test_snips
 	print(f"Combining all 3 together, we obtain {len(snippets)} many code snippets")
 
 
@@ -123,7 +142,8 @@ def parse_all_snippets(snippets):
 	all_name_vars = list() #need to take care of this step
 	for i in tqdm(range(len(snippets))):
 		snip = snippets[i]
-		tokens,names = parse_code(snip,to_print=False)
+		print(f"\n{i+1}.")
+		tokens,names = parse_code(snip,to_print=True)
 		all_tokens += tokens
 		all_tokens = list(set(all_tokens))
 
@@ -135,15 +155,14 @@ def parse_all_snippets(snippets):
 				pickle.dump(all_tokens,file)
 
 	vocab_stats(all_tokens,all_name_vars)
-	with open(f"vocabulary/Vocab_all.pkl","wb") as file:
-		pickle.dump(all_tokens,file)
+	#with open(f"vocabulary/Vocab_all.pkl","wb") as file:
+	#	pickle.dump(all_tokens,file)
 
 	return 
 def main():
 	start  = time.time()
 	snippets = get_snippets()
-	snippet = input("Enter: ")
-	parse_code(snippet,to_print=True)
+	parse_all_snippets(snippets[:50])
 	print(f"Time taken: {(time.time() - start)/60.00:.3f} minutes")
 
 if __name__ == '__main__':
