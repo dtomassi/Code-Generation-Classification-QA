@@ -1,6 +1,3 @@
-['run', 'Popen', 'STARTUPINFO', 'STARTUPINFO', 'dwFlags', 'STARTUPINFO', 'hStdInput', 'STARTUPINFO', 'hStdOutput', 'STARTUPINFO', 'hStdError', 'STARTUPINFO', 'wShowWindow', 'STARTUPINFO', 'lpAttributeList', 'STD_INPUT_HANDLE', 'STD_OUTPUT_HANDLE', 'STD_ERROR_HANDLE', 'SW_HIDE', 'STARTF_USESTDHANDLES', 'STARTF_USESHOWWINDOW', 'CREATE_NEW_CONSOLE', 'CREATE_NEW_PROCESS_GROUP', 'ABOVE_NORMAL_PRIORITY_CLASS', 'BELOW_NORMAL_PRIORITY_CLASS', 'HIGH_PRIORITY_CLASS', 'IDLE_PRIORITY_CLASS', 'NORMAL_PRIORITY_CLASS', 'REALTIME_PRIORITY_CLASS', 'CREATE_NO_WINDOW', 'DETACHED_PROCESS', 'CREATE_DEFAULT_ERROR_MODE', 'CREATE_BREAKAWAY_FROM_JOB', 'call', 'check_call', 'check_output', 'getstatusoutput', 'getoutput']
-['request', 'urlopen', 'request', 'install_opener', 'request', 'build_opener', '', '', '])', 'request', 'pathname2url', 'request', 'url2pathname', 'request', 'getproxies', 'request', 'Request', 'request', 'OpenerDirector', 'request', 'BaseHandler', 'request', 'HTTPDefaultErrorHandler', 'request', 'HTTPRedirectHandler', 'request', 'HTTPCookieProcessor', 'request', 'ProxyHandler', 'request', 'HTTPPasswordMgr', 'request', 'HTTPPasswordMgrWithDefaultRealm', 'request', 'HTTPPasswordMgrWithPriorAuth', 'request', 'AbstractBasicAuthHandler', 'request', 'HTTPBasicAuthHandler', 'request', 'ProxyBasicAuthHandler', 'request', 'AbstractDigestAuthHandler', 'request', 'HTTPDigestAuthHandler', 'request', 'ProxyDigestAuthHandler', 'request', 'HTTPHandler', 'request', 'HTTPSHandler', 'request', 'FileHandler', 'request', 'DataHandler', 'request', 'FTPHandler', 'request', 'CacheFTPHandler', 'request', 'UnknownHandler', 'request', 'HTTPErrorProcessor', 'request', 'urlretrieve', 'request', 'urlcleanup', 'request', 'URLopener', 'open', 'request', 'URLopener', 'retrieve', 'request', 'URLopener', 'open_unknown', 'request', 'URLopener', 'version', 'request', 'FancyURLopener', 'request', 'FancyURLopener', 'prompt_user_passwd', 'response', 'addinfourl', 'url', 'response', 'addinfourl', 'headers', 'response', 'addinfourl', 'status', 'response', 'addinfourl', 'geturl', 'response', 'addinfourl', 'info', 'response', 'addinfourl', 'code', 'response', 'addinfourl', 'getstatus', 'error', 'URLError', 'error', 'HTTPError', 'error', 'ContentTooShortError', 'parse', 'urlparse', 'parse', 'parse_qs', 'parse', 'parse_qsl', 'parse', 'urlunparse', 'parse', 'urlsplit', 'parse', 'urlunsplit', 'parse', 'urljoin', 'parse', 'urldefrag', 'parse', 'unwrap', 'parse', 'SplitResult', 'geturl', 'parse', 'DefragResult', 'parse', 'ParseResult', 'parse', 'SplitResult', 'parse', 'DefragResultBytes', 'parse', 'ParseResultBytes', 'parse', 'SplitResultBytes', 'parse', 'quote', 'parse', 'quote_plus', 'parse', 'quote_from_bytes', 'parse', 'unquote', 'parse', 'unquote_plus', 'parse', 'unquote_to_bytes', 'parse', 'urlencode', 'robotparser', 'RobotFileParser', 'robotparser', 'RobotFileParser', 'set_url', 'robotparser', 'RobotFileParser', 'read', 'robotparser', 'RobotFileParser', 'parse', 'robotparser', 'RobotFileParser', 'can_fetch', 'robotparser', 'RobotFileParser', 'mtime', 'robotparser', 'RobotFileParser', 'modified', 'robotparser', 'RobotFileParser', 'crawl_delay', 'robotparser', 'RobotFileParser', 'request_rate', 'robotparser', 'RobotFileParser', 'site_maps']
-['connector', 'connect', 'MySQLConnection', 'MySQLConnection', 'close', 'MySQLConnection', 'commit', 'MySQLConnection', 'config', 'MySQLConnection', 'connect', 'MySQLConnection', 'cursor', 'MySQLConnection', 'cmd_change_user', 'MySQLConnection', 'cmd_debug', 'MySQLConnection', 'cmd_init_db', 'MySQLConnection', 'cmd_ping', 'MySQLConnection', 'cmd_process_info', 'MySQLConnection', 'cmd_process_kill', 'MySQLConnection', 'cmd_query', 'MySQLConnection', 'cmd_query_iter', 'MySQLConnection', 'cmd_quit', 'MySQLConnection', 'cmd_refresh', 'MySQLConnection', 'cmd_reset_connection', 'MySQLConnection', 'cmd_shutdown', 'MySQLConnection', 'cmd_statistics', 'MySQLConnection', 'disconnect', 'MySQLConnection', 'get_row', 'MySQLConnection', 'get_rows', 'MySQLConnection', 'get_server_info', 'MySQLConnection', 'get_server_version', 'MySQLConnection', 'is_connected', 'MySQLConnection', 'isset_client_flag', 'MySQLConnection', 'ping', 'MySQLConnection', 'reconnect', 'MySQLConnection', 'reset_session', 'MySQLConnection', 'rollback', 'MySQLConnection', 'set_charset_collation', 'MySQLConnection', 'set_client_flags', 'MySQLConnection', 'shutdown', 'MySQLConnection', 'start_transaction', 'MySQLConnection', 'autocommit', 'MySQLConnection', 'unread_results ', 'MySQLConnection', 'can_consume_results', 'MySQLConnection', 'charset Property', 'MySQLConnection', 'collation Property', 'MySQLConnection', 'connection_id ', 'MySQLConnection', 'database ', 'MySQLConnection', 'get_warnings ', 'MySQLConnection', 'in_transaction ', 'MySQLConnection', 'raise_on_warnings ', 'MySQLConnection', 'server_host ', 'MySQLConnection', 'server_port ', 'MySQLConnection', 'sql_mode', 'MySQLConnection', 'time_zone ', 'MySQLConnection', 'unix_socket', 'MySQLConnection', 'user Property', 'connector', 'connect', 'cursor', 'connector', 'connect', 'cursor', 'callproc', 'connector', 'connect', 'cursor', 'close', 'connector', 'connect', 'cursor', 'execute', 'connector', 'connect', 'cursor', 'executemany', 'connector', 'connect', 'cursor', 'fetchall', 'connector', 'connect', 'cursor', 'fetchmany', 'connector', 'connect', 'cursor', 'fetchone', 'connector', 'connect', 'cursor', 'fetchwarnings', 'connector', 'connect', 'cursor', 'stored_results', 'connector', 'connect', 'cursor', 'column_names ', 'connector', 'connect', 'cursor', 'description', 'connector', 'connect', 'cursor', 'lastrowid', 'connector', 'connect', 'cursor', 'rowcount', 'connector', 'connect', 'cursor', 'statement ', 'connector', 'connect', 'cursor', 'with_rows']
 API NAMES
 ['pandas', 'numpy', 'matplotlib', 'pyplot', 'file', 're', 'six', 'list', 'plt', 'tuple', 'subprocess', 'threading', 'urllib', 'sys', 'pickle', 'requests', 'series', 'dictionary', 'time', 'typing', 'json', 'warnings', 'os', 'datatime', 'collections', 'np', 'logging', 'copy', 'pd', 'set', 'funtools', 'mysql', 'math', 'itertools', 'df', 'sqlite3', 'argparse', 'string']
 
@@ -9,8 +6,8 @@ API NAMES
 
 
 METHODS
-NUM API METHODS: 4957
-['active_count', '', 'core.groupby.DataFrameGroupBy.count', 'time.microsecond', 'record.getfield', 'generic.getfield', 'align', 'distutils.misc_util.is_sequence', 'matrix.getH', 'tseries.offsets.FY5253Quarter.apply', 'ndarray.argmin', 'Cursor.executescript', 'tseries.offsets.CustomBusinessMonthEnd.kwds', 'tseries.offsets.CustomBusinessDay.normalize', 'recarray.tobytes', 'ma.MaskedArray.__len__', 'POSIX_FADV_SEQUENTIAL', 'code', 'to_records', 'cat.codes']
+NUM API METHODS: 4956
+['distutils.cpuinfo.cpu = <np.distutils.cpuinfo.LinuxCPUInfo object>', 'dt.start_time', 'Index.equals', 'ndarray.sort', 'tseries.offsets.CustomBusinessHour.copy', 'sqrt', 'Thread.native_id', 'tseries.offsets.BusinessHour.n', 'quantile', 'arctan', 'random.beta', 'quote_from_bytes', 'atanh', 'char.chararray.lstrip', 'process_time_ns', 'cat.remove_categories', 'tseries.offsets.QuarterEnd.freqstr', 'O_EXLOCK', 'log10', 'polynomial.polynomial.polyzero = array']
 Combining all 3 together, we obtain 43967 many code snippets
 
 1.
@@ -62,7 +59,7 @@ OP 	 )
 NEWLINE 	 
 ENDMARKER 	 
 All variable/function names:
- ['BeautifulSoup', 'driver', 'dict_from_json', 'soup', 'bs4', 'page_source']
+ ['bs4', 'BeautifulSoup', 'dict_from_json', 'driver', 'page_source', 'soup']
 
 2.
 
@@ -89,7 +86,7 @@ OP 	 )
 NEWLINE 	 
 ENDMARKER 	 
 All variable/function names:
- ['f', 'd2', 'd1']
+ ['d1', 'd2', 'f']
 
 3.
 
@@ -138,7 +135,7 @@ OP 	 }
 NEWLINE 	 
 ENDMARKER 	 
 All variable/function names:
- ['master', 'sendchange', 'auth', 'PASS', 'MASTERHOST', 'FILENAMES', 'PORT', 'USER', 'buildbot']
+ ['USER', 'PASS', 'sendchange', 'auth', 'buildbot', 'master', 'FILENAMES', 'MASTERHOST', 'PORT']
 
 4.
 
@@ -221,7 +218,7 @@ OP 	 ;
 NEWLINE 	 
 ENDMARKER 	 
 All variable/function names:
- ['Arial', 'sans', 'font', 'family', 'serif', 'Helvetica']
+ ['sans', 'Helvetica', 'font', 'Arial', 'family', 'serif']
 
 7.
 
@@ -297,7 +294,7 @@ NAME 	 log
 NEWLINE 	 
 ENDMARKER 	 
 All variable/function names:
- ['prkumar', 'home', 'python', 'Desktop', 'output', 'py']
+ ['output', 'Desktop', 'prkumar', 'home', 'python', 'py']
 
 9.
 
@@ -354,7 +351,7 @@ OP 	 )
 NEWLINE 	 
 ENDMARKER 	 
 All variable/function names:
- ['getpass', 'getuser']
+ ['getuser', 'getpass']
 
 11.
 
@@ -384,7 +381,7 @@ OP 	 )
 NEWLINE 	 
 ENDMARKER 	 
 All variable/function names:
- ['direct_output', 'shell']
+ ['shell', 'direct_output']
 
 12.
 
@@ -407,7 +404,7 @@ OP 	 ]
 NEWLINE 	 
 ENDMARKER 	 
 All variable/function names:
- ['elem', 'inputiterator']
+ ['inputiterator', 'elem']
 
 13.
 
@@ -565,7 +562,7 @@ OP 	 >
 NEWLINE 	 
 ENDMARKER 	 
 All variable/function names:
- ['a', 'href']
+ ['href', 'a']
 
 18.
 
@@ -661,7 +658,7 @@ OP 	 )
 NEWLINE 	 
 ENDMARKER 	 
 All variable/function names:
- ['tempfile', 'template', 'mkstemp', 'suffix']
+ ['template', 'suffix', 'mkstemp', 'tempfile']
 
 20.
 
@@ -695,7 +692,7 @@ OP 	 )
 NEWLINE 	 
 ENDMARKER 	 
 All variable/function names:
- ['on', 'sortedregsubjdf', 'merged_df', 'sortedcentralitiesdf']
+ ['sortedregsubjdf', 'sortedcentralitiesdf', 'merged_df', 'on']
 
 21.
 
@@ -722,7 +719,7 @@ OP 	 )
 NEWLINE 	 
 ENDMARKER 	 
 All variable/function names:
- ['switch_to', 'window', 'driver', 'window_handles']
+ ['window_handles', 'driver', 'switch_to', 'window']
 
 22.
 
@@ -853,7 +850,7 @@ OP 	 )
 NEWLINE 	 
 ENDMARKER 	 
 All variable/function names:
- ['unicode_html', 'BeautifulSoup', 'myfile', 'soup']
+ ['myfile', 'BeautifulSoup', 'unicode_html', 'soup']
 
 26.
 
@@ -900,7 +897,7 @@ OP 	 )
 NEWLINE 	 
 ENDMARKER 	 
 All variable/function names:
- ['dpi', 'filename', 'figsize']
+ ['figsize', 'filename', 'dpi']
 
 27.
 
@@ -935,7 +932,7 @@ OP 	 :
 NEWLINE 	 
 ENDMARKER 	 
 All variable/function names:
- ['i', 'years', 'months', 'days']
+ ['months', 'years', 'i', 'days']
 
 28.
 
@@ -983,7 +980,7 @@ NAME 	 adj
 NEWLINE 	 
 ENDMARKER 	 
 All variable/function names:
- ['adj', 'net', 'add_edge', 'networkx', 'trust', 'nx', 'Graph']
+ ['networkx', 'trust', 'Graph', 'add_edge', 'net', 'nx', 'adj']
 
 29.
 
@@ -1113,7 +1110,7 @@ OP 	 )
 NEWLINE 	 
 ENDMARKER 	 
 All variable/function names:
- ['kdtree', 'data', 'tree', 'construct_from_data', 't', 'KDTree', 'nearest', 'query_point']
+ ['tree', 'query_point', 'nearest', 'data', 'construct_from_data', 'kdtree', 't', 'KDTree']
 
 31.
 
@@ -1135,7 +1132,7 @@ OP 	 ;
 NEWLINE 	 
 ENDMARKER 	 
 All variable/function names:
- ['LIKE', 'WHERE', 'FROM', 'SELECT']
+ ['FROM', 'WHERE', 'LIKE', 'SELECT']
 
 32.
 
@@ -1220,7 +1217,7 @@ OP 	 )
 NEWLINE 	 
 ENDMARKER 	 
 All variable/function names:
- ['Serial', 'serial', 'usb', 'timeout']
+ ['serial', 'Serial', 'timeout', 'usb']
 
 34.
 
@@ -1273,7 +1270,7 @@ OP 	 )
 NEWLINE 	 
 ENDMARKER 	 
 All variable/function names:
- ['Turtle', 'left', 'foo', 'turtle', 'forward']
+ ['foo', 'Turtle', 'left', 'forward', 'turtle']
 
 35.
 
@@ -1336,7 +1333,7 @@ OP 	 )
 NEWLINE 	 
 ENDMARKER 	 
 All variable/function names:
- ['counter', 'key', 'my_list']
+ ['my_list', 'key', 'counter']
 
 36.
 
@@ -1486,7 +1483,7 @@ OP 	 )
 NEWLINE 	 
 ENDMARKER 	 
 All variable/function names:
- ['data', 'x']
+ ['x', 'data']
 
 39.
 
@@ -1669,7 +1666,7 @@ NAME 	 enumerated
 NEWLINE 	 
 ENDMARKER 	 
 All variable/function names:
- ['start', 'breaks', 'end', 'enumerated']
+ ['breaks', 'start', 'enumerated', 'end']
 
 43.
 
@@ -1727,7 +1724,7 @@ OP 	 )
 NEWLINE 	 
 ENDMARKER 	 
 All variable/function names:
- ['pid', 'func', 'args']
+ ['func', 'pid', 'args']
 
 44.
 
@@ -1795,7 +1792,7 @@ OP 	 )
 NEWLINE 	 
 ENDMARKER 	 
 All variable/function names:
- ['y', 'x', 'forms', 'media', 'form']
+ ['form', 'media', 'forms', 'y', 'x']
 
 46.
 
@@ -1858,7 +1855,7 @@ OP 	 )
 NEWLINE 	 
 ENDMARKER 	 
 All variable/function names:
- ['Bucket', 'obj', 'Object', 'resource', 'bucket_name', 'boto3', 'key_name', 'bucket', 's3', 'body']
+ ['Object', 'Bucket', 'bucket_name', 's3', 'key_name', 'bucket', 'resource', 'boto3', 'body', 'obj']
 
 47.
 
@@ -2018,7 +2015,7 @@ OP 	 )
 NEWLINE 	 
 ENDMARKER 	 
 All variable/function names:
- ['f', 'i', 'res']
+ ['f', 'res', 'i']
 
 50.
 
@@ -2045,4 +2042,4 @@ All variable/function names:
  []
 334 many tokens overall
 134 many variable/function names
-Time taken: 0.004 minutes
+Time taken: 0.003 minutes
