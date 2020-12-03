@@ -47,7 +47,7 @@ def getApiCalls():
 						else:
 							new_methods.append(m)
 
-			print(new_methods)
+			
 			api_methods += new_methods	
 
 
@@ -74,6 +74,7 @@ def getApiCalls():
 
 	print("METHODS")
 	api_methods = list(set(api_methods))
+	api_methods.remove('')
 	print("NUM API METHODS:",len(api_methods))
 	print(api_methods[:20])
 	return api_names,api_methods
