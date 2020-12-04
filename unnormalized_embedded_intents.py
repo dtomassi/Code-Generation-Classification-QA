@@ -18,6 +18,7 @@ def main():
         word_tokenization.append(snippet_word_tokenized)
 
     print(str(word_tokenization))
+    
     model = Word2Vec(word_tokenization, min_count=1)
 
     #summarize vocab
