@@ -10,24 +10,24 @@ from pathlib import Path
 ### Load in Models ###
 
 # Combined Dataset - w2v Model #
-co_model_w2v = KeyedVectors.load('co-w2v-sg.bin')
+co_model_w2v = KeyedVectors.load('combined-w2v-model.bin')
 
 # CodeSearchNet + Combined Dataset - w2v Model #
-csn_model_w2v_full = Word2Vec.load('w2v-csn.model')
+csn_model_w2v_full = Word2Vec.load('csn-w2v.model')
 csn_model_w2v = csn_model_w2v_full.wv
 
 # Combined Dataset - glove Model #
 p = str(Path.cwd())
-glove_f_co = datapath(p + '/vectors-co.txt')
-tmp_f_co = get_tmpfile(p + '/glove_w2v_co.txt')
+glove_f_co = datapath(p + '/combined-glove-vectors.txt')
+tmp_f_co = get_tmpfile(p + '/combined-glove-vectors-as-w2v.txt')
 
 _ = glove2word2vec(glove_f_co, tmp_f_co)
 
 co_model_g = KeyedVectors.load_word2vec_format(tmp_f_co)
 
 # CodeSearchNet + Combined Dataset - glove Model #
-glove_f_csn = datapath(p + '/vectors-csn.txt')
-tmp_f_csn = get_tmpfile(p + '/glove_w2v_csn.txt')
+glove_f_csn = datapath(p + '/csn-glove-vectors.txt')
+tmp_f_csn = get_tmpfile(p + '/csn-glove-vectors-as-w2v.txt')
 
 _ = glove2word2vec(glove_f_csn, tmp_f_csn)
 
@@ -54,7 +54,10 @@ def Analysis(model,color,label,l1,l2):
     v_info.append('Number of words: ' + str(len(model.vocab)))
 
     if (l1=='g'):
-        file = 'vocab-' + l2 + '.txt'
+        if l2=='co':
+            file = 'combined-glove-vocab.txt'
+        else:
+            file = 'csn-glove-vocab.txt'
         tfile = open(file, 'r')
         g_count = {}
         temp = []
@@ -137,9 +140,9 @@ def Analysis(model,color,label,l1,l2):
 
             plt.title('PCA Graph for Random Tokens: ' + label)
             name = 'PCArandom-' + im_name
-            plt.savefig(name)
+            #plt.savefig(name)
 
-            #plt.show()
+            plt.show()
 
         if all:
             ## Use for all vocab
