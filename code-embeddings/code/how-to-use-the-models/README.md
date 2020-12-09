@@ -1,5 +1,4 @@
 # How to Use the Embeddings Models
-## In General
 ## Word2Vec
 To use either of the Word2Vec models using the gensim library, include the following:
 
