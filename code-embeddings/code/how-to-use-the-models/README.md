@@ -1,4 +1,4 @@
-# How to Use the Embeddings Models
+# How to Load in the Models
 ## Word2Vec
 To use either of the Word2Vec models using the gensim library, include the following:
 
@@ -57,3 +57,16 @@ _ = glove2word2vec(glove_f_csn, tmp_f_csn)
 
 csn_model_g = KeyedVectors.load_word2vec_format(tmp_f_csn)
 ```
+## How to Use the Models
+Once the models are loaded in, to access the vectors, use the following code:
+
+```
+model.get_vector('token')
+```
+This will return a one-dimensional array containing the token vector. So for example, if you wish for the GloVe embedding for the token "for" for the Combined Dataset:
+
+```
+co_model_g.get_vector('for')
+```
+
+This form works for all models. If the token does not exist within the vocabulary, an error called `KeyError` will be raised. 
