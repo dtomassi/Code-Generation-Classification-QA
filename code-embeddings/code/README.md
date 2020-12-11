@@ -11,10 +11,10 @@
 ### Models (min_count = 0)
 
 Two of the models that have been trained on the combined dataset have been created in which the minimum count was set to zero, whereas the rest of the models had `min_count` set to 5. These can be seen in the `min_count 0 models` folder.
-- `combined-w2v-model-mincount0`: Word2Vec model trained on the combined dataset.
-- `combined-glove-vectors-mincount0`: GloVe vectors trained on the combined dataset.
+- `combined-w2v-model-mincount0.bin`: Word2Vec model trained on the combined dataset.
+- `combined-glove-vectors-mincount0.txt`: GloVe vectors trained on the combined dataset.
 
-In addition, the `min_count 0 models` folder also contains the file `combined-glove-vocab-mincount0`, which contain a list of the vocabulary tokens for the GloVe vectors along with the count of each token.
+In addition, the `min_count 0 models` folder also contains the file `combined-glove-vocab-mincount0.txt`, which contain a list of the vocabulary tokens for the GloVe vectors along with the count of each token.
 
 ### Vocab List (Provided by GloVe)
 - `combined-glove-vocab.txt`: Text file that includes the vocab and vocab count for the combined dataset
