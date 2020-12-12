@@ -4,7 +4,7 @@ import random
 
 def main():
     # Change conala_all_fp to where it is on your machine.
-    conala_all_fp = 'conala-all.json'
+    conala_all_fp = 'final-combined-dataset.json'
     with open(conala_all_fp) as f:
         data = json.load(f)
 
@@ -13,7 +13,7 @@ def main():
         intents.add(answer['intent'])
 
     random.seed(42)
-    NUM_NEG_SAMPLES_PER_Q = 2
+    NUM_NEG_SAMPLES_PER_Q = 1
     NUM_SAMPLES = 10
     negative_samples = []
     for intent in intents:
@@ -28,11 +28,13 @@ def main():
                 continue
             generated_samples.append({
                 'intent': intent,
-                'snippet': answer['snippet']
+                'snippet': answer['snippet'],
+                'clean_snippet': answer['clean_snippet'],
+                'class': 0,
                 })
         negative_samples += generated_samples
 
-    with open('negative-samples.json', 'w+') as out_file:
+    with open('negative-samples-combined.json', 'w+') as out_file:
         json.dump(negative_samples, out_file, indent=4)
 
 
