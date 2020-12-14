@@ -525,11 +525,13 @@ sample_intent[0]
 reshape_intent = sample_intent.reshape((3,35))
 reshape_intent.shape
 
+EPOCHS = 10
+
 seq2seqmodel_history = model.fit(
           [pos_train_intents, pos_train_snip_decinput],
           decoder_targets_train_one_hot,
           validation_data= ([pos_val_intents,pos_val_snip_decinput],decoder_targets_val_one_hot),
-          epochs=10,
+          epochs=EPOCHS,
           batch_size = 256
           )
 
@@ -659,3 +661,40 @@ code_output,avg_embed  =  code_generate(sample_intent)
 code_output
 
 avg_embed
+
+yaml_file = open('seq2seq_model.yaml', 'r')
+loaded_model_yaml = yaml_file.read()
+yaml_file.close()
+loaded_model = keras.models.model_from_yaml(loaded_model_yaml)
+# load weights into new model
+loaded_model.load_weights("seq2seq_model.h5")
+print("Loaded model from disk")
+
+
+with open("seq2seq_trainHistoryDict.pkl",'rb') as f:
+  history = pickle.load(f)
+print(history)
+
+plt.figure()
+plt.plot(list(range(1,EPOCHS+1)),history['loss'],label='train')
+plt.plot(list(range(1,EPOCHS+1)),history['val_loss'],label = 'val')
+plt.xlabel("Epochs")
+plt.ylabel("Loss")
+plt.legend()
+plt.title("Loss for Seq2Seq")
+plt.savefig("loss_seq2seq.png")
+
+plt.figure()
+plt.plot(range(1,EPOCHS+1),np.array(history['accuracy'])*100.00,label='train')
+plt.plot(range(1,EPOCHS+1),np.array(history['val_accuracy']) * 100.0,label = 'val')
+plt.xlabel("Epochs")
+plt.ylabel("Accuracy (%)")
+plt.legend()
+plt.title("Accuracy for Seq2Seq")
+plt.savefig("acc_seq2seq.png")
+
+loaded_model.compile(optimizer="Adam", loss="categorical_crossentropy",metrics = ['accuracy']) # Set up model
+scores = loaded_model.evaluate([pos_test_intents,pos_test_snip_decinput],decoder_targets_test_one_hot)
+print("Test loss: ",scores[0])
+print("Test accuracy: ",scores[1]*100.00)
+
