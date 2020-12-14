@@ -19,7 +19,7 @@ from keras.utils import to_categorical
 import keras.backend as K
 import numpy as np
 import matplotlib.pyplot as plt
-from gensim.models import Word2Vec 
+from gensim.models import Word2Vec
 from gensim.models import KeyedVectors
 from gensim.scripts.glove2word2vec import glove2word2vec
 from gensim.test.utils import datapath, get_tmpfile
@@ -27,7 +27,7 @@ from pathlib import Path
 import nltk
 import json
 import pickle
-from sklearn.model_selection import train_test_split 
+from sklearn.model_selection import train_test_split
 from collections import defaultdict,Counter
 
 traces_filename = "overall-pos_neg_final-dataset.json"
@@ -263,12 +263,12 @@ EMBEDDING_SIZE = 100
 
 #load W2V vectors from the pretrained intent embeddings
 model_filename = 'intents-w2v.model'
-w2v_embedding = KeyedVectors.load(model_filename) 
+w2v_embedding = KeyedVectors.load(model_filename)
 w2v_embedding
 
 w2v_embedding.get_vector("how")
 
-word2idx_inputs = tok_intent.word_index 
+word2idx_inputs = tok_intent.word_index
 len(word2idx_inputs)
 
 num_words_intent = len(word2idx_inputs) + 1
