@@ -668,7 +668,7 @@ model_yaml = binary_model.to_yaml()
 with open("binary_model.yaml", "w") as yaml_file:
     yaml_file.write(model_yaml)
 # serialize weights to HDF5
-model.save_weights("binary_model.h5")
+binary_model.save_weights("binary_model.h5")
 print("Saved model to disk")
 
 
