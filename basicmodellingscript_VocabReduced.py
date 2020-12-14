@@ -626,20 +626,6 @@ for i,intent in enumerate(train_intent_sequences):
   
   if i!= 0 and i%1000 == 0:
     print(f"{i}th iteration")
-#test_intent_embeds = np.zeros((NUM_TEST,EMBEDDING_SIZE))
-#test_code_embeds = np.zeros((NUM_TEST,EMBEDDING_SIZE))
-#test_code_outputs = []
-#i = 0
-#print("Testing code and intents")
-#for intent in test_intent_sequences:
-#  intent_embed = intent_w2v(intent)
-#  code_output,code_embed = code_generate(intent)
-#  test_code_embeds[i][:] = code_embed[:][0]
-#  test_code_outputs.append(code_output)
-#  test_intent_embeds[i][:] = intent_embed[:][0]
-#  i += 1
-#  if i!= 0 and i%1000 == 0:
-#    print(f"{i}th iteration")
 
 
 val_intent_embeds = np.zeros((NUM_VAL,EMBEDDING_SIZE))
@@ -687,13 +673,13 @@ print("Saved model to disk")
 
 
 # plotting
-#yaml_file = open('seq2seq_model.yaml', 'r')
-#loaded_model_yaml = yaml_file.read()
-#yaml_file.close()
-#loaded_model = keras.models.model_from_yaml(loaded_model_yaml)
-## load weights into new model
-#loaded_model.load_weights("seq2seq_model.h5")
-#print("Loaded model from disk")
+yaml_file = open('seq2seq_model.yaml', 'r')
+loaded_model_yaml = yaml_file.read()
+yaml_file.close()
+loaded_model = keras.models.model_from_yaml(loaded_model_yaml)
+# load weights into new model
+loaded_model.load_weights("seq2seq_model.h5")
+print("Loaded model from disk")
 #
 #
 #with open("seq2seq_trainHistoryDict.pkl",'rb') as f:
@@ -718,8 +704,40 @@ print("Saved model to disk")
 #plt.title("Accuracy for Seq2Seq")
 #plt.savefig("acc_seq2seq.png")
 #
-#loaded_model.compile(optimizer="Adam", loss="categorical_crossentropy",metrics = ['accuracy']) # Set up model
-#scores = loaded_model.evaluate([pos_test_intents,pos_test_snip_decinput],decoder_targets_test_one_hot)
-#print("Test loss: ",scores[0])
-#print("Test accuracy: ",scores[1]*100.00)
+loaded_model.compile(optimizer="Adam", loss="categorical_crossentropy",metrics = ['accuracy']) # Set up model
+scores = loaded_model.evaluate([pos_test_intents,pos_test_snip_decinput],decoder_targets_test_one_hot)
+print('Seq2Seq')
+print("Test loss: ",scores[0])
+print("Test accuracy: ",scores[1]*100.00)
+
+
+test_intent_embeds = np.zeros((10,EMBEDDING_SIZE))# Change to 1000
+test_code_embeds = np.zeros((10,EMBEDDING_SIZE))# Change to 1000
+test_code_outputs = []
+import time
+t = int(time.time())
+print("Testing code and intents")
+y_test_sample = y_test[:10]# Change to 1000
+print(dict(Counter(y_test_sample)))
+i = 0
+print("Testing code and intents")
+for intent in test_intent_sequences[:10]:# Change to 1000
+  intent_embed = intent_w2v(intent)
+  code_output,code_embed = code_generate(intent)
+  test_code_embeds[i][:] = code_embed[:][0]
+  test_code_outputs.append(code_output)
+  test_intent_embeds[i][:] = intent_embed[:][0]
+  i += 1
+  if i!= 0 and i%1000 == 0:
+    print(f"{i}th iteration")
+print(test_intent_embeds.shape,'\t',test_code_embeds.shape)
+
+scores = binary_model.evaluate([test_intent_embeds,test_code_embeds],np.array(y_test_sample))
+print("Binary Model Test loss: ",scores[0])
+print("Binary Model Test accuracy: ",scores[1]*100.00)
+y_pred = binary_model.predict([test_intent_embeds,test_code_embeds])
+with open("y_true.pkl",'wb') as true:
+  pickle.dump(y_test_sample,true)
+with open("y_pred.pkl",'wb') as pred:
+  pickle.dump(y_pred,pred)
 
