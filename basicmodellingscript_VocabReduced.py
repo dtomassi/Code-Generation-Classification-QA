@@ -469,29 +469,29 @@ print(pos_train_snip_decoutput.shape)
 print(pos_test_snip_decoutput.shape)
 print(pos_val_snip_decoutput.shape)
 
-# decoder_targets_train_one_hot = np.zeros((
-#         NUM_TRAIN,
-#         pad_length_snippet,
-#         num_words_output
-#     ),
-#     dtype='float32'
-# )
+decoder_targets_train_one_hot = np.zeros((
+         28520,
+         pad_length_snippet + 1,
+         num_words_output + 1
+     ),
+     dtype='float32'
+ )
 
-# decoder_targets_test_one_hot = np.zeros((
-#         NUM_TEST,
-#         pad_length_snippet,
-#         num_words_output
-#     ),
-#     dtype='float32'
-# )
+decoder_targets_test_one_hot = np.zeros((
+         8127,
+         pad_length_snippet + 1,
+         num_words_output + 1
+     ),
+     dtype='float32'
+ )
 
-# decoder_targets_val_one_hot = np.zeros((
-#         NUM_VAL,
-#         pad_length_snippet,
-#         num_words_output
-#     ),
-#     dtype='float32'
-# )
+decoder_targets_val_one_hot = np.zeros((
+         3439,
+         pad_length_snippet + 1,
+         num_words_output + 1
+     ),
+     dtype='float32'
+ )
 decoder_sample_val_one_hot = np.zeros((3,pad_length_snippet+1,num_words_output+1),dtype='float32')
 
 for i, d in enumerate(pos_train_snip_decoutput):
@@ -526,8 +526,9 @@ reshape_intent = sample_intent.reshape((3,35))
 reshape_intent.shape
 
 seq2seqmodel_history = model.fit(
-          [reshape_intent,sample_dec_input],
-          decoder_sample_val_one_hot,
+          [pos_train_intents, pos_train_snip_decinput],
+          decoder_targets_train_one_hot,
+          validation_data= ([pos_val_intents,pos_val_snip_decinput],decoder_targets_val_one_hot),
           epochs=10,
           batch_size = 256
           )
