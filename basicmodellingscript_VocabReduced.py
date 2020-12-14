@@ -531,7 +531,7 @@ seq2seqmodel_history = model.fit(
           [pos_train_intents, pos_train_snip_decinput],
           decoder_targets_train_one_hot,
           validation_data= ([pos_val_intents,pos_val_snip_decinput],decoder_targets_val_one_hot),
-          epochs=1,
+          epochs=EPOCHS,
           batch_size = 256
           )
 
