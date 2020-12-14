@@ -531,7 +531,7 @@ seq2seqmodel_history = model.fit(
           [pos_train_intents, pos_train_snip_decinput],
           decoder_targets_train_one_hot,
           validation_data= ([pos_val_intents,pos_val_snip_decinput],decoder_targets_val_one_hot),
-          epochs=EPOCHS,
+          epochs=1,
           batch_size = 256
           )
 
@@ -602,27 +602,63 @@ def intent_w2v(sequence,_embedding_matrix = embedding_matrix):
   
   return avg_embed/num_nonzero
 
-#run it for all the 3 sets: train, test and val
-intent_embeds = np.zeros((3,EMBEDDING_SIZE))
-code_embeds = np.zeros((3,EMBEDDING_SIZE))
-code_outputs = []
-i = 0
-for intent,dec_input in zip(reshape_intent,sample_dec_input):
+def code_w2v(sequence, _embedding_matrix = code_embedding_matrix):
+  #embedding matrix: idx to vector mapping (it is a matrix)
+  avg_embed = np.zeros((EMBEDDING_SIZE,1))
+  num_nonzero = 0
+  for token in sequence:
+    if token != 0:
+      vector = _embedding_matrix[token].reshape(-1,1)
+      avg_embed += vector
+      num_nonzero += 1
+  
+  return avg_embed/num_nonzero
+
+train_intent_embeds = np.zeros((NUM_TRAIN,EMBEDDING_SIZE))
+train_code_embeds = np.zeros((NUM_TRAIN,EMBEDDING_SIZE))
+print("Training code and intents")
+for i,intent in enumerate(train_intent_sequences):
   intent_embed = intent_w2v(intent)
-  code_output,code_embed = code_generate(intent)
-  print(i)
-  code_embeds[i][:] = code_embed[:][0]
-  code_outputs.append(code_output)
-  intent_embeds[i][:] = intent_embed[:][0]
+  code = train_padded_input_snippet_sequences[i][1:]
+  code_embed = code_w2v(code)
+  train_code_embeds[i][:] = code_embed[:][0]
+  train_intent_embeds[i][:] = intent_embed[:][0]
+  
+  if i!= 0 and i%1000 == 0:
+    print(f"{i}th iteration")
+#test_intent_embeds = np.zeros((NUM_TEST,EMBEDDING_SIZE))
+#test_code_embeds = np.zeros((NUM_TEST,EMBEDDING_SIZE))
+#test_code_outputs = []
+#i = 0
+#print("Testing code and intents")
+#for intent in test_intent_sequences:
+#  intent_embed = intent_w2v(intent)
+#  code_output,code_embed = code_generate(intent)
+#  test_code_embeds[i][:] = code_embed[:][0]
+#  test_code_outputs.append(code_output)
+#  test_intent_embeds[i][:] = intent_embed[:][0]
+#  i += 1
+#  if i!= 0 and i%1000 == 0:
+#    print(f"{i}th iteration")
+
+
+val_intent_embeds = np.zeros((NUM_VAL,EMBEDDING_SIZE))
+val_code_embeds = np.zeros((NUM_VAL,EMBEDDING_SIZE))
+i = 0
+print("validation code and intents")
+for intent in val_intent_sequences:
+  intent_embed = intent_w2v(intent)
+  code = val_padded_input_snippet_sequences[i][1:]
+  code_embed = code_w2v(code)
+  val_code_embeds[i][:] = code_embed[:][0]
+  val_intent_embeds[i][:] = intent_embed[:][0]
   i += 1
+  if i!= 0 and i%1000 == 0:
+    print(f"{i}th iteration")
 
-code_embeds.shape
-
-intent_embeds.shape
-
-type(code_embeds[0])
-
-# Need to apply this to the all the samples in the training sample set i had created earlier
+print(train_intent_embeds.shape,'\t',train_code_embeds.shape)
+#print(test_intent_embeds.shape,'\t',test_code_embeds.shape)
+print(val_intent_embeds.shape,'\t',val_code_embeds.shape)
 
 #INPUTS TO THE BINARY MODEL
 # INTENT W2V: avg W2V embedding for the intent sequence
@@ -631,14 +667,16 @@ type(code_embeds[0])
 '''
 X: intent_embeds,code_embeds
 y: the class label for the sample set working currently: y_train[:3]
-
 '''
-y_sample = y_train[:3]
-bin_history = binary_model.fit(x = [intent_embeds,code_embeds],y = np.array(y_sample),epochs=10,batch_size=1)
+bin_history = binary_model.fit(x=[train_intent_embeds,train_code_embeds],
+                               y=np.array(y_train),
+                               validation_data=([val_intent_embeds,val_code_embeds],np.array(y_val)),
+                               epochs = EPOCHS,
+                                batch_size = 256
+                               )
 
 with open('binary_trainHistoryDict.pkl', 'wb') as file_pi:
   pickle.dump(bin_history.history, file_pi)
-
 # serialize model to YAML
 model_yaml = binary_model.to_yaml()
 with open("binary_model.yaml", "w") as yaml_file:
@@ -647,54 +685,41 @@ with open("binary_model.yaml", "w") as yaml_file:
 model.save_weights("binary_model.h5")
 print("Saved model to disk")
 
-"""## **A sample test of the seq2seq alone**"""
 
-sample_intent = pos_test_intents[0][:]
-sample_dec_input = pos_test_snip_decinput[0][:]
-sample_dec_output = pos_test_snip_decoutput[0][:]
-print(' '.join([idx_word_intent[idx] for idx in sample_intent if idx != 0]))
-print(' '.join([idx2word_target[idx] for idx in sample_dec_input if idx != 0]))
-print(' '.join([idx2word_target[idx] for idx in sample_dec_input if idx != 0]))
-
-code_output,avg_embed  =  code_generate(sample_intent)
-
-code_output
-
-avg_embed
-
-yaml_file = open('seq2seq_model.yaml', 'r')
-loaded_model_yaml = yaml_file.read()
-yaml_file.close()
-loaded_model = keras.models.model_from_yaml(loaded_model_yaml)
-# load weights into new model
-loaded_model.load_weights("seq2seq_model.h5")
-print("Loaded model from disk")
-
-
-with open("seq2seq_trainHistoryDict.pkl",'rb') as f:
-  history = pickle.load(f)
-print(history)
-
-plt.figure()
-plt.plot(list(range(1,EPOCHS+1)),history['loss'],label='train')
-plt.plot(list(range(1,EPOCHS+1)),history['val_loss'],label = 'val')
-plt.xlabel("Epochs")
-plt.ylabel("Loss")
-plt.legend()
-plt.title("Loss for Seq2Seq")
-plt.savefig("loss_seq2seq.png")
-
-plt.figure()
-plt.plot(range(1,EPOCHS+1),np.array(history['accuracy'])*100.00,label='train')
-plt.plot(range(1,EPOCHS+1),np.array(history['val_accuracy']) * 100.0,label = 'val')
-plt.xlabel("Epochs")
-plt.ylabel("Accuracy (%)")
-plt.legend()
-plt.title("Accuracy for Seq2Seq")
-plt.savefig("acc_seq2seq.png")
-
-loaded_model.compile(optimizer="Adam", loss="categorical_crossentropy",metrics = ['accuracy']) # Set up model
-scores = loaded_model.evaluate([pos_test_intents,pos_test_snip_decinput],decoder_targets_test_one_hot)
-print("Test loss: ",scores[0])
-print("Test accuracy: ",scores[1]*100.00)
+# plotting
+#yaml_file = open('seq2seq_model.yaml', 'r')
+#loaded_model_yaml = yaml_file.read()
+#yaml_file.close()
+#loaded_model = keras.models.model_from_yaml(loaded_model_yaml)
+## load weights into new model
+#loaded_model.load_weights("seq2seq_model.h5")
+#print("Loaded model from disk")
+#
+#
+#with open("seq2seq_trainHistoryDict.pkl",'rb') as f:
+#  history = pickle.load(f)
+#print(history)
+#
+#plt.figure()
+#plt.plot(list(range(1,EPOCHS+1)),history['loss'],label='train')
+#plt.plot(list(range(1,EPOCHS+1)),history['val_loss'],label = 'val')
+#plt.xlabel("Epochs")
+#plt.ylabel("Loss")
+#plt.legend()
+#plt.title("Loss for Seq2Seq")
+#plt.savefig("loss_seq2seq.png")
+#
+#plt.figure()
+#plt.plot(range(1,EPOCHS+1),np.array(history['accuracy'])*100.00,label='train')
+#plt.plot(range(1,EPOCHS+1),np.array(history['val_accuracy']) * 100.0,label = 'val')
+#plt.xlabel("Epochs")
+#plt.ylabel("Accuracy (%)")
+#plt.legend()
+#plt.title("Accuracy for Seq2Seq")
+#plt.savefig("acc_seq2seq.png")
+#
+#loaded_model.compile(optimizer="Adam", loss="categorical_crossentropy",metrics = ['accuracy']) # Set up model
+#scores = loaded_model.evaluate([pos_test_intents,pos_test_snip_decinput],decoder_targets_test_one_hot)
+#print("Test loss: ",scores[0])
+#print("Test accuracy: ",scores[1]*100.00)
 
