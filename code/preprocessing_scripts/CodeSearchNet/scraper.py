@@ -8,16 +8,6 @@ def main():
 	start = time.time()
 	
 	urlist=[]
-	#urlist.append("https://github.com/ageitgey/face_recognition/blob/c96b010c02f15e8eeb0f71308c641179ac1f19bb/examples/face_recognition_knn.py#L46-L108")
-	#urlist.append("https://github.com/ageitgey/face_recognition/blob/c96b010c02f15e8eeb0f71308c641179ac1f19bb/face_recognition/api.py#L32-L39")
-	#urlist.append("https://github.com/apache/spark/blob/618d6bff71073c8c93501ab7392c3cc579730f0b/python/pyspark/sql/types.py#L758-L820")
-	#urlist.append("https://github.com/apache/spark/blob/618d6bff71073c8c93501ab7392c3cc579730f0b/python/pyspark/ml/regression.py#L211-L222")
-	#urlist.append("https://github.com/apache/spark/blob/618d6bff71073c8c93501ab7392c3cc579730f0b/python/pyspark/shuffle.py#L71-L79")
-	#urlist.append("https://github.com/apache/spark/blob/618d6bff71073c8c93501ab7392c3cc579730f0b/python/pyspark/rdd.py#L317-L327")
-	#urlist.append("https://github.com/apache/spark/blob/618d6bff71073c8c93501ab7392c3cc579730f0b/python/pyspark/sql/column.py#L57-L66")
-	#urlist.append("https://github.com/apache/spark/blob/618d6bff71073c8c93501ab7392c3cc579730f0b/python/pyspark/mllib/feature.py#L611-L624")
-	#urlist.append("https://github.com/apache/spark/blob/618d6bff71073c8c93501ab7392c3cc579730f0b/python/pyspark/mllib/tree.py#L39-L52")
-	#urlist.append("https://github.com/apache/spark/blob/618d6bff71073c8c93501ab7392c3cc579730f0b/python/pyspark/conf.py#L164-L172")
 	finalDict={}
 	urlist=parse()
 
@@ -42,16 +32,16 @@ def parse():
 	        studentDict = json.loads(jsonObj)
 	        finalList.append(studentDict)
 
-	#print("Printing each JSON Decoded Object")
+
 	for iterVar in finalList:
 		if iterVar["path"] not in urlDict:
 			urlDict[iterVar["path"]]=iterVar["url"]
-		#print(iterVar["code_tokens"], "\n")
+
 	for key,value in urlDict.items():
-		#print(key, ' : ', value)
+
 		returnFinalDict.append(value)
 	return returnFinalDict
-	#print(len(urlDict))
+
 def scraperUrl(url,libraryDict):
 	try:
 		source = urllib.request.urlopen(url).read()

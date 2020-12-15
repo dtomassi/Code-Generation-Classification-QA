@@ -9,7 +9,7 @@ import re
 import pickle
 import string
 import os
-#from tqdm import tqdm
+
 SPECIAL_FILES = ['mysql.txt','subprocess.txt','urllib.txt']
 def is_keyword(name):
 	return name in keyword.kwlist
@@ -72,14 +72,9 @@ def getApiCalls():
 
 			api_methods += new_methods
 
-	#print("API NAMES")
-	#print(api_names)
-	#print('\n'*4)
-
-	#print("METHODS")
+	
 	api_methods = list(set(api_methods))
-	#print("NUM API METHODS:",len(api_methods))
-	#print(api_methods[:20])
+
 	return api_names,api_methods
 
 FILE = "../data/combined-dataset.json"
@@ -95,7 +90,6 @@ def is_api_call(token):
 def parsingVocab():
 	vocabList = []
 	print("Started Reading JSON file which contains multiple JSON document")
-	#print(string.punctuation,type(string.punctuation))
 	stopWord=["[","]",",","{","}","(",")",":","=","==",".","0","1","2","3","4","5","6","7","8","9","10","+=","!=","<",">","<=",">=","-","+","0.6","UTC","//","_","^=","<<","/=","/","&=","~","@",">>"]
 	stopWordVocab=["{","}","0","1","2","3","4","5","6","7","8","9","10","-","0.6","UTC","//","_","^=","<<","/","&=","~","@",">>"]
 	with open('python_train_13.json') as f:
@@ -114,24 +108,22 @@ def parsingVocab():
 			if not is_builtin(i) and not is_keyword(i) and i not in stopWord and "#" not in i and " " not in i and "%" not in i and "\\n" not in i and "*" not in i:
 				if not(i.isdigit()) and not isFloat(i) and not i.startswith("\"") and not i.startswith("\'") and not is_api_call(i):
 					finalVarList.append(i)
-		#print(finalVocabList)
+
 		for item in finalVarList:
 			if item in finalVocabList and item != '<VAR_NAME>':
 				finalVocabList[finalVocabList.index(item)] = '<VAR_NAME>'
 				finalVocabList2.append(finalVocabList)
-				#finalVocabList2.append("\n")
+
 		finalVocabList=[]
 		finalVarList=[]
 	with open("codeSearchNetVocab13.txt","w") as filehandle:
 		filehandle.writelines("%s\n" % place for place in finalVocabList2)
-	#print("here",finalVocabList2)
+
 	return finalVocabList2
 
 def main():
 	snippetList=parsingVocab()
 	print("Finish Vocab")
-	#print(uniqueSnippetList ,len(uniqueSnippetList))
 
-	#allVar=parse_all_snippets(snippetList)
 if __name__ == '__main__':
 	main()
