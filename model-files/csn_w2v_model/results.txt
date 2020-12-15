@@ -1,0 +1,9 @@
+25 Epochs for CodeSearchNet + Combined Word2Vec Embeddings:
+
+Seq2Seq Model Results:
+Test loss:  1.1018621921539307
+Test accuracy:  75.52120089530945
+
+Binary Model Results:
+Binary Model Test loss:  0.6883329153060913
+Binary Model Test accuracy:  69.9999988079071
