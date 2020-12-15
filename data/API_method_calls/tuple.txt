@@ -1,0 +1,12 @@
+x in s
+x not in s
+s + t
+s * n or n * s
+s[i]
+s[i:j]
+s[i:j:k]
+len(s)
+min(s)
+max(s)
+s.index(x[, i[, j]])
+s.count(x)

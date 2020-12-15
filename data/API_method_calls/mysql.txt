@@ -1,0 +1,67 @@
+connector.connect()
+MySQLConnection() 
+MySQLConnection.close() 
+MySQLConnection.commit()
+MySQLConnection.config() 
+MySQLConnection.connect()
+MySQLConnection.cursor() 
+MySQLConnection.cmd_change_user() 
+MySQLConnection.cmd_debug()
+MySQLConnection.cmd_init_db() 
+MySQLConnection.cmd_ping() 
+MySQLConnection.cmd_process_info()
+MySQLConnection.cmd_process_kill() 
+MySQLConnection.cmd_query() 
+MySQLConnection.cmd_query_iter() 
+MySQLConnection.cmd_quit() 
+MySQLConnection.cmd_refresh() 
+MySQLConnection.cmd_reset_connection() 
+MySQLConnection.cmd_shutdown() 
+MySQLConnection.cmd_statistics() 
+MySQLConnection.disconnect() 
+MySQLConnection.get_row()
+MySQLConnection.get_rows() 
+MySQLConnection.get_server_info() 
+MySQLConnection.get_server_version() 
+MySQLConnection.is_connected() 
+MySQLConnection.isset_client_flag() 
+MySQLConnection.ping() Method
+MySQLConnection.reconnect() Method
+MySQLConnection.reset_session() Method
+MySQLConnection.rollback() Method
+MySQLConnection.set_charset_collation() 
+MySQLConnection.set_client_flags() 
+MySQLConnection.shutdown()
+MySQLConnection.start_transaction() 
+MySQLConnection.autocommit
+MySQLConnection.unread_results 
+MySQLConnection.can_consume_results
+MySQLConnection.charset Property
+MySQLConnection.collation Property
+MySQLConnection.connection_id 
+MySQLConnection.database 
+MySQLConnection.get_warnings 
+MySQLConnection.in_transaction 
+MySQLConnection.raise_on_warnings 
+MySQLConnection.server_host 
+MySQLConnection.server_port 
+MySQLConnection.sql_mode
+MySQLConnection.time_zone 
+MySQLConnection.unix_socket
+MySQLConnection.user Property
+connector.connect().cursor()
+connector.connect().cursor().callproc() 
+connector.connect().cursor().close() 
+connector.connect().cursor().execute()
+connector.connect().cursor().executemany() 
+connector.connect().cursor().fetchall() 
+connector.connect().cursor().fetchmany() 
+connector.connect().cursor().fetchone()
+connector.connect().cursor().fetchwarnings() 
+connector.connect().cursor().stored_results() 
+connector.connect().cursor().column_names 
+connector.connect().cursor().description
+connector.connect().cursor().lastrowid
+connector.connect().cursor().rowcount
+connector.connect().cursor().statement 
+connector.connect().cursor().with_rows

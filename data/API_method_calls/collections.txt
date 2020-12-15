@@ -1,0 +1,35 @@
+ChainMap.maps
+ChainMap.new_child(m=None)
+ChainMap.parents
+Counter.elements()
+Counter.most_common([n])
+Counter.subtract([iterable-or-mapping])
+Counter.fromkeys(iterable)
+Counter.update([iterable-or-mapping])
+deque.append(x)
+deque.appendleft(x)
+deque.clear()
+deque.copy()
+deque.count(x)
+deque.extend(iterable)
+deque.extendleft(iterable)
+deque.index(x[, start[, stop]])
+deque.insert(i, x)
+deque.pop()
+deque.popleft()
+deque.remove(value)
+deque.reverse()
+deque.rotate(n=1)
+deque.maxlen
+defaultdict.__missing__(key)
+defaultdict.default_factory
+namedtuple._make(iterable)
+namedtuple._replace(**kwargs)
+namedtuple._asdict()
+namedtuple._fields
+namedtuple._field_defaults
+OrderedDict.popitem(last=True)
+OrderedDict.move_to_end(key, last=True)
+UserDict.data
+UserList.data
+UserString.data

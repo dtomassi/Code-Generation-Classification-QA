@@ -1,0 +1,78 @@
+Any
+NoReturn
+Tuple
+Union
+Optional
+Callable
+Type(Generic[CT_co])
+Literal
+ClassVar
+Final
+Annotated
+Generic
+TypeVar
+AnyStr
+Protocol(Generic)
+runtime_checkable
+NamedTuple
+TypedDict(dict)
+NewType(name, tp)
+Dict(dict, MutableMapping[KT, VT])
+List(list, MutableSequence[T])
+Set(set, MutableSet[T])
+FrozenSet(frozenset, AbstractSet[T_co])
+DefaultDict(collections.defaultdict, MutableMapping[KT, VT])
+OrderedDict(collections.OrderedDict, MutableMapping[KT, VT])
+ChainMap(collections.ChainMap, MutableMapping[KT, VT])
+Counter(collections.Counter, Dict[T, int])
+Deque(deque, MutableSequence[T])
+IO
+TextIO
+BinaryIO
+Pattern
+Match
+Text
+AbstractSet(Sized, Collection[T_co])
+ByteString(Sequence[int])¶
+Collection(Sized, Iterable[T_co], Container[T_co])
+Container(Generic[T_co])
+ItemsView(MappingView, Generic[KT_co, VT_co])
+KeysView(MappingView[KT_co], AbstractSet[KT_co])
+Mapping(Sized, Collection[KT], Generic[VT_co])
+MappingView(Sized, Iterable[T_co])
+MutableMapping(Mapping[KT, VT])
+MutableSequence(Sequence[T])
+MutableSet(AbstractSet[T])
+Sequence(Reversible[T_co], Collection[T_co])
+ValuesView(MappingView[VT_co])
+Iterable(Generic[T_co])
+Iterator(Iterable[T_co])
+Generator(Iterator[T_co], Generic[T_co, T_contra, V_co])
+Hashable
+Reversible(Iterable[T_co])
+Sized
+Coroutine(Awaitable[V_co], Generic[T_co, T_contra, V_co])
+AsyncGenerator(AsyncIterator[T_co], Generic[T_co, T_contra])
+AsyncIterable(Generic[T_co])
+AsyncIterator(AsyncIterable[T_co])
+Awaitable(Generic[T_co])
+ContextManager(Generic[T_co])
+AsyncContextManager(Generic[T_co])
+TYPE_CHECKING
+ForwardRef
+get_args(tp)
+get_origin(tp)
+get_type_hints(obj, globalns=None, localns=None, include_extras=False)
+type_check_only
+no_type_check_decorator
+no_type_check
+final
+overload
+cast(typ, val)
+SupportsAbs
+SupportsBytes
+SupportsComplex
+SupportsFloat
+SupportsIndex
+SupportsInt
+SupportsRound

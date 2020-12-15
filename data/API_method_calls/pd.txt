@@ -1,0 +1,1367 @@
+read_csv()
+read_pickle()
+read_table()
+read_fwf()
+read_clipboard()
+read_excel()
+ExcelFile.parse()
+ExcelWriter()
+read_json()
+json_normalize()
+build_table_schema()
+read_html()
+read_hdf()
+HDFStore.put()
+HDFStore.append()
+HDFStore.get()
+HDFStore.select()
+HDFStore.info()
+HDFStore.keys()
+HDFStore.groups()
+HDFStore.walk()
+read_feather()
+read_parquet()
+read_orc()
+read_sas()
+read_spss()
+read_sql_table()
+read_sql_query()
+read_sql()
+read_gbq()
+read_stata()
+io.stata.StataReader.data_label
+io.stata.StataReader.value_labels()
+io.stata.StataReader.variable_labels()
+io.stata.StataWriter.write_file()
+melt()
+pivot()
+pivot_table()
+crosstab()
+cut()
+qcut()
+merge()
+merge_ordered()
+merge_asof()
+concat()
+get_dummies()
+factorize()
+unique()
+wide_to_long()
+isna()
+isnull()
+notna()
+notnull()
+to_numeric()
+to_datetime()
+to_timedelta()
+date_range()
+bdate_range()
+period_range()
+timedelta_range()
+infer_freq()
+util.hash_array()
+util.hash_pandas_object()
+eval()
+interval_range()
+test()
+Series()
+DataFrame()
+array(data, dtype=None, copy=True)
+Timestamp(ts_input=<object object>, freq=None, tz=None, unit=None, year=None, month=None, day=None, hour=None, minute=None, second=None, microsecond=None, nanosecond=None, tzinfo=None, *, fold=None)
+Timestamp.asm8
+Timestamp.day
+Timestamp.dayofweek
+Timestamp.dayofyear
+Timestamp.days_in_month
+Timestamp.daysinmonth
+Timestamp.fold
+Timestamp.hour
+Timestamp.is_leap_year
+Timestamp.is_month_end
+Timestamp.is_month_start
+Timestamp.is_quarter_end
+Timestamp.is_quarter_start
+Timestamp.is_year_end
+Timestamp.is_year_start
+Timestamp.max = Timestamp('2262-04-11 23:47:16.854775807')
+Timestamp.microsecond
+Timestamp.min = Timestamp('1677-09-21 00:12:43.145225')
+Timestamp.minute
+Timestamp.month
+Timestamp.nanosecond
+Timestamp.quarter
+Timestamp.resolution = Timedelta('0 days 00:00:00.000000001')
+Timestamp.second
+Timestamp.tz
+Timestamp.tzinfo
+Timestamp.value
+Timestamp.week
+Timestamp.weekofyear
+Timestamp.year
+Timestamp.astimezone()
+Timestamp.ceil(freq, ambiguous='raise', nonexistent='raise')
+Timestamp.combine()
+Timestamp.ctime()
+Timestamp.date()
+Timestamp.day_name()
+Timestamp.dst()
+Timestamp.floor(freq, ambiguous='raise', nonexistent='raise')
+Timestamp.freq
+Timestamp.freqstr
+Timestamp.fromordinal(ordinal, freq=None, tz=None)
+Timestamp.fromtimestamp()
+Timestamp.isocalendar()
+Timestamp.isoformat()
+Timestamp.isoweekday()
+Timestamp.month_name()
+Timestamp.normalize()
+Timestamp.now(tz=None)
+Timestamp.replace(year=None, month=None, day=None, hour=None, minute=None, second=None, microsecond=None, nanosecond=None, tzinfo=<class 'object'>, fold=0)
+Timestamp.round(freq, ambiguous='raise', nonexistent='raise')
+Timestamp.strftime()
+Timestamp.strptime()
+Timestamp.time()
+Timestamp.timestamp()
+Timestamp.timetuple()
+Timestamp.timetz()
+Timestamp.to_datetime64()
+Timestamp.to_numpy()
+Timestamp.to_julian_date()
+Timestamp.to_period()
+Timestamp.to_pydatetime()
+Timestamp.today(cls, tz=None)
+Timestamp.toordinal()
+Timestamp.tz_convert()
+Timestamp.tz_localize(tz, ambiguous='raise', nonexistent='raise')
+Timestamp.tzname()
+Timestamp.utcfromtimestamp()
+Timestamp.utcnow()
+Timestamp.utcoffset()
+Timestamp.utctimetuple()
+Timestamp.weekday()
+arrays.DatetimeArray(values, dtype=dtype('<M8[ns]'), freq=None, copy=False)
+DatetimeTZDtype(unit='ns', tz=None)
+Timedelta(value=<object object>, unit=None, **kwargs)
+Timedelta.asm8
+Timedelta.components
+Timedelta.days
+Timedelta.delta
+Timedelta.freq
+Timedelta.is_populated
+Timedelta.max = Timedelta('106751 days 23:47:16.854775807')
+Timedelta.microseconds
+Timedelta.min = Timedelta('-106752 days +00:12:43.145224193')
+Timedelta.nanoseconds
+Timedelta.resolution = Timedelta('0 days 00:00:00.000000001')
+Timedelta.seconds
+Timedelta.value
+Timedelta.view()
+Timedelta.ceil()
+Timedelta.floor()
+Timedelta.isoformat()
+Timedelta.round()
+Timedelta.to_pytimedelta()
+Timedelta.to_timedelta64()
+Timedelta.to_numpy()
+Timedelta.total_seconds()
+arrays.TimedeltaArray(values, dtype=dtype('<m8[ns]'), freq=<object object>, copy=False)
+Period(value=None, freq=None, ordinal=None, year=None, month=None, quarter=None, day=None, hour=None, minute=None, second=None)
+Period.day
+Period.dayofweek
+Period.dayofyear
+Period.days_in_month
+Period.daysinmonth
+Period.end_time
+Period.freq
+Period.freqstr
+Period.hour
+Period.is_leap_year
+Period.minute
+Period.month
+Period.ordinal
+Period.quarter
+Period.qyear
+Period.second
+Period.start_time
+Period.week
+Period.weekday
+Period.weekofyear
+Period.year
+Period.asfreq()
+Period.now()
+Period.strftime()
+Period.to_timestamp()
+arrays.PeriodArray(values, freq=None, dtype=None, copy=False)
+PeriodDtype(freq=None)
+Interval
+Interval.closed
+Interval.closed_left
+Interval.closed_right
+Interval.is_empty
+Interval.left
+Interval.length
+Interval.mid
+Interval.open_left
+Interval.open_right
+Interval.overlaps()
+Interval.right
+arrays.IntervalArray(data, closed=None, dtype=None, copy=False, verify_integrity=True)
+IntervalDtype(subtype=None)
+arrays.IntegerArray(values, mask, copy=False)
+Int8Dtype
+Int16Dtype
+Int32Dtype
+Int64Dtype
+UInt8Dtype
+UInt16Dtype
+UInt32Dtype
+UInt64Dtype
+CategoricalDtype(categories=None, ordered=False)
+CategoricalDtype.categories
+CategoricalDtype.ordered
+Categorical(values, categories=None, ordered=None, dtype=None, fastpath=False)
+Categorical.from_codes(codes, categories=None, ordered=None, dtype=None)
+Categorical.dtype
+Categorical.categories
+Categorical.ordered
+Categorical.codes
+Categorical.__array__(dtype=None)
+arrays.SparseArray(data, sparse_index=None, index=None, fill_value=None, kind='integer', dtype=None, copy=False)
+SparseDtype(dtype=<class 'numpy.float64'>, fill_value=None)
+arrays.StringArray(values, copy=False)
+StringDtype
+arrays.BooleanArray(values, mask, copy=False)
+BooleanDtype
+Index(data=None, dtype=None, copy=False, name=None, tupleize_cols=True, **kwargs)
+Index.values
+Index.is_monotonic
+Index.is_monotonic_increasing
+Index.is_monotonic_decreasing
+Index.is_unique
+Index.has_duplicates
+Index.hasnans
+Index.dtype
+Index.inferred_type
+Index.is_all_dates
+Index.shape
+Index.name
+Index.names
+Index.nbytes
+Index.ndim
+Index.size
+Index.empty
+Index.T
+Index.memory_usage(deep=False)
+Index.all()
+Index.any()
+Index.argmin(axis=None, skipna=True, *args, **kwargs)
+Index.argmax(axis=None, skipna=True, *args, **kwargs)
+Index.copy(name=None, deep=False, dtype=None, names=None)
+Index.delete()
+Index.drop(labels, errors='raise')
+Index.drop_duplicates(keep='first')
+Index.duplicated(keep='first')
+Index.equals()
+Index.factorize(sort=False, na_sentinel=- 1)
+Index.identical()
+Index.insert()
+Index.is_()
+Index.is_boolean()
+Index.is_categorical()
+Index.is_floating()
+Index.is_integer()
+Index.is_interval()
+Index.is_mixed()
+Index.is_numeric()
+Index.is_object()
+Index.min(axis=None, skipna=True, *args, **kwargs)
+Index.max(axis=None, skipna=True, *args, **kwargs)
+Index.reindex(target, method=None, level=None, limit=None, tolerance=None)
+Index.rename(name, inplace=False)
+Index.repeat(repeats, axis=None)
+Index.where(cond, other=None)
+Index.take(indices, axis=0, allow_fill=True, fill_value=None, **kwargs)
+Index.putmask()
+Index.unique(level=None)
+Index.nunique(dropna=True)
+Index.value_counts(normalize=False, sort=True, ascending=False, bins=None, dropna=True)
+Index.set_names(names, level=None, inplace=False)
+Index.droplevel(level=0)
+Index.fillna(value=None, downcast=None)
+Index.dropna(how='any')
+Index.isna()
+Index.notna()
+Index.astype(dtype, copy=True)
+Index.item()
+Index.map(mapper, na_action=None)
+Index.ravel(order='C')
+Index.to_list()
+Index.to_native_types(slicer=None, **kwargs)
+Index.to_series(index=None, name=None)
+Index.to_frame(index=True, name=None)
+Index.view(cls=None)
+Index.argsort()
+Index.searchsorted(value, side='left', sorter=None)
+Index.sort_values(return_indexer=False, ascending=True, key=None)
+Index.shift(periods=1, freq=None)
+Index.append()
+Index.join(other, how='left', level=None, return_indexers=False, sort=False)
+Index.intersection(other, sort=False)
+Index.union(other, sort=None)
+Index.difference(other, sort=None)
+Index.symmetric_difference(other, result_name=None, sort=None)
+Index.asof()
+Index.asof_locs()
+Index.get_indexer(target, method=None, limit=None, tolerance=None)
+Index.get_indexer_for()
+Index.get_indexer_non_unique()
+Index.get_level_values()
+Index.get_loc(key, method=None, tolerance=None)
+Index.get_slice_bound()
+Index.get_value()
+Index.isin(values, level=None)
+Index.slice_indexer(start=None, end=None, step=None, kind=None)
+Index.slice_locs(start=None, end=None, step=None, kind=None)
+RangeIndex(start=None, stop=None, step=None, dtype=None, copy=False, name=None)
+Int64Index(data=None, dtype=None, copy=False, name=None)
+UInt64Index(data=None, dtype=None, copy=False, name=None)
+Float64Index(data=None, dtype=None, copy=False, name=None)
+RangeIndex.start
+RangeIndex.stop
+RangeIndex.step
+RangeIndex.from_range(data, name=None, dtype=None)
+CategoricalIndex(data=None, categories=None, ordered=None, dtype=None, copy=False, name=None)
+CategoricalIndex.codes
+CategoricalIndex.categories
+CategoricalIndex.ordered
+CategoricalIndex.rename_categories()
+CategoricalIndex.reorder_categories()
+CategoricalIndex.add_categories()
+CategoricalIndex.remove_categories()
+CategoricalIndex.remove_unused_categories()
+CategoricalIndex.set_categories()
+CategoricalIndex.as_ordered()
+CategoricalIndex.as_unordered()
+CategoricalIndex.map()
+CategoricalIndex.equals()
+IntervalIndex(data, closed=None, dtype=None, copy=False, name=None, verify_integrity=True)
+IntervalIndex.from_arrays(left, right, closed='right', name=None, copy=False, dtype=None)
+IntervalIndex.from_tuples(data, closed='right', name=None, copy=False, dtype=None)
+IntervalIndex.from_breaks(breaks, closed='right', name=None, copy=False, dtype=None)
+IntervalIndex.left
+IntervalIndex.right
+IntervalIndex.mid
+IntervalIndex.closed
+IntervalIndex.length
+IntervalIndex.values
+IntervalIndex.is_empty
+IntervalIndex.is_non_overlapping_monotonic
+IntervalIndex.is_overlapping
+IntervalIndex.get_loc(key, method=None, tolerance=None)
+IntervalIndex.get_indexer(target, method=None, limit=None, tolerance=None)
+IntervalIndex.set_closed()
+IntervalIndex.contains()
+IntervalIndex.overlaps()
+IntervalIndex.to_tuples()
+MultiIndex(levels=None, codes=None, sortorder=None, names=None, dtype=None, copy=False, name=None, verify_integrity=True, _set_identity=True)
+IndexSlice = <pandas.core.indexing._IndexSlice object>
+MultiIndex.from_arrays(arrays, sortorder=None, names=<object object>)
+MultiIndex.from_tuples(tuples, sortorder=None, names=None)
+MultiIndex.from_product(iterables, sortorder=None, names=<object object>)
+MultiIndex.from_frame(df, sortorder=None, names=None)
+MultiIndex.names
+MultiIndex.levels
+MultiIndex.codes
+MultiIndex.nlevels
+MultiIndex.levshape
+MultiIndex.set_levels(levels, level=None, inplace=False, verify_integrity=True)
+MultiIndex.set_codes(codes, level=None, inplace=False, verify_integrity=True)
+MultiIndex.to_flat_index()
+MultiIndex.to_frame(index=True, name=None)
+MultiIndex.is_lexsorted()
+MultiIndex.sortlevel(level=0, ascending=True, sort_remaining=True)
+MultiIndex.droplevel(level=0)
+MultiIndex.swaplevel(i=- 2, j=- 1)
+MultiIndex.reorder_levels()
+MultiIndex.remove_unused_levels()
+MultiIndex.get_loc(key, method=None)
+MultiIndex.get_locs()
+MultiIndex.get_loc_level(key, level=0, drop_level=True)
+MultiIndex.get_indexer(target, method=None, limit=None, tolerance=None)
+MultiIndex.get_level_values()
+DatetimeIndex(data=None, freq=<object object>, tz=None, normalize=False, closed=None, ambiguous='raise', dayfirst=False, yearfirst=False, dtype=None, copy=False, name=None)
+DatetimeIndex.year
+DatetimeIndex.month
+DatetimeIndex.day
+DatetimeIndex.hour
+DatetimeIndex.minute
+DatetimeIndex.second
+DatetimeIndex.microsecond
+DatetimeIndex.nanosecond
+DatetimeIndex.date
+DatetimeIndex.time
+DatetimeIndex.timetz
+DatetimeIndex.dayofyear
+DatetimeIndex.weekofyear
+DatetimeIndex.week
+DatetimeIndex.dayofweek
+DatetimeIndex.weekday
+DatetimeIndex.quarter
+DatetimeIndex.tz
+DatetimeIndex.freq
+DatetimeIndex.freqstr
+DatetimeIndex.is_month_start
+DatetimeIndex.is_month_end
+DatetimeIndex.is_quarter_start
+DatetimeIndex.is_quarter_end
+DatetimeIndex.is_year_start
+DatetimeIndex.is_year_end
+DatetimeIndex.is_leap_year
+DatetimeIndex.inferred_freq
+DatetimeIndex.indexer_at_time(time, asof=False)
+DatetimeIndex.indexer_between_time(start_time, end_time, include_start=True, include_end=True)
+DatetimeIndex.normalize()
+DatetimeIndex.strftime()
+DatetimeIndex.snap(freq='S')
+DatetimeIndex.tz_convert()
+DatetimeIndex.tz_localize(tz, ambiguous='raise', nonexistent='raise')
+DatetimeIndex.round()
+DatetimeIndex.floor()
+DatetimeIndex.ceil()
+DatetimeIndex.month_name()
+DatetimeIndex.day_name()
+DatetimeIndex.to_period()
+DatetimeIndex.to_perioddelta()
+DatetimeIndex.to_pydatetime()
+DatetimeIndex.to_series(keep_tz=<object object>, index=None, name=None)
+DatetimeIndex.to_frame(index=True, name=None)
+DatetimeIndex.mean()
+TimedeltaIndex(data=None, unit=None, freq=<object object>, closed=None, dtype=dtype('<m8[ns]'), copy=False, name=None)
+TimedeltaIndex.days
+TimedeltaIndex.seconds
+TimedeltaIndex.microseconds
+TimedeltaIndex.nanoseconds
+TimedeltaIndex.components
+TimedeltaIndex.inferred_freq
+TimedeltaIndex.to_pytimedelta()
+TimedeltaIndex.to_series(index=None, name=None)
+TimedeltaIndex.round()
+TimedeltaIndex.floor()
+TimedeltaIndex.ceil()
+TimedeltaIndex.to_frame(index=True, name=None)
+TimedeltaIndex.mean()
+PeriodIndex(data=None, ordinal=None, freq=None, tz=None, dtype=None, copy=False, name=None, **fields)
+PeriodIndex.day
+PeriodIndex.dayofweek
+PeriodIndex.dayofyear
+PeriodIndex.days_in_month
+PeriodIndex.daysinmonth
+PeriodIndex.end_time
+PeriodIndex.freq
+PeriodIndex.freqstr
+PeriodIndex.hour
+PeriodIndex.is_leap_year
+PeriodIndex.minute
+PeriodIndex.month
+PeriodIndex.quarter
+PeriodIndex.qyear
+PeriodIndex.second
+PeriodIndex.start_time
+PeriodIndex.week
+PeriodIndex.weekday
+PeriodIndex.weekofyear
+PeriodIndex.year
+PeriodIndex.asfreq(freq=None, how='E')
+PeriodIndex.strftime()
+PeriodIndex.to_timestamp()
+tseries.offsets.DateOffset
+tseries.offsets.DateOffset.freqstr
+tseries.offsets.DateOffset.kwds
+tseries.offsets.DateOffset.name
+tseries.offsets.DateOffset.nanos
+tseries.offsets.DateOffset.normalize
+tseries.offsets.DateOffset.rule_code
+tseries.offsets.DateOffset.n
+tseries.offsets.DateOffset.apply()
+tseries.offsets.DateOffset.apply_index()
+tseries.offsets.DateOffset.copy()
+tseries.offsets.DateOffset.isAnchored()
+tseries.offsets.DateOffset.onOffset()
+tseries.offsets.DateOffset.is_anchored()
+tseries.offsets.DateOffset.is_on_offset()
+tseries.offsets.DateOffset.__call__()
+tseries.offsets.BusinessDay
+tseries.offsets.BDay
+tseries.offsets.BusinessDay.freqstr
+tseries.offsets.BusinessDay.kwds
+tseries.offsets.BusinessDay.name
+tseries.offsets.BusinessDay.nanos
+tseries.offsets.BusinessDay.normalize
+tseries.offsets.BusinessDay.rule_code
+tseries.offsets.BusinessDay.n
+tseries.offsets.BusinessDay.weekmask
+tseries.offsets.BusinessDay.holidays
+tseries.offsets.BusinessDay.calendar
+tseries.offsets.BusinessDay.apply()
+tseries.offsets.BusinessDay.apply_index()
+tseries.offsets.BusinessDay.copy()
+tseries.offsets.BusinessDay.isAnchored()
+tseries.offsets.BusinessDay.onOffset()
+tseries.offsets.BusinessDay.is_anchored()
+tseries.offsets.BusinessDay.is_on_offset()
+tseries.offsets.BusinessDay.__call__()
+tseries.offsets.BusinessHour
+tseries.offsets.BusinessHour.freqstr
+tseries.offsets.BusinessHour.kwds
+tseries.offsets.BusinessHour.name
+tseries.offsets.BusinessHour.nanos
+tseries.offsets.BusinessHour.normalize
+tseries.offsets.BusinessHour.rule_code
+tseries.offsets.BusinessHour.n
+tseries.offsets.BusinessHour.start
+tseries.offsets.BusinessHour.end
+tseries.offsets.BusinessHour.weekmask
+tseries.offsets.BusinessHour.holidays
+tseries.offsets.BusinessHour.calendar()
+tseries.offsets.BusinessHour.apply()
+tseries.offsets.BusinessHour.apply_index()
+tseries.offsets.BusinessHour.copy()
+tseries.offsets.BusinessHour.isAnchored()
+tseries.offsets.BusinessHour.onOffset()
+tseries.offsets.BusinessHour.is_anchored()
+tseries.offsets.BusinessHour.is_on_offset()
+tseries.offsets.BusinessHour.__call__()
+tseries.offsets.CustomBusinessDay
+tseries.offsets.CDay
+tseries.offsets.CustomBusinessDay.freqstr
+tseries.offsets.CustomBusinessDay.kwds
+tseries.offsets.CustomBusinessDay.name
+tseries.offsets.CustomBusinessDay.nanos
+tseries.offsets.CustomBusinessDay.normalize
+tseries.offsets.CustomBusinessDay.rule_code
+tseries.offsets.CustomBusinessDay.n
+tseries.offsets.CustomBusinessDay.weekmask
+tseries.offsets.CustomBusinessDay.calendar
+tseries.offsets.CustomBusinessDay.holidays
+tseries.offsets.CustomBusinessDay.apply_index()
+tseries.offsets.CustomBusinessDay.apply()
+tseries.offsets.CustomBusinessDay.copy()
+tseries.offsets.CustomBusinessDay.isAnchored()
+tseries.offsets.CustomBusinessDay.onOffset()
+tseries.offsets.CustomBusinessDay.is_anchored()
+tseries.offsets.CustomBusinessDay.is_on_offset()
+tseries.offsets.CustomBusinessDay.__call__()
+tseries.offsets.CustomBusinessHour
+tseries.offsets.CustomBusinessHour.freqstr
+tseries.offsets.CustomBusinessHour.kwds
+tseries.offsets.CustomBusinessHour.name
+tseries.offsets.CustomBusinessHour.nanos
+tseries.offsets.CustomBusinessHour.normalize
+tseries.offsets.CustomBusinessHour.rule_code
+tseries.offsets.CustomBusinessHour.n
+tseries.offsets.CustomBusinessHour.weekmask
+tseries.offsets.CustomBusinessHour.calendar
+tseries.offsets.CustomBusinessHour.holidays
+tseries.offsets.CustomBusinessHour.start
+tseries.offsets.CustomBusinessHour.end
+tseries.offsets.CustomBusinessHour.apply()
+tseries.offsets.CustomBusinessHour.apply_index()
+tseries.offsets.CustomBusinessHour.copy()
+tseries.offsets.CustomBusinessHour.isAnchored()
+tseries.offsets.CustomBusinessHour.onOffset()
+tseries.offsets.CustomBusinessHour.is_anchored()
+tseries.offsets.CustomBusinessHour.is_on_offset()
+tseries.offsets.CustomBusinessHour.__call__()
+tseries.offsets.MonthEnd
+tseries.offsets.MonthEnd.freqstr
+tseries.offsets.MonthEnd.kwds
+tseries.offsets.MonthEnd.name
+tseries.offsets.MonthEnd.nanos
+tseries.offsets.MonthEnd.normalize
+tseries.offsets.MonthEnd.rule_code
+tseries.offsets.MonthEnd.n
+tseries.offsets.MonthEnd.apply()
+tseries.offsets.MonthEnd.apply_index()
+tseries.offsets.MonthEnd.copy()
+tseries.offsets.MonthEnd.isAnchored()
+tseries.offsets.MonthEnd.onOffset()
+tseries.offsets.MonthEnd.is_anchored()
+tseries.offsets.MonthEnd.is_on_offset()
+tseries.offsets.MonthEnd.__call__()
+tseries.offsets.MonthBegin
+tseries.offsets.MonthBegin.freqstr
+tseries.offsets.MonthBegin.kwds
+tseries.offsets.MonthBegin.name
+tseries.offsets.MonthBegin.nanos
+tseries.offsets.MonthBegin.normalize
+tseries.offsets.MonthBegin.rule_code
+tseries.offsets.MonthBegin.n
+tseries.offsets.MonthBegin.apply()
+tseries.offsets.MonthBegin.apply_index()
+tseries.offsets.MonthBegin.copy()
+tseries.offsets.MonthBegin.isAnchored()
+tseries.offsets.MonthBegin.onOffset()
+tseries.offsets.MonthBegin.is_anchored()
+tseries.offsets.MonthBegin.is_on_offset()
+tseries.offsets.MonthBegin.__call__()
+tseries.offsets.BusinessMonthEnd
+tseries.offsets.BMonthEnd
+tseries.offsets.BusinessMonthEnd.freqstr
+tseries.offsets.BusinessMonthEnd.kwds
+tseries.offsets.BusinessMonthEnd.name
+tseries.offsets.BusinessMonthEnd.nanos
+tseries.offsets.BusinessMonthEnd.normalize
+tseries.offsets.BusinessMonthEnd.rule_code
+tseries.offsets.BusinessMonthEnd.n
+tseries.offsets.BusinessMonthEnd.apply()
+tseries.offsets.BusinessMonthEnd.apply_index()
+tseries.offsets.BusinessMonthEnd.copy()
+tseries.offsets.BusinessMonthEnd.isAnchored()
+tseries.offsets.BusinessMonthEnd.onOffset()
+tseries.offsets.BusinessMonthEnd.is_anchored()
+tseries.offsets.BusinessMonthEnd.is_on_offset()
+tseries.offsets.BusinessMonthEnd.__call__()
+tseries.offsets.BusinessMonthBegin
+tseries.offsets.BMonthBegin
+tseries.offsets.BusinessMonthBegin.freqstr
+tseries.offsets.BusinessMonthBegin.kwds
+tseries.offsets.BusinessMonthBegin.name
+tseries.offsets.BusinessMonthBegin.nanos
+tseries.offsets.BusinessMonthBegin.normalize
+tseries.offsets.BusinessMonthBegin.rule_code
+tseries.offsets.BusinessMonthBegin.n
+tseries.offsets.BusinessMonthBegin.apply()
+tseries.offsets.BusinessMonthBegin.apply_index()
+tseries.offsets.BusinessMonthBegin.copy()
+tseries.offsets.BusinessMonthBegin.isAnchored()
+tseries.offsets.BusinessMonthBegin.onOffset()
+tseries.offsets.BusinessMonthBegin.is_anchored()
+tseries.offsets.BusinessMonthBegin.is_on_offset()
+tseries.offsets.BusinessMonthBegin.__call__()
+tseries.offsets.CustomBusinessMonthEnd
+tseries.offsets.CBMonthEnd
+tseries.offsets.CustomBusinessMonthEnd.freqstr
+tseries.offsets.CustomBusinessMonthEnd.kwds
+tseries.offsets.CustomBusinessMonthEnd.m_offset
+tseries.offsets.CustomBusinessMonthEnd.name
+tseries.offsets.CustomBusinessMonthEnd.nanos
+tseries.offsets.CustomBusinessMonthEnd.normalize
+tseries.offsets.CustomBusinessMonthEnd.rule_code
+tseries.offsets.CustomBusinessMonthEnd.n
+tseries.offsets.CustomBusinessMonthEnd.weekmask
+tseries.offsets.CustomBusinessMonthEnd.calendar
+tseries.offsets.CustomBusinessMonthEnd.holidays
+tseries.offsets.CustomBusinessMonthEnd.apply()
+tseries.offsets.CustomBusinessMonthEnd.apply_index()
+tseries.offsets.CustomBusinessMonthEnd.copy()
+tseries.offsets.CustomBusinessMonthEnd.isAnchored()
+tseries.offsets.CustomBusinessMonthEnd.onOffset()
+tseries.offsets.CustomBusinessMonthEnd.is_anchored()
+tseries.offsets.CustomBusinessMonthEnd.is_on_offset()
+tseries.offsets.CustomBusinessMonthEnd.__call__()
+tseries.offsets.CustomBusinessMonthBegin
+tseries.offsets.CBMonthBegin
+tseries.offsets.CustomBusinessMonthBegin.freqstr
+tseries.offsets.CustomBusinessMonthBegin.kwds
+tseries.offsets.CustomBusinessMonthBegin.m_offset
+tseries.offsets.CustomBusinessMonthBegin.name
+tseries.offsets.CustomBusinessMonthBegin.nanos
+tseries.offsets.CustomBusinessMonthBegin.normalize
+tseries.offsets.CustomBusinessMonthBegin.rule_code
+tseries.offsets.CustomBusinessMonthBegin.n
+tseries.offsets.CustomBusinessMonthBegin.weekmask
+tseries.offsets.CustomBusinessMonthBegin.calendar
+tseries.offsets.CustomBusinessMonthBegin.holidays
+tseries.offsets.CustomBusinessMonthBegin.apply()
+tseries.offsets.CustomBusinessMonthBegin.apply_index()
+tseries.offsets.CustomBusinessMonthBegin.copy()
+tseries.offsets.CustomBusinessMonthBegin.isAnchored()
+tseries.offsets.CustomBusinessMonthBegin.onOffset()
+tseries.offsets.CustomBusinessMonthBegin.is_anchored()
+tseries.offsets.CustomBusinessMonthBegin.is_on_offset()
+tseries.offsets.CustomBusinessMonthBegin.__call__()
+tseries.offsets.SemiMonthEnd
+tseries.offsets.SemiMonthEnd.freqstr
+tseries.offsets.SemiMonthEnd.kwds
+tseries.offsets.SemiMonthEnd.name
+tseries.offsets.SemiMonthEnd.nanos
+tseries.offsets.SemiMonthEnd.normalize
+tseries.offsets.SemiMonthEnd.rule_code
+tseries.offsets.SemiMonthEnd.n
+tseries.offsets.SemiMonthEnd.day_of_month
+tseries.offsets.SemiMonthEnd.apply()
+tseries.offsets.SemiMonthEnd.apply_index()
+tseries.offsets.SemiMonthEnd.copy()
+tseries.offsets.SemiMonthEnd.isAnchored()
+tseries.offsets.SemiMonthEnd.onOffset()
+tseries.offsets.SemiMonthEnd.is_anchored()
+tseries.offsets.SemiMonthEnd.is_on_offset()
+tseries.offsets.SemiMonthEnd.__call__()
+tseries.offsets.SemiMonthBegin
+tseries.offsets.SemiMonthBegin.freqstr
+tseries.offsets.SemiMonthBegin.kwds
+tseries.offsets.SemiMonthBegin.name
+tseries.offsets.SemiMonthBegin.nanos
+tseries.offsets.SemiMonthBegin.normalize
+tseries.offsets.SemiMonthBegin.rule_code
+tseries.offsets.SemiMonthBegin.n
+tseries.offsets.SemiMonthBegin.day_of_month
+tseries.offsets.SemiMonthBegin.apply()
+tseries.offsets.SemiMonthBegin.apply_index()
+tseries.offsets.SemiMonthBegin.copy()
+tseries.offsets.SemiMonthBegin.isAnchored()
+tseries.offsets.SemiMonthBegin.onOffset()
+tseries.offsets.SemiMonthBegin.is_anchored()
+tseries.offsets.SemiMonthBegin.is_on_offset()
+tseries.offsets.SemiMonthBegin.__call__()
+tseries.offsets.Week
+tseries.offsets.Week.freqstr
+tseries.offsets.Week.kwds
+tseries.offsets.Week.name
+tseries.offsets.Week.nanos
+tseries.offsets.Week.normalize
+tseries.offsets.Week.rule_code
+tseries.offsets.Week.n
+tseries.offsets.Week.weekday
+tseries.offsets.Week.apply()
+tseries.offsets.Week.apply_index()
+tseries.offsets.Week.copy()
+tseries.offsets.Week.isAnchored()
+tseries.offsets.Week.onOffset()
+tseries.offsets.Week.is_anchored()
+tseries.offsets.Week.is_on_offset()
+tseries.offsets.Week.__call__()
+tseries.offsets.WeekOfMonth
+tseries.offsets.WeekOfMonth.freqstr
+tseries.offsets.WeekOfMonth.kwds
+tseries.offsets.WeekOfMonth.name
+tseries.offsets.WeekOfMonth.nanos
+tseries.offsets.WeekOfMonth.normalize
+tseries.offsets.WeekOfMonth.rule_code
+tseries.offsets.WeekOfMonth.n
+tseries.offsets.WeekOfMonth.week
+tseries.offsets.WeekOfMonth.apply()
+tseries.offsets.WeekOfMonth.apply_index()
+tseries.offsets.WeekOfMonth.copy()
+tseries.offsets.WeekOfMonth.isAnchored()
+tseries.offsets.WeekOfMonth.onOffset()
+tseries.offsets.WeekOfMonth.is_anchored()
+tseries.offsets.WeekOfMonth.is_on_offset()
+tseries.offsets.WeekOfMonth.__call__()
+tseries.offsets.WeekOfMonth.weekday
+tseries.offsets.LastWeekOfMonth
+tseries.offsets.LastWeekOfMonth.freqstr
+tseries.offsets.LastWeekOfMonth.kwds
+tseries.offsets.LastWeekOfMonth.name
+tseries.offsets.LastWeekOfMonth.nanos
+tseries.offsets.LastWeekOfMonth.normalize
+tseries.offsets.LastWeekOfMonth.rule_code
+tseries.offsets.LastWeekOfMonth.n
+tseries.offsets.LastWeekOfMonth.weekday
+tseries.offsets.LastWeekOfMonth.week
+tseries.offsets.LastWeekOfMonth.apply()
+tseries.offsets.LastWeekOfMonth.apply_index()
+tseries.offsets.LastWeekOfMonth.copy()
+tseries.offsets.LastWeekOfMonth.isAnchored()
+tseries.offsets.LastWeekOfMonth.onOffset()
+tseries.offsets.LastWeekOfMonth.is_anchored()
+tseries.offsets.LastWeekOfMonth.is_on_offset()
+tseries.offsets.LastWeekOfMonth.__call__()
+tseries.offsets.BQuarterEnd
+tseries.offsets.BQuarterEnd.freqstr
+tseries.offsets.BQuarterEnd.kwds
+tseries.offsets.BQuarterEnd.name
+tseries.offsets.BQuarterEnd.nanos
+tseries.offsets.BQuarterEnd.normalize
+tseries.offsets.BQuarterEnd.rule_code
+tseries.offsets.BQuarterEnd.n
+tseries.offsets.BQuarterEnd.startingMonth
+tseries.offsets.BQuarterEnd.apply()
+tseries.offsets.BQuarterEnd.apply_index()
+tseries.offsets.BQuarterEnd.copy()
+tseries.offsets.BQuarterEnd.isAnchored()
+tseries.offsets.BQuarterEnd.onOffset()
+tseries.offsets.BQuarterEnd.is_anchored()
+tseries.offsets.BQuarterEnd.is_on_offset()
+tseries.offsets.BQuarterEnd.__call__()
+tseries.offsets.BQuarterBegin
+tseries.offsets.BQuarterBegin.freqstr
+tseries.offsets.BQuarterBegin.kwds
+tseries.offsets.BQuarterBegin.name
+tseries.offsets.BQuarterBegin.nanos
+tseries.offsets.BQuarterBegin.normalize
+tseries.offsets.BQuarterBegin.rule_code
+tseries.offsets.BQuarterBegin.n
+tseries.offsets.BQuarterBegin.startingMonth
+tseries.offsets.BQuarterBegin.apply()
+tseries.offsets.BQuarterBegin.apply_index()
+tseries.offsets.BQuarterBegin.copy()
+tseries.offsets.BQuarterBegin.isAnchored()
+tseries.offsets.BQuarterBegin.onOffset()
+tseries.offsets.BQuarterBegin.is_anchored()
+tseries.offsets.BQuarterBegin.is_on_offset()
+tseries.offsets.BQuarterBegin.__call__()
+tseries.offsets.QuarterEnd
+tseries.offsets.QuarterEnd.freqstr
+tseries.offsets.QuarterEnd.kwds
+tseries.offsets.QuarterEnd.name
+tseries.offsets.QuarterEnd.nanos
+tseries.offsets.QuarterEnd.normalize
+tseries.offsets.QuarterEnd.rule_code
+tseries.offsets.QuarterEnd.n
+tseries.offsets.QuarterEnd.startingMonth
+tseries.offsets.QuarterEnd.apply()
+tseries.offsets.QuarterEnd.apply_index()
+tseries.offsets.QuarterEnd.copy()
+tseries.offsets.QuarterEnd.isAnchored()
+tseries.offsets.QuarterEnd.onOffset()
+tseries.offsets.QuarterEnd.is_anchored()
+tseries.offsets.QuarterEnd.is_on_offset()
+tseries.offsets.QuarterEnd.__call__()
+tseries.offsets.QuarterBegin
+tseries.offsets.QuarterBegin.freqstr
+tseries.offsets.QuarterBegin.kwds
+tseries.offsets.QuarterBegin.name
+tseries.offsets.QuarterBegin.nanos
+tseries.offsets.QuarterBegin.normalize
+tseries.offsets.QuarterBegin.rule_code
+tseries.offsets.QuarterBegin.n
+tseries.offsets.QuarterBegin.startingMonth
+tseries.offsets.QuarterBegin.apply()
+tseries.offsets.QuarterBegin.apply_index()
+tseries.offsets.QuarterBegin.copy()
+tseries.offsets.QuarterBegin.isAnchored()
+tseries.offsets.QuarterBegin.onOffset()
+tseries.offsets.QuarterBegin.is_anchored()
+tseries.offsets.QuarterBegin.is_on_offset()
+tseries.offsets.QuarterBegin.__call__()
+tseries.offsets.BYearEnd
+tseries.offsets.BYearEnd.freqstr
+tseries.offsets.BYearEnd.kwds
+tseries.offsets.BYearEnd.name
+tseries.offsets.BYearEnd.nanos
+tseries.offsets.BYearEnd.normalize
+tseries.offsets.BYearEnd.rule_code
+tseries.offsets.BYearEnd.n
+tseries.offsets.BYearEnd.month
+tseries.offsets.BYearEnd.apply()
+tseries.offsets.BYearEnd.apply_index()
+tseries.offsets.BYearEnd.copy()
+tseries.offsets.BYearEnd.isAnchored()
+tseries.offsets.BYearEnd.onOffset()
+tseries.offsets.BYearEnd.is_anchored()
+tseries.offsets.BYearEnd.is_on_offset()
+tseries.offsets.BYearEnd.__call__()
+tseries.offsets.BYearBegin
+tseries.offsets.BYearBegin.freqstr
+tseries.offsets.BYearBegin.kwds
+tseries.offsets.BYearBegin.name
+tseries.offsets.BYearBegin.nanos
+tseries.offsets.BYearBegin.normalize
+tseries.offsets.BYearBegin.rule_code
+tseries.offsets.BYearBegin.n
+tseries.offsets.BYearBegin.month
+tseries.offsets.BYearBegin.apply()
+tseries.offsets.BYearBegin.apply_index()
+tseries.offsets.BYearBegin.copy()
+tseries.offsets.BYearBegin.isAnchored()
+tseries.offsets.BYearBegin.onOffset()
+tseries.offsets.BYearBegin.is_anchored()
+tseries.offsets.BYearBegin.is_on_offset()
+tseries.offsets.BYearBegin.__call__()
+tseries.offsets.YearEnd
+tseries.offsets.YearEnd.freqstr
+tseries.offsets.YearEnd.kwds
+tseries.offsets.YearEnd.name
+tseries.offsets.YearEnd.nanos
+tseries.offsets.YearEnd.normalize
+tseries.offsets.YearEnd.rule_code
+tseries.offsets.YearEnd.n
+tseries.offsets.YearEnd.month
+tseries.offsets.YearEnd.apply()
+tseries.offsets.YearEnd.apply_index()
+tseries.offsets.YearEnd.copy()
+tseries.offsets.YearEnd.isAnchored()
+tseries.offsets.YearEnd.onOffset()
+tseries.offsets.YearEnd.is_anchored()
+tseries.offsets.YearEnd.is_on_offset()
+tseries.offsets.YearEnd.__call__()
+tseries.offsets.YearBegin
+tseries.offsets.YearBegin.freqstr
+tseries.offsets.YearBegin.kwds
+tseries.offsets.YearBegin.name
+tseries.offsets.YearBegin.nanos
+tseries.offsets.YearBegin.normalize
+tseries.offsets.YearBegin.rule_code
+tseries.offsets.YearBegin.n
+tseries.offsets.YearBegin.month
+tseries.offsets.YearBegin.apply()
+tseries.offsets.YearBegin.apply_index()
+tseries.offsets.YearBegin.copy()
+tseries.offsets.YearBegin.isAnchored()
+tseries.offsets.YearBegin.onOffset()
+tseries.offsets.YearBegin.is_anchored()
+tseries.offsets.YearBegin.is_on_offset()
+tseries.offsets.YearBegin.__call__()
+tseries.offsets.FY5253
+tseries.offsets.FY5253.freqstr
+tseries.offsets.FY5253.kwds
+tseries.offsets.FY5253.name
+tseries.offsets.FY5253.nanos
+tseries.offsets.FY5253.normalize
+tseries.offsets.FY5253.rule_code
+tseries.offsets.FY5253.n
+tseries.offsets.FY5253.startingMonth
+tseries.offsets.FY5253.variation
+tseries.offsets.FY5253.weekday
+tseries.offsets.FY5253.apply()
+tseries.offsets.FY5253.apply_index()
+tseries.offsets.FY5253.copy()
+tseries.offsets.FY5253.get_rule_code_suffix()
+tseries.offsets.FY5253.get_year_end()
+tseries.offsets.FY5253.isAnchored()
+tseries.offsets.FY5253.onOffset()
+tseries.offsets.FY5253.is_anchored()
+tseries.offsets.FY5253.is_on_offset()
+tseries.offsets.FY5253.__call__()
+tseries.offsets.FY5253Quarter
+tseries.offsets.FY5253Quarter.freqstr
+tseries.offsets.FY5253Quarter.kwds
+tseries.offsets.FY5253Quarter.name
+tseries.offsets.FY5253Quarter.nanos
+tseries.offsets.FY5253Quarter.normalize
+tseries.offsets.FY5253Quarter.rule_code
+tseries.offsets.FY5253Quarter.n
+tseries.offsets.FY5253Quarter.qtr_with_extra_week
+tseries.offsets.FY5253Quarter.startingMonth
+tseries.offsets.FY5253Quarter.variation
+tseries.offsets.FY5253Quarter.weekday
+tseries.offsets.FY5253Quarter.apply()
+tseries.offsets.FY5253Quarter.apply_index()
+tseries.offsets.FY5253Quarter.copy()
+tseries.offsets.FY5253Quarter.get_rule_code_suffix()
+tseries.offsets.FY5253Quarter.get_weeks()
+tseries.offsets.FY5253Quarter.isAnchored()
+tseries.offsets.FY5253Quarter.onOffset()
+tseries.offsets.FY5253Quarter.is_anchored()
+tseries.offsets.FY5253Quarter.is_on_offset()
+tseries.offsets.FY5253Quarter.year_has_extra_week()
+tseries.offsets.FY5253Quarter.__call__()
+tseries.offsets.Easter
+tseries.offsets.Easter.freqstr
+tseries.offsets.Easter.kwds
+tseries.offsets.Easter.name
+tseries.offsets.Easter.nanos
+tseries.offsets.Easter.normalize
+tseries.offsets.Easter.rule_code
+tseries.offsets.Easter.n
+tseries.offsets.Easter.apply()
+tseries.offsets.Easter.apply_index()
+tseries.offsets.Easter.copy()
+tseries.offsets.Easter.isAnchored()
+tseries.offsets.Easter.onOffset()
+tseries.offsets.Easter.is_anchored()
+tseries.offsets.Easter.is_on_offset()
+tseries.offsets.Easter.__call__()
+tseries.offsets.Tick
+tseries.offsets.Tick.delta
+tseries.offsets.Tick.freqstr
+tseries.offsets.Tick.kwds
+tseries.offsets.Tick.name
+tseries.offsets.Tick.nanos
+tseries.offsets.Tick.normalize
+tseries.offsets.Tick.rule_code
+tseries.offsets.Tick.n
+tseries.offsets.Tick.copy()
+tseries.offsets.Tick.isAnchored()
+tseries.offsets.Tick.onOffset()
+tseries.offsets.Tick.is_anchored()
+tseries.offsets.Tick.is_on_offset()
+tseries.offsets.Tick.__call__()
+tseries.offsets.Tick.apply()
+tseries.offsets.Tick.apply_index()
+tseries.offsets.Day
+tseries.offsets.Day.delta
+tseries.offsets.Day.freqstr
+tseries.offsets.Day.kwds
+tseries.offsets.Day.name
+tseries.offsets.Day.nanos
+tseries.offsets.Day.normalize
+tseries.offsets.Day.rule_code
+tseries.offsets.Day.n
+tseries.offsets.Day.copy()
+tseries.offsets.Day.isAnchored()
+tseries.offsets.Day.onOffset()
+tseries.offsets.Day.is_anchored()
+tseries.offsets.Day.is_on_offset()
+tseries.offsets.Day.__call__()
+tseries.offsets.Day.apply()
+tseries.offsets.Day.apply_index()
+tseries.offsets.Hour
+tseries.offsets.Hour.delta
+tseries.offsets.Hour.freqstr
+tseries.offsets.Hour.kwds
+tseries.offsets.Hour.name
+tseries.offsets.Hour.nanos
+tseries.offsets.Hour.normalize
+tseries.offsets.Hour.rule_code
+tseries.offsets.Hour.n
+tseries.offsets.Hour.copy()
+tseries.offsets.Hour.isAnchored()
+tseries.offsets.Hour.onOffset()
+tseries.offsets.Hour.is_anchored()
+tseries.offsets.Hour.is_on_offset()
+tseries.offsets.Hour.__call__()
+tseries.offsets.Hour.apply()
+tseries.offsets.Hour.apply_index()
+tseries.offsets.Minute
+tseries.offsets.Minute.delta
+tseries.offsets.Minute.freqstr
+tseries.offsets.Minute.kwds
+tseries.offsets.Minute.name
+tseries.offsets.Minute.nanos
+tseries.offsets.Minute.normalize
+tseries.offsets.Minute.rule_code
+tseries.offsets.Minute.n
+tseries.offsets.Minute.copy()
+tseries.offsets.Minute.isAnchored()
+tseries.offsets.Minute.onOffset()
+tseries.offsets.Minute.is_anchored()
+tseries.offsets.Minute.is_on_offset()
+tseries.offsets.Minute.__call__()
+tseries.offsets.Minute.apply()
+tseries.offsets.Minute.apply_index()
+tseries.offsets.Second
+tseries.offsets.Second.delta
+tseries.offsets.Second.freqstr
+tseries.offsets.Second.kwds
+tseries.offsets.Second.name
+tseries.offsets.Second.nanos
+tseries.offsets.Second.normalize
+tseries.offsets.Second.rule_code
+tseries.offsets.Second.n
+tseries.offsets.Second.copy()
+tseries.offsets.Second.isAnchored()
+tseries.offsets.Second.onOffset()
+tseries.offsets.Second.is_anchored()
+tseries.offsets.Second.is_on_offset()
+tseries.offsets.Second.__call__()
+tseries.offsets.Second.apply()
+tseries.offsets.Second.apply_index()
+tseries.offsets.Milli
+tseries.offsets.Milli.delta
+tseries.offsets.Milli.freqstr
+tseries.offsets.Milli.kwds
+tseries.offsets.Milli.name
+tseries.offsets.Milli.nanos
+tseries.offsets.Milli.normalize
+tseries.offsets.Milli.rule_code
+tseries.offsets.Milli.n
+tseries.offsets.Milli.copy()
+tseries.offsets.Milli.isAnchored()
+tseries.offsets.Milli.onOffset()
+tseries.offsets.Milli.is_anchored()
+tseries.offsets.Milli.is_on_offset()
+tseries.offsets.Milli.__call__()
+tseries.offsets.Milli.apply()
+tseries.offsets.Milli.apply_index()
+tseries.offsets.Micro
+tseries.offsets.Micro.delta
+tseries.offsets.Micro.freqstr
+tseries.offsets.Micro.kwds
+tseries.offsets.Micro.name
+tseries.offsets.Micro.nanos
+tseries.offsets.Micro.normalize
+tseries.offsets.Micro.rule_code
+tseries.offsets.Micro.n
+tseries.offsets.Micro.copy()
+tseries.offsets.Micro.isAnchored()
+tseries.offsets.Micro.onOffset()
+tseries.offsets.Micro.is_anchored()
+tseries.offsets.Micro.is_on_offset()
+tseries.offsets.Micro.__call__()
+tseries.offsets.Micro.apply()
+tseries.offsets.Micro.apply_index()
+tseries.offsets.Nano
+tseries.offsets.Nano.delta
+tseries.offsets.Nano.freqstr
+tseries.offsets.Nano.kwds
+tseries.offsets.Nano.name
+tseries.offsets.Nano.nanos
+tseries.offsets.Nano.normalize
+tseries.offsets.Nano.rule_code
+tseries.offsets.Nano.n
+tseries.offsets.Nano.copy()
+tseries.offsets.Nano.isAnchored()
+tseries.offsets.Nano.onOffset()
+tseries.offsets.Nano.is_anchored()
+tseries.offsets.Nano.is_on_offset()
+tseries.offsets.Nano.__call__()
+tseries.offsets.Nano.apply()
+tseries.offsets.Nano.apply_index()
+core.window.rolling.Rolling.count()
+core.window.rolling.Rolling.sum()
+core.window.rolling.Rolling.mean()
+core.window.rolling.Rolling.median()
+core.window.rolling.Rolling.var(ddof=1, *args, **kwargs)
+core.window.rolling.Rolling.std(ddof=1, *args, **kwargs)
+core.window.rolling.Rolling.min()
+core.window.rolling.Rolling.max()
+core.window.rolling.Rolling.corr(other=None, pairwise=None, **kwargs)
+core.window.rolling.Rolling.cov(other=None, pairwise=None, ddof=1, **kwargs)
+core.window.rolling.Rolling.skew()
+core.window.rolling.Rolling.kurt()
+core.window.rolling.Rolling.apply(func, raw=False, engine=None, engine_kwargs=None, args=None, kwargs=None)
+core.window.rolling.Rolling.aggregate(func, *args, **kwargs)
+core.window.rolling.Rolling.quantile(quantile, interpolation='linear', **kwargs)
+core.window.rolling.Window.mean()
+core.window.rolling.Window.sum()
+core.window.rolling.Window.var(ddof=1, *args, **kwargs)
+core.window.rolling.Window.std(ddof=1, *args, **kwargs)
+core.window.expanding.Expanding.count()
+core.window.expanding.Expanding.sum()
+core.window.expanding.Expanding.mean()
+core.window.expanding.Expanding.median()
+core.window.expanding.Expanding.var(ddof=1, *args, **kwargs)
+core.window.expanding.Expanding.std(ddof=1, *args, **kwargs)
+core.window.expanding.Expanding.min()
+core.window.expanding.Expanding.max()
+core.window.expanding.Expanding.corr(other=None, pairwise=None, **kwargs)
+core.window.expanding.Expanding.cov(other=None, pairwise=None, ddof=1, **kwargs)
+core.window.expanding.Expanding.skew()
+core.window.expanding.Expanding.kurt()
+core.window.expanding.Expanding.apply(func, raw=False, engine=None, engine_kwargs=None, args=None, kwargs=None)
+core.window.expanding.Expanding.aggregate()
+core.window.expanding.Expanding.quantile(quantile, interpolation='linear', **kwargs)
+core.window.ewm.ExponentialMovingWindow.mean()
+core.window.ewm.ExponentialMovingWindow.std(bias=False, *args, **kwargs)
+core.window.ewm.ExponentialMovingWindow.var(bias=False, *args, **kwargs)
+core.window.ewm.ExponentialMovingWindow.corr(other=None, pairwise=None, **kwargs)
+core.window.ewm.ExponentialMovingWindow.cov(other=None, pairwise=None, bias=False, **kwargs)
+api.indexers.BaseIndexer(index_array=None, window_size=0, **kwargs)
+api.indexers.FixedForwardWindowIndexer(index_array=None, window_size=0, **kwargs)
+api.indexers.VariableOffsetWindowIndexer(index_array=None, window_size=0, index=None, offset=None, **kwargs)
+core.groupby.GroupBy.__iter__()
+core.groupby.GroupBy.groups
+core.groupby.GroupBy.indices
+core.groupby.GroupBy.get_group(name, obj=None)
+Grouper()
+TimeGrouper()
+core.groupby.GroupBy.apply()
+core.groupby.GroupBy.agg()
+core.groupby.SeriesGroupBy.aggregate(func=None, *args, engine=None, engine_kwargs=None, **kwargs)
+core.groupby.DataFrameGroupBy.aggregate(func=None, *args, engine=None, engine_kwargs=None, **kwargs)
+core.groupby.SeriesGroupBy.transform(func, *args, engine=None, engine_kwargs=None, **kwargs)
+core.groupby.DataFrameGroupBy.transform(func, *args, engine=None, engine_kwargs=None, **kwargs)
+core.groupby.GroupBy.pipe()
+core.groupby.GroupBy.all(skipna=True)
+core.groupby.GroupBy.any(skipna=True)
+core.groupby.GroupBy.bfill(limit=None)
+core.groupby.GroupBy.backfill(limit=None)
+core.groupby.GroupBy.count()
+core.groupby.GroupBy.cumcount(ascending=True)
+core.groupby.GroupBy.cummax(axis=0, **kwargs)
+core.groupby.GroupBy.cummin(axis=0, **kwargs)
+core.groupby.GroupBy.cumprod(axis=0, *args, **kwargs)
+core.groupby.GroupBy.cumsum(axis=0, *args, **kwargs)
+core.groupby.GroupBy.ffill(limit=None)
+core.groupby.GroupBy.first(numeric_only=False, min_count=- 1)
+core.groupby.GroupBy.head(n=5)
+core.groupby.GroupBy.last(numeric_only=False, min_count=- 1)
+core.groupby.GroupBy.max(numeric_only=False, min_count=- 1)
+core.groupby.GroupBy.mean(numeric_only=True)
+core.groupby.GroupBy.median(numeric_only=True)
+core.groupby.GroupBy.min(numeric_only=False, min_count=- 1)
+core.groupby.GroupBy.ngroup(ascending=True)
+core.groupby.GroupBy.nth(n, dropna=None)
+core.groupby.GroupBy.ohlc()
+core.groupby.GroupBy.pad(limit=None)
+core.groupby.GroupBy.prod(numeric_only=True, min_count=0)
+core.groupby.GroupBy.rank(method='average', ascending=True, na_option='keep', pct=False, axis=0)
+core.groupby.GroupBy.pct_change(periods=1, fill_method='pad', limit=None, freq=None, axis=0)
+core.groupby.GroupBy.size()
+core.groupby.GroupBy.sem(ddof=1)
+core.groupby.GroupBy.std(ddof=1)
+core.groupby.GroupBy.sum(numeric_only=True, min_count=0)
+core.groupby.GroupBy.var(ddof=1)
+core.groupby.GroupBy.tail(n=5)
+core.groupby.DataFrameGroupBy.all(skipna=True)
+core.groupby.DataFrameGroupBy.any(skipna=True)
+core.groupby.DataFrameGroupBy.backfill(limit=None)
+core.groupby.DataFrameGroupBy.bfill(limit=None)
+core.groupby.DataFrameGroupBy.corr
+core.groupby.DataFrameGroupBy.count()
+core.groupby.DataFrameGroupBy.cov
+core.groupby.DataFrameGroupBy.cumcount(ascending=True)
+core.groupby.DataFrameGroupBy.cummax(axis=0, **kwargs)
+core.groupby.DataFrameGroupBy.cummin(axis=0, **kwargs)
+core.groupby.DataFrameGroupBy.cumprod(axis=0, *args, **kwargs)
+core.groupby.DataFrameGroupBy.cumsum(axis=0, *args, **kwargs)
+core.groupby.DataFrameGroupBy.describe()
+core.groupby.DataFrameGroupBy.diff
+core.groupby.DataFrameGroupBy.ffill(limit=None)
+core.groupby.DataFrameGroupBy.fillna
+core.groupby.DataFrameGroupBy.filter(func, dropna=True, *args, **kwargs)
+core.groupby.DataFrameGroupBy.hist
+core.groupby.DataFrameGroupBy.idxmax
+core.groupby.DataFrameGroupBy.idxmin
+core.groupby.DataFrameGroupBy.mad
+core.groupby.DataFrameGroupBy.nunique(dropna=True)
+core.groupby.DataFrameGroupBy.pad(limit=None)
+core.groupby.DataFrameGroupBy.pct_change(periods=1, fill_method='pad', limit=None, freq=None, axis=0)
+core.groupby.DataFrameGroupBy.plot
+core.groupby.DataFrameGroupBy.quantile(q=0.5, interpolation='linear')
+core.groupby.DataFrameGroupBy.rank(method='average', ascending=True, na_option='keep', pct=False, axis=0)
+core.groupby.DataFrameGroupBy.resample()
+core.groupby.DataFrameGroupBy.sample(n=None, frac=None, replace=False, weights=None, random_state=None)
+core.groupby.DataFrameGroupBy.shift(periods=1, freq=None, axis=0, fill_value=None)
+core.groupby.DataFrameGroupBy.size()
+core.groupby.DataFrameGroupBy.skew
+core.groupby.DataFrameGroupBy.take
+core.groupby.DataFrameGroupBy.tshift
+core.groupby.SeriesGroupBy.hist
+core.groupby.SeriesGroupBy.nlargest
+core.groupby.SeriesGroupBy.nsmallest
+core.groupby.SeriesGroupBy.nunique(dropna=True)
+core.groupby.SeriesGroupBy.unique
+core.groupby.SeriesGroupBy.value_counts(normalize=False, sort=True, ascending=False, bins=None, dropna=True)
+core.groupby.SeriesGroupBy.is_monotonic_increasing
+core.groupby.SeriesGroupBy.is_monotonic_decreasing
+core.groupby.DataFrameGroupBy.corrwith
+core.groupby.DataFrameGroupBy.boxplot(subplots=True, column=None, fontsize=None, rot=0, grid=True, ax=None, figsize=None, layout=None, sharex=False, sharey=True, backend=None, **kwargs)
+core.resample.Resampler.__iter__()
+core.resample.Resampler.groups
+core.resample.Resampler.indices
+core.resample.Resampler.get_group(name, obj=None)
+core.resample.Resampler.apply()
+core.resample.Resampler.aggregate()
+core.resample.Resampler.transform()
+core.resample.Resampler.pipe()
+core.resample.Resampler.ffill(limit=None)
+core.resample.Resampler.backfill(limit=None)
+core.resample.Resampler.bfill(limit=None)
+core.resample.Resampler.pad(limit=None)
+core.resample.Resampler.nearest(limit=None)
+core.resample.Resampler.fillna(method, limit=None)
+core.resample.Resampler.asfreq(fill_value=None)
+core.resample.Resampler.interpolate(method='linear', axis=0, limit=None, inplace=False, limit_direction='forward', limit_area=None, downcast=None, **kwargs)
+core.resample.Resampler.count()
+core.resample.Resampler.nunique(_method='nunique')
+core.resample.Resampler.first(_method='first', *args, **kwargs)
+core.resample.Resampler.last(_method='last', *args, **kwargs)
+core.resample.Resampler.max(_method='max', *args, **kwargs)
+core.resample.Resampler.mean(_method='mean', *args, **kwargs)
+core.resample.Resampler.median(_method='median', *args, **kwargs)
+core.resample.Resampler.min(_method='min', *args, **kwargs)
+core.resample.Resampler.ohlc(_method='ohlc', *args, **kwargs)
+core.resample.Resampler.prod(_method='prod', min_count=0, *args, **kwargs)
+core.resample.Resampler.size()
+core.resample.Resampler.sem(_method='sem', *args, **kwargs)
+core.resample.Resampler.std(ddof=1, *args, **kwargs)
+core.resample.Resampler.sum(_method='sum', min_count=0, *args, **kwargs)
+core.resample.Resampler.var(ddof=1, *args, **kwargs)
+core.resample.Resampler.quantile(q=0.5, **kwargs)
+io.formats.style.Styler(data, precision=None, table_styles=None, uuid=None, caption=None, table_attributes=None, cell_ids=True, na_rep=None)
+io.formats.Styler.from_custom_template()
+io.formats.Styler.env = <jinja2.environment.Environment object>
+io.formats.Styler.template = <Template 'html.tpl'>
+io.formats.Styler.loader = <jinja2.loaders.PackageLoader object>
+io.formats.Styler.apply(func, axis=0, subset=None, **kwargs)
+io.formats.Styler.applymap(func, subset=None, **kwargs)
+io.formats.Styler.where(cond, value, other=None, subset=None, **kwargs)
+io.formats.Styler.format(formatter, subset=None, na_rep=None)
+io.formats.Styler.set_precision()
+io.formats.Styler.set_table_styles()
+io.formats.Styler.set_table_attributes()
+io.formats.Styler.set_caption()
+io.formats.Styler.set_properties(subset=None, **kwargs)
+io.formats.Styler.set_uuid()
+io.formats.Styler.set_na_rep()
+io.formats.Styler.clear()
+io.formats.Styler.pipe()
+io.formats.Styler.highlight_max(subset=None, color='yellow', axis=0)
+io.formats.Styler.highlight_min(subset=None, color='yellow', axis=0)
+io.formats.Styler.highlight_null(null_color='red', subset=None)
+io.formats.Styler.background_gradient(cmap='PuBu', low=0, high=0, axis=0, subset=None, text_color_threshold=0.408, vmin=None, vmax=None)
+io.formats.Styler.bar(subset=None, axis=0, color='#d65f5f', width=100, align='left', vmin=None, vmax=None)
+io.formats.Styler.render()
+io.formats.Styler.export()
+io.formats.Styler.use()
+io.formats.Styler.to_excel(excel_writer, sheet_name='Sheet1', na_rep='', float_format=None, columns=None, header=True, index=True, index_label=None, startrow=0, startcol=0, engine=None, merge_cells=True, encoding=None, inf_rep='inf', verbose=True, freeze_panes=None)
+plotting.andrews_curves(frame, class_column, ax=None, samples=200, color=None, colormap=None, **kwargs)
+plotting.autocorrelation_plot(series, ax=None, **kwargs)
+plotting.bootstrap_plot(series, fig=None, size=50, samples=500, **kwds)
+plotting.boxplot(data, column=None, by=None, ax=None, fontsize=None, rot=0, grid=True, figsize=None, layout=None, return_type=None, **kwargs)
+plotting.deregister_matplotlib_converters()
+plotting.lag_plot(series, lag=1, ax=None, **kwds)
+plotting.parallel_coordinates(frame, class_column, cols=None, ax=None, color=None, use_columns=False, xticks=None, colormap=None, axvlines=True, axvlines_kwds=None, sort_labels=False, **kwargs)
+plotting.plot_params = {'xaxis.compat': False}
+plotting.radviz(frame, class_column, ax=None, color=None, colormap=None, **kwds)
+plotting.register_matplotlib_converters()
+plotting.scatter_matrix(frame, alpha=0.5, figsize=None, ax=None, grid=False, diagonal='hist', marker='.', density_kwds=None, hist_kwds=None, range_padding=0.05, **kwargs)
+plotting.table(ax, data, rowLabels=None, colLabels=None, **kwargs)
+describe_option(pat, _print_desc=False) = <pandas._config.config.CallableDynamicDoc object>
+reset_option() = <pandas._config.config.CallableDynamicDoc object>
+get_option() = <pandas._config.config.CallableDynamicDoc object>
+set_option() = <pandas._config.config.CallableDynamicDoc object>
+option_context()
+testing.assert_frame_equal(left, right, check_dtype=True, check_index_type='equiv', check_column_type='equiv', check_frame_type=True, check_less_precise=<object object>, check_names=True, by_blocks=False, check_exact=False, check_datetimelike_compat=False, check_categorical=True, check_like=False, check_freq=True, rtol=1e-05, atol=1e-08, obj='DataFrame')
+testing.assert_series_equal(left, right, check_dtype=True, check_index_type='equiv', check_series_type=True, check_less_precise=<object object>, check_names=True, check_exact=False, check_datetimelike_compat=False, check_categorical=True, check_category_order=True, check_freq=True, rtol=1e-05, atol=1e-08, obj='Series')
+testing.assert_index_equal(left, right, exact='equiv', check_names=True, check_less_precise=<object object>, check_exact=True, check_categorical=True, rtol=1e-05, atol=1e-08, obj='Index')
+testing.assert_extension_array_equal(left, right, check_dtype=True, index_values=None, check_less_precise=<object object>, check_exact=False, rtol=1e-05, atol=1e-08)
+errors.AccessorRegistrationWarning.exception pandas.errors.AccessorRegistrationWarning
+errors.DtypeWarning.exception pandas.errors.DtypeWarning
+errors.EmptyDataError.exception pandas.errors.EmptyDataError
+errors.InvalidIndexError.exception pandas.errors.InvalidIndexError
+errors.MergeError.exception pandas.errors.MergeError
+errors.NullFrequencyError.exception pandas.errors.NullFrequencyError
+errors.NumbaUtilError.exception pandas.errors.NumbaUtilError
+errors.OutOfBoundsDatetime.exception pandas.errors.OutOfBoundsDatetime
+errors.OutOfBoundsTimedelta.exception pandas.errors.OutOfBoundsTimedelta
+errors.ParserError.exception pandas.errors.ParserError
+errors.ParserWarning.exception pandas.errors.ParserWarning
+errors.PerformanceWarning.exception pandas.errors.PerformanceWarning
+errors.UnsortedIndexError.exception pandas.errors.UnsortedIndexError
+errors.UnsupportedFunctionCall.exception pandas.errors.UnsupportedFunctionCall
+api.types.union_categoricals(to_union, sort_categories=False, ignore_order=False)
+api.types.infer_dtype()
+api.types.pandas_dtype()
+api.types.is_bool_dtype()
+api.types.is_categorical_dtype()
+api.types.is_complex_dtype()
+api.types.is_datetime64_any_dtype()
+api.types.is_datetime64_dtype()
+api.types.is_datetime64_ns_dtype()
+api.types.is_datetime64tz_dtype()
+api.types.is_extension_type()
+api.types.is_extension_array_dtype()
+api.types.is_float_dtype()
+api.types.is_int64_dtype()
+api.types.is_integer_dtype()
+api.types.is_interval_dtype()
+api.types.is_numeric_dtype()
+api.types.is_object_dtype()
+api.types.is_period_dtype()
+api.types.is_signed_integer_dtype()
+api.types.is_string_dtype()
+api.types.is_timedelta64_dtype()
+api.types.is_timedelta64_ns_dtype()
+api.types.is_unsigned_integer_dtype()
+api.types.is_sparse()
+api.types.is_dict_like()
+api.types.is_file_like()
+api.types.is_list_like()
+api.types.is_named_tuple()
+api.types.is_iterator()
+api.types.is_bool()
+api.types.is_categorical()
+api.types.is_complex()
+api.types.is_float()
+api.types.is_hashable()
+api.types.is_integer()
+api.types.is_interval()
+api.types.is_number()
+api.types.is_re()
+api.types.is_re_compilable()
+api.types.is_scalar()
+show_versions(as_json=False)

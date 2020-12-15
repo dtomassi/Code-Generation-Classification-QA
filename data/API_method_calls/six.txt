@@ -1,0 +1,52 @@
+class_types
+integer_types
+string_types
+text_type
+binary_type
+get_method_function(meth)
+get_method_self(meth)
+get_function_closure(func)
+get_function_code(func)
+get_function_defaults(func)
+get_function_globals(func)
+next(it)
+advance_iterator(it)
+callable(obj)
+iterkeys(dictionary, **kwargs)
+itervalues(dictionary, **kwargs)
+iteritems(dictionary, **kwargs)
+iterlists(dictionary, **kwargs)
+viewkeys(dictionary)
+viewvalues(dictionary)
+viewitems(dictionary)
+create_bound_method(func, obj)
+create_unbound_method(func, cls)
+Iterator
+wraps(wrapped, assigned=functools.WRAPPER_ASSIGNMENTS, updated=functools.WRAPPER_UPDATES)
+exec_(code, globals=None, locals=None)
+print_(*args, *, file=sys.stdout, end="\n", sep=" ", flush=False)
+raise_from(exc_value, exc_value_from)
+reraise(exc_type, exc_value, exc_traceback=None)
+with_metaclass(metaclass, *bases)
+add_metaclass(metaclass)
+b(data)
+u(text)
+unichr(c)
+int2byte(i)
+byte2int(bs)
+indexbytes(buf, i)
+iterbytes(buf)
+ensure_binary(s, encoding='utf-8', errors='strict')
+ensure_str(s, encoding='utf-8', errors='strict')
+ensure_text(s, encoding='utf-8', errors='strict')
+StringIO
+BytesIO
+python_2_unicode_compatible
+assertCountEqual()
+assertRaisesRegex()
+assertRegex()
+assertNotRegex()
+add_move(item)
+remove_move(name)
+MovedModule(name, old_mod, new_mod)
+MovedAttribute(name, old_mod, new_mod, old_attr=None, new_attr=None)

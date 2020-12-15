@@ -1,0 +1,104 @@
+MINYEAR
+MAXYEAR
+date
+time
+datetime
+timedelta
+tzinfo
+timezone
+timedelta(days=0, seconds=0, microseconds=0, milliseconds=0, minutes=0, hours=0, weeks=0)
+timedelta.min
+timedelta.max
+timedelta.resolution
+timedelta.total_seconds()
+date(year, month, day)
+today()
+fromtimestamp(timestamp)
+fromordinal(ordinal)
+fromisoformat(date_string)
+fromisocalendar(year, week, day)
+date.min
+date.max
+date.resolution
+date.year
+date.month
+date.day
+date.replace(year=self.year, month=self.month, day=self.day)
+date.timetuple()
+date.toordinal()
+date.weekday()
+date.isoweekday()
+date.isocalendar()
+date.isoformat()
+date.__str__()
+date.ctime()
+date.strftime(format)
+date.__format__(format)
+today()
+now(tz=None)
+utcnow()
+fromtimestamp(timestamp, tz=None)
+utcfromtimestamp(timestamp)
+fromordinal(ordinal)
+combine(date, time, tzinfo=self.tzinfo)
+fromisoformat(date_string)
+fromisocalendar(year, week, day)
+strptime(date_string, format)
+min
+resolution
+year
+month
+day
+hour
+minute
+second
+microsecond
+tzinfo
+fold
+date()
+time()
+timetz()
+replace()
+astimezone(tz=None)
+utcoffset()
+dst()
+tzname()
+timetuple()
+utctimetuple()
+toordinal()
+timestamp()
+weekday()
+isoweekday()
+isocalendar()
+isoformat(sep='T', timespec='auto')
+__str__()
+ctime()
+strftime(format)
+__format__(format)
+time()
+time.min
+time.max
+time.resolution
+time.hour
+time.minute
+time.second
+time.microsecond
+time.tzinfo
+time.fold
+time.fromisoformat(time_string)
+time.isoformat(timespec='auto')
+time.__str__()
+time.strftime(format)
+time.__format__(format)
+time.utcoffset()
+time.dst()
+time.tzname()
+tzinfo.utcoffset(dt)
+tzinfo.dst(dt)
+tzinfo.tzname(dt)
+tzinfo.fromutc(dt)
+timezone.utcoffset(dt)
+timezone.tzname(dt)
+timezone.dst(dt)
+timezone.fromutc(dt)
+timezone.utc

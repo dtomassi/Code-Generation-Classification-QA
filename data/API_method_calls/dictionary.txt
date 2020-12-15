@@ -1,0 +1,20 @@
+dict(**kwarg)
+dict(mapping, **kwarg)
+dict(iterable, **kwarg)
+dict[key] = value
+del dict[key]
+key in dict
+key not in dict
+iter(dict)
+clear()
+copy()
+fromkeys(iterable[, value])
+get(key[, default])
+items()
+keys()
+pop()
+popitem()
+reversed(dict)
+setdefault(key[, default])
+update([other])
+values()

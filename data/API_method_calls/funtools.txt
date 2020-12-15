@@ -1,0 +1,12 @@
+cache(user_function)
+cached_property(func)
+cmp_to_key(func)
+lru_cache(user_function)
+total_ordering
+partial(func, /, *args, **keywords)
+partialmethod(func, /, *args, **keywords)
+reduce(function, iterable[, initializer])
+singledispatch
+singledispatchmethod(func)
+update_wrapper(wrapper, wrapped, assigned=WRAPPER_ASSIGNMENTS, updated=WRAPPER_UPDATES)
+wraps(wrapped, assigned=WRAPPER_ASSIGNMENTS, updated=WRAPPER_UPDATES

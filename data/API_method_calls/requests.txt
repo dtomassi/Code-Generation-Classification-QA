@@ -1,0 +1,7 @@
+delete()
+get()
+head()
+patch()
+post()
+put()
+request()

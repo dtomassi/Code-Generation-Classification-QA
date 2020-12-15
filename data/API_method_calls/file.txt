@@ -1,0 +1,9 @@
+open(filename, mode)
+closed
+close()
+read(size)
+readline()
+readlines()
+write(string)
+seek(offset, whence)
+tell()

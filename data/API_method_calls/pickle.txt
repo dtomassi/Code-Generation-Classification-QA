@@ -1,0 +1,9 @@
+HIGHEST_PROTOCOL
+DEFAULT_PROTOCOL
+dump(obj, file, protocol=None, *, fix_imports=True, buffer_callback=None)
+dumps(obj, protocol=None, *, fix_imports=True, buffer_callback=None)
+load(file, *, fix_imports=True, encoding="ASCII", errors="strict", buffers=None)
+loads(data, /, *, fix_imports=True, encoding="ASCII", errors="strict", buffers=None)
+PickleError
+PicklingError
+UnpicklingError

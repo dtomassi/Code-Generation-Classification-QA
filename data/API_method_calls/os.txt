@@ -1,0 +1,350 @@
+name
+ctermid()
+environ
+environb
+chdir(path)
+fchdir(fd)
+getcwd()
+fsencode(filename)
+fsdecode(filename)
+fspath(path)
+getenv(key, default=None)
+PathLike()
+getenv(key, default=None)
+getenvb(key, default=None)
+get_exec_path(env=None)
+getegid()
+geteuid()
+getgid()
+getgrouplist(user, group)
+getgroups()
+getlogin()
+getpgid(pid)
+getpgrp()
+getpid()
+getppid()
+getpriority(which, who)
+PRIO_PROCESS
+PRIO_PGRP
+PRIO_USER
+getresuid()
+getresgid()
+getuid()
+initgroups(username, gid)
+putenv(key, value)
+setegid(egid)
+seteuid(euid)
+setgid(gid)
+setgroups(groups)
+setpgrp()
+setpgid(pid, pgrp)
+setpriority(which, who, priority)
+setregid(rgid, egid)
+setresgid(rgid, egid, sgid)
+setresuid(ruid, euid, suid)
+setreuid(ruid, euid)
+getsid(pid)
+setsid()
+setuid(uid)
+strerror(code)
+supports_bytes_environ
+umask(mask)
+uname()
+unsetenv(key)
+fdopen(fd, *args, **kwargs)
+close(fd)
+closerange(fd_low, fd_high)
+copy_file_range(src, dst, count, offset_src=None, offset_dst=None)
+device_encoding(fd)
+dup(fd)
+dup2(fd, fd2, inheritable=True)
+fchmod(fd, mode)
+fchown(fd, uid, gid)
+fdatasync(fd)
+fpathconf(fd, name)
+fstat(fd)
+fstatvfs(fd)
+fsync(fd)
+ftruncate(fd, length)
+get_blocking(fd)
+isatty(fd)
+lockf(fd, cmd, len)
+F_LOCK
+F_TLOCK
+F_ULOCK
+F_TEST
+lseek(fd, pos, how)
+SEEK_SET
+SEEK_CUR
+SEEK_END
+open(path, flags, mode=0o777, *, dir_fd=None)
+O_RDONLY
+O_WRONLY
+O_RDWR
+O_APPEND
+O_CREAT
+O_EXCL
+O_TRUNC
+O_DSYNC
+O_RSYNC
+O_SYNC
+O_NDELAY
+O_NONBLOCK
+O_NOCTTY
+O_CLOEXEC
+O_BINARY
+O_NOINHERIT
+O_SHORT_LIVED
+O_TEMPORARY
+O_RANDOM
+O_SEQUENTIAL
+O_TEXT
+O_ASYNC
+O_DIRECT
+O_DIRECTORY
+O_NOFOLLOW
+O_NOATIME
+O_PATH
+O_TMPFILE
+O_SHLOCK
+O_EXLOCK
+openpty()
+pipe()
+pipe2(flags)
+posix_fallocate(fd, offset, len)
+posix_fadvise(fd, offset, len, advice)
+POSIX_FADV_NORMAL
+POSIX_FADV_SEQUENTIAL
+POSIX_FADV_RANDOM
+POSIX_FADV_NOREUSE
+POSIX_FADV_WILLNEED
+POSIX_FADV_DONTNEED
+pread(fd, n, offset)
+preadv(fd, buffers, offset, flags=0)
+RWF_NOWAIT
+RWF_HIPRI
+pwrite(fd, str, offset)
+pwritev(fd, buffers, offset, flags=0)
+RWF_DSYNC
+RWF_SYNC
+read(fd, n)
+sendfile(out_fd, in_fd, offset, count)
+sendfile(out_fd, in_fd, offset, count, headers=(), trailers=(), flags=0)
+set_blocking(fd, blocking)
+SF_NODISKIO
+SF_MNOWAIT
+SF_SYNC
+readv(fd, buffers)
+tcgetpgrp(fd)
+tcsetpgrp(fd, pg)
+ttyname(fd)
+write(fd, str)
+writev(fd, buffers)
+get_terminal_size(fd=STDOUT_FILENO)
+get_inheritable(fd)
+set_inheritable(fd, inheritable)
+get_handle_inheritable(handle)
+set_handle_inheritable(handle, inheritable)
+access(path, mode, *, dir_fd=None, effective_ids=False, follow_symlinks=True)
+F_OK
+R_OK
+W_OK
+X_OK
+chdir(path)
+chflags(path, flags, *, follow_symlinks=True)
+chmod(path, mode, *, dir_fd=None, follow_symlinks=True)
+chown(path, uid, gid, *, dir_fd=None, follow_symlinks=True)
+chroot(path)
+fchdir(fd)
+getcwd()
+getcwdb()
+lchflags(path, flags)
+lchmod(path, mode)
+lchown(path, uid, gid)
+link(src, dst, *, src_dir_fd=None, dst_dir_fd=None, follow_symlinks=True)
+listdir(path='.')
+lstat(path, *, dir_fd=None)
+mkdir(path, mode=0o777, *, dir_fd=None)
+makedirs(name, mode=0o777, exist_ok=False)
+mkfifo(path, mode=0o666, *, dir_fd=None)
+mknod(path, mode=0o600, device=0, *, dir_fd=None)
+major(device)
+minor(device)
+makedev(major, minor)
+pathconf(path, name)
+pathconf_names
+readlink(path, *, dir_fd=None)
+remove(path, *, dir_fd=None)
+removedirs(name)
+rename(src, dst, *, src_dir_fd=None, dst_dir_fd=None)
+renames(old, new)
+replace(src, dst, *, src_dir_fd=None, dst_dir_fd=None)
+rmdir(path, *, dir_fd=None)
+scandir(path='.')
+stat(path, *, dir_fd=None, follow_symlinks=True)
+statvfs(path)
+supports_dir_fd
+supports_effective_ids
+supports_fd
+supports_follow_symlinks
+symlink(src, dst, target_is_directory=False, *, dir_fd=None)
+sync()
+truncate(path, length)
+unlink(path, *, dir_fd=None)¶
+utime(path, times=None, *, [ns, ]dir_fd=None, follow_symlinks=True)
+walk(top, topdown=True, onerror=None, followlinks=False)
+fwalk(top='.', topdown=True, onerror=None, *, follow_symlinks=False, dir_fd=None)
+memfd_create(name[, flags=os.MFD_CLOEXEC])
+MFD_CLOEXEC
+MFD_ALLOW_SEALING
+MFD_HUGETLB
+MFD_HUGE_SHIFT
+MFD_HUGE_MASK
+MFD_HUGE_64KB
+MFD_HUGE_512KB
+MFD_HUGE_1MB
+MFD_HUGE_2MB
+MFD_HUGE_8MB
+MFD_HUGE_16MB
+MFD_HUGE_32MB
+MFD_HUGE_256MB
+MFD_HUGE_512MB
+MFD_HUGE_1GB
+MFD_HUGE_2GB
+MFD_HUGE_16GB
+getxattr(path, attribute, *, follow_symlinks=True)
+listxattr(path=None, *, follow_symlinks=True)
+removexattr(path, attribute, *, follow_symlinks=True)
+setxattr(path, attribute, value, flags=0, *, follow_symlinks=True)
+XATTR_SIZE_MAX
+XATTR_CREATE
+XATTR_REPLACE
+abort()
+add_dll_directory(path)
+execl(path, arg0, arg1, ...)
+execle(path, arg0, arg1, ..., env)
+execlp(file, arg0, arg1, ...)
+execlpe(file, arg0, arg1, ..., env)
+execv(path, args)
+execve(path, args, env)
+execvp(file, args)
+execvpe(file, args, env)
+_exit(n)
+EX_OK
+EX_USAGE
+EX_DATAERR
+EX_NOINPUT
+EX_NOUSER
+EX_NOHOST
+EX_UNAVAILABLE
+EX_SOFTWARE
+EX_OSERR
+EX_OSFILE
+EX_CANTCREAT
+EX_IOERR
+EX_TEMPFAIL
+EX_PROTOCOL
+EX_NOPERM
+EX_CONFIG
+EX_NOTFOUND
+fork()
+forkpty()
+kill(pid, sig)
+killpg(pgid, sig)
+nice(increment)
+pidfd_open(pid, flags=0)
+plock(op)
+popen(cmd, mode='r', buffering=-1)
+posix_spawn(path, argv, env, *, file_actions=None, setpgroup=None, resetids=False, setsid=False, setsigmask=(), setsigdef=(), scheduler=None)
+posix_spawnp(path, argv, env, *, file_actions=None, setpgroup=None, resetids=False, setsid=False, setsigmask=(), setsigdef=(), scheduler=None)
+register_at_fork(*, before=None, after_in_parent=None, after_in_child=None)
+spawnl(mode, path, ...)
+spawnle(mode, path, ..., env)
+spawnlp(mode, file, ...)
+spawnlpe(mode, file, ..., env)
+spawnv(mode, path, args)
+spawnve(mode, path, args, env)
+spawnvp(mode, file, args)
+spawnvpe(mode, file, args, env)
+P_NOWAIT
+P_NOWAITO
+P_WAIT
+P_DETACH
+P_OVERLAY
+startfile(path[, operation])
+system(command)
+times()
+wait()
+waitid(idtype, id, options)
+P_PID
+P_PGID
+P_ALL
+P_PIDFD
+WEXITED
+WSTOPPED
+WNOWAIT
+CLD_EXITED
+CLD_KILLED
+CLD_DUMPED
+CLD_TRAPPED
+CLD_STOPPED
+CLD_CONTINUED
+waitpid(pid, options)
+wait3(options)
+wait4(pid, options)
+waitstatus_to_exitcode(status)
+WNOHANG
+WCONTINUED
+WUNTRACED
+WCOREDUMP(status)
+WIFCONTINUED(status)
+WIFSTOPPED(status)
+WIFSIGNALED(status)
+WIFEXITED(status)
+WEXITSTATUS(status)
+WSTOPSIG(status)
+WTERMSIG(status)
+SCHED_OTHER
+SCHED_BATCH
+SCHED_IDLE
+SCHED_SPORADIC
+SCHED_FIFO
+SCHED_RR
+SCHED_RESET_ON_FORK
+sched_get_priority_min(policy)
+sched_param(sched_priority)
+sched_get_priority_max(policy)
+sched_get_priority_min(policy)
+sched_setscheduler(pid, policy, param)
+sched_getscheduler(pid)
+sched_setparam(pid, param)
+sched_getparam(pid)
+sched_rr_get_interval(pid)
+sched_yield()
+sched_setaffinity(pid, mask)
+sched_getaffinity(pid)
+confstr(name)
+confstr_names
+os.cpu_count()
+sysconf(name)
+sysconf_names
+curdir
+pardir
+sep
+altsep
+extsep
+pathsep
+defpath
+linesep
+devnull
+RTLD_LAZY
+RTLD_NOW
+RTLD_GLOBAL
+RTLD_LOCAL
+RTLD_NODELETE
+RTLD_NOLOAD
+RTLD_DEEPBIND
+getrandom(size, flags=0)
+urandom(size)
+GRND_NONBLOCK
+GRND_RANDOM
