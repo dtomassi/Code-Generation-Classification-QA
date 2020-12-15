@@ -1,0 +1,9 @@
+Seq2Seq Results
+
+Test Loss: 1.30003
+Test Accuracy: 76.70775%
+
+Binary Classifier Results
+
+Binary Test loss:  0.6926584243774414
+Binary Test accuracy:  51.5999972820282 %
