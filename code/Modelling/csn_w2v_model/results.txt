@@ -1,0 +1,7 @@
+Seq2Seq
+Test loss:  1.127774953842163
+Test accuracy:  75.33904314041138%
+
+Binary
+Binary Model Test loss:  0.6929115653038025
+Binary Model Test accuracy:  51.499998569488525%
