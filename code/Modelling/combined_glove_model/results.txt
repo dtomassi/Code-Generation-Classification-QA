@@ -1,7 +1,7 @@
 Seq2Seq Results
 
 Test Loss: 0.959522545337677
-Test Accuracy: 52.10000276565552%
+Test Accuracy: 78.32955718040466%
 
 Binary Classifier Results
 
