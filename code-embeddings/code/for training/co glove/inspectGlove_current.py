@@ -7,8 +7,8 @@ from pathlib import Path
 
 ### Load in Model ###
 p = str(Path.cwd())
-glove_f_co = datapath(p + '/vectors-co.txt')
-tmp_f_co = get_tmpfile(p + '/glove_w2v_co.txt')
+glove_f_co = datapath(p + '/current-glove-vectors-mincount0.txt')
+tmp_f_co = get_tmpfile(p + '/current-glove-vectors-mincount0-as-w2v.txt')
 
 _ = glove2word2vec(glove_f_co, tmp_f_co)
 
