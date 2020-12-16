@@ -2,12 +2,10 @@
 
 Dataset found at: https://drive.google.com/drive/u/1/folders/17EXFRp9fd3f7O3mjjsC_KJK6hLgw6WbK
 
-The code and the model files for each model trained. It contains the basic results we obtained.
-
-
-To run the training files 
 
 # Modelling
+
+To run the training files 
 
 `hidden_state_model.py`: the script to run the element wise product of the hidden state and the context vector into the binary classifier
 
