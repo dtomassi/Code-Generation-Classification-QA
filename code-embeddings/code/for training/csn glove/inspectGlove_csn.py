@@ -7,8 +7,8 @@ import random
 from pathlib import Path
 
 ### Load in Model ###
-glove_f_csn = datapath(p + '/vectors-csn.txt')
-tmp_f_csn = get_tmpfile(p + '/glove_w2v_csn.txt')
+glove_f_csn = datapath(p + '/csn-glove-vectors-mincount0.txt')
+tmp_f_csn = get_tmpfile(p + '/csn-glove-vectors-mincount0-as-w2v.txt')
 
 _ = glove2word2vec(glove_f_csn, tmp_f_csn)
 

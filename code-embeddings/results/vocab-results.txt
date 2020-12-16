@@ -1,20 +1,20 @@
-Information for Combined Corpus (w2v):
-Number of words: 2231
+Information for Current Corpus (w2v):
+Number of words: 34669
 
 10 Most Frequent Words + Count:
-<VAR_NAME>: 232712
-(: 94479
-): 94366
-,: 76777
-.: 76489
-=: 51170
-[: 33005
-]: 32976
-:: 29151
-in: 12539
+<VAR_NAME>: 457640
+(: 185896
+): 185688
+,: 151976
+.: 150152
+=: 100377
+[: 64635
+]: 64580
+:: 57586
+in: 24732
 
 
-Information for CodeSearchNet + Combined Corpus (w2v):
+Information for CodeSearchNet + Current Corpus (w2v):
 Number of words: 22814
 
 10 Most Frequent Words + Count:
@@ -30,24 +30,24 @@ Number of words: 22814
 if: 69695906
 
 
-Information for Combined Corpus (GloVe):
-Number of words: 2851
+Information for Current Corpus (GloVe):
+Number of words: 39106
 
 10 Most Frequent Words + Count:
-<VAR_NAME>: 232712
-(: 94493
-): 94403
-,: 82165
-.: 76500
-=: 51499
-[: 33017
-]: 32987
-:: 29317
-in: 12719
+<VAR_NAME>: 457640
+(: 185926
+): 185758
+,: 162949
+.: 150178
+=: 101075
+[: 64664
+]: 64603
+:: 57936
+in: 25104
 
 
-Information for CodeSearchNet + Combined Corpus (GloVe):
-Number of words: 23424
+Information for CodeSearchNet + Current Corpus (GloVe):
+Number of words: 58434
 
 10 Most Frequent Words + Count:
 <VAR_NAME>: 1186319608

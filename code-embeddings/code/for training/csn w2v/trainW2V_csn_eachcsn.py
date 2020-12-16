@@ -6,7 +6,7 @@ import re
 import sys
 
 ### Load in Model ###
-model = Word2Vec.load('w2v-csn.model')
+model = Word2Vec.load('csn-w2v.model')
 
 ### Load in Corpus Text File ###
 token_words = []
@@ -38,7 +38,7 @@ model.train(sentences, total_examples=te, epochs=model.epochs)
 
 print('\n\nModel Summary:')
 print(model)
-model.save('co-w2v.bin')
+model.save('csn-w2v.model')
 
 ## Edit results with added file + model summary
 results.append("-------Model Summary--------")

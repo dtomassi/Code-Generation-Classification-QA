@@ -24,7 +24,7 @@ sentences = token_words
 model = Word2Vec(sentences, window=15, min_count=5, sg=1, iter=10)
 print('\n\nModel Summary:')
 print(model)
-model.save('w2v-csn.model')
+model.save('csn-w2v.model')
 
 ## Edit results with added file + model summary
 results.append("-------Model Summary--------")

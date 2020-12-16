@@ -9,24 +9,24 @@ from pathlib import Path
 
 ### Load in Models ###
 
-# Combined Dataset - w2v Model #
-co_model_w2v = KeyedVectors.load('combined-w2v-model.bin')
+# Current Dataset - w2v Model #
+curr_model_w2v = KeyedVectors.load('current-w2v-model-mincount0.bin')
 
-# CodeSearchNet + Combined Dataset - w2v Model #
+# CodeSearchNet + Current Dataset - w2v Model #
 csn_model_w2v_full = Word2Vec.load('csn-w2v.model')
 csn_model_w2v = csn_model_w2v_full.wv
 
-# Combined Dataset - glove Model #
+# Current Dataset - glove Model #
 p = str(Path.cwd())
-glove_f_co = datapath(p + '/combined-glove-vectors.txt')
-tmp_f_co = get_tmpfile(p + '/combined-glove-vectors-as-w2v.txt')
+glove_f_co = datapath(p + '/current-glove-vectors-mincount0.txt')
+tmp_f_co = get_tmpfile(p + '/current-glove-vectors-as-w2v.txt')
 
 _ = glove2word2vec(glove_f_co, tmp_f_co)
 
-co_model_g = KeyedVectors.load_word2vec_format(tmp_f_co)
+curr_model_g = KeyedVectors.load_word2vec_format(tmp_f_co)
 
-# CodeSearchNet + Combined Dataset - glove Model #
-glove_f_csn = datapath(p + '/csn-glove-vectors.txt')
+# CodeSearchNet + Current Dataset - glove Model #
+glove_f_csn = datapath(p + '/csn-glove-vectors-mincount0.txt')
 tmp_f_csn = get_tmpfile(p + '/csn-glove-vectors-as-w2v.txt')
 
 _ = glove2word2vec(glove_f_csn, tmp_f_csn)
@@ -55,9 +55,9 @@ def Analysis(model,color,label,l1,l2):
 
     if (l1=='g'):
         if l2=='co':
-            file = 'combined-glove-vocab.txt'
+            file = 'current-glove-vocab-mincount0.txt'
         else:
-            file = 'csn-glove-vocab.txt'
+            file = 'csn-glove-vocab-mincount0.txt'
         tfile = open(file, 'r')
         g_count = {}
         temp = []
@@ -153,16 +153,7 @@ def Analysis(model,color,label,l1,l2):
             plt.figure(figsize=(7,4))
             plt.scatter(result[0:, 0], result[0:, 1], c=color, marker='.')
             words = list(model.vocab)
-            #random.seed(0)
-            """
-            wl = []
-            index = random.sample(range(w_size-1),15)
-            for i in index:
-                wl.append(words[i])
-
-            for i, word in enumerate(wl):
-                plt.annotate(word, xy=(result[index[i],0], result[index[i],1]), fontsize='small')
-            """
+            
             plt.title('PCA Graph for All Tokens: ' + label)
             name = 'PCAall-' + im_name
             plt.savefig(name)
@@ -198,14 +189,14 @@ def Analysis(model,color,label,l1,l2):
 
     setUp(all=True,top=10)
 
-# Combined Dataset - w2v Model #
-Analysis(co_model_w2v,'firebrick','Combined Corpus (w2v)','w','co')
+# Current Dataset - w2v Model #
+Analysis(curr_model_w2v,'firebrick','Current Corpus (w2v)','w','co')
 
-# CodeSearchNet + Combined Dataset - w2v Model #
-Analysis(csn_model_w2v,'purple','CodeSearchNet + Combined Corpus (w2v)','w','csn')
+# CodeSearchNet + Current Dataset - w2v Model #
+Analysis(csn_model_w2v,'purple','CodeSearchNet + Current Corpus (w2v)','w','csn')
 
-# Combined Dataset - glove Model #
-Analysis(co_model_g,'tomato','Combined Corpus (GloVe)','g','co')
+# Current Dataset - glove Model #
+Analysis(curr_model_g,'tomato','Current Corpus (GloVe)','g','co')
 
-# CodeSearchNet + Combined Dataset - glove Model #
-Analysis(csn_model_g,'cadetblue','CodeSearchNet + Combined Corpus (GloVe)','g','csn')
+# CodeSearchNet + Current Dataset - glove Model #
+Analysis(csn_model_g,'cadetblue','CodeSearchNet + Current Corpus (GloVe)','g','csn')

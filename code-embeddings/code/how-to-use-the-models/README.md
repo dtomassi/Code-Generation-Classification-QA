@@ -9,13 +9,13 @@ from gensim.models import KeyedVectors
 
 Then load in the models with the following code:
 
-***Combined Dataset Model:***
+***Current Dataset Model:***
 
 ```
-co_model_w2v = KeyedVectors.load('combined-w2v-model.bin')
+co_model_w2v = KeyedVectors.load('current-w2v-model-mincount0.bin')
 ```
 
-***CodeSearchNet + Combined Dataset Model:***
+***CodeSearchNet + Current Dataset Model:***
 
 ```
 csn_model_w2v_full = Word2Vec.load('csn-w2v.model')
@@ -35,23 +35,23 @@ from pathlib import Path
 
 Then load in the models with the following code:
 
-***Combined Dataset Model:***
+***Current Dataset Model:***
 
 ```
 p = str(Path.cwd())
-glove_f_co = datapath(p + '/combined-glove-vectors.txt')
-tmp_f_co = get_tmpfile(p + '/combined-glove-vectors-as-w2v.txt')
+glove_f_co = datapath(p + '/current-glove-vectors-mincount0.txt')
+tmp_f_co = get_tmpfile(p + '/current-glove-vectors-mincount0-as-w2v.txt')
 
 _ = glove2word2vec(glove_f_co, tmp_f_co)
 
 co_model_g = KeyedVectors.load_word2vec_format(tmp_f_co)
 ```
 
-***CodeSearchNet + Combined Dataset Model:***
+***CodeSearchNet + Current Dataset Model:***
 
 ```
-glove_f_csn = datapath(p + '/csn-glove-vectors.txt')
-tmp_f_csn = get_tmpfile(p + '/csn-glove-vectors-as-w2v.txt')
+glove_f_csn = datapath(p + '/csn-glove-vectors-mincount0.txt')
+tmp_f_csn = get_tmpfile(p + '/csn-glove-vectors-mincount0-as-w2v.txt')
 
 _ = glove2word2vec(glove_f_csn, tmp_f_csn)
 
