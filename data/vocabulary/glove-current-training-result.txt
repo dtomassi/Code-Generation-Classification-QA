@@ -1,0 +1,40 @@
+Dataset: Current, Embeddings: GloVe 
+
+-------Model Summary--------
+<gensim.models.keyedvectors.Word2VecKeyedVectors object at 0x126507310>
+
+-------Similarity Tests-------
+SG: Similarity between 'print' and 'in': 0.6023448
+SG: Similarity between 'for' and 'in': 0.916461
+SG: Similarity between 'if' and 'else': 0.7721719
+SG: Similarity between 'import' and 'from': 0.9378327
+
+-------Most Similar Tokens Tests-------
+Most similar tokens to "for":
+1. in: 0.9164610505104065
+2. enumerate: 0.8317314386367798
+3. range: 0.7753329873085022
+4. <VAR_NAME>: 0.7593400478363037
+5. items: 0.7520445585250854
+6. else: 0.7487058043479919
+7. list: 0.7464114427566528
+8. zip: 0.740487813949585
+9. 343.01: 0.733857274055481
+10. len: 0.7325542569160461
+
+
+Most similar tokens to "import":
+1. from: 0.937832772731781
+2. matplotlib: 0.6988819241523743
+3. as: 0.6548221111297607
+4. ImportError: 0.6502098441123962
+5. try: 0.6272696256637573
+6. 295.01: 0.6093043088912964
+7. 301.01: 0.5954867601394653
+8. <VAR_NAME>: 0.5946319103240967
+9. .: 0.5854249596595764
+10. None: 0.5795071125030518
+
+
+
+

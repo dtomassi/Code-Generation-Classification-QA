@@ -1,0 +1,40 @@
+Dataset: CodeSearchNet + Current, Embeddings: GloVe 
+
+-------Model Summary--------
+<gensim.models.keyedvectors.Word2VecKeyedVectors object at 0x1211b90d0>
+
+-------Similarity Tests-------
+SG: Similarity between 'print' and 'in': 0.46218222
+SG: Similarity between 'for' and 'in': 0.87901783
+SG: Similarity between 'if' and 'else': 0.7600664
+SG: Similarity between 'import' and 'from': 0.86570257
+
+-------Most Similar Tokens Tests-------
+Most similar tokens to "for":
+1. in: 0.8790177702903748
+2. updated: 0.8723560571670532
+3. cervera: 0.8564201593399048
+4. sleeps: 0.8517252206802368
+5. Gupte: 0.8500067591667175
+6. /Users/Desktop/Xfiles: 0.8294866681098938
+7. [frozenset(i): 0.8289532661437988
+8. like_picto_unselected: 0.8143470287322998
+9. cough: 0.805740237236023
+10. shit: 0.7996346950531006
+
+
+Most similar tokens to "import":
+1. "[1,2,3]": 0.8884562253952026
+2. /data/lives/here: 0.866202712059021
+3. from: 0.8657025098800659
+4. abc\\dev\\t: 0.8330355286598206
+5. Py_ENABLE_SHARED: 0.8277063965797424
+6. 1j_HxD4iLn8: 0.8238097429275513
+7. 0.89473684210526316: 0.81048184633255
+8. /path-to-request: 0.8058512210845947
+9. perms": 0.8032286763191223
+10. oS\\xf8\\xf4\\xe2\\xc8\\xda\\xe3\\x7f\\xc75*\\x83\\xb1\\x06\\x8c\\x85\\xa4\\xa7piE\\xd6I: 0.8017309904098511
+
+
+
+

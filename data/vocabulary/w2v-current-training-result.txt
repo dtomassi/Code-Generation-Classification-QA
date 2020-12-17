@@ -1,0 +1,40 @@
+Dataset: Current, Embeddings: Word2Vec 
+
+-------Model Summary--------
+<gensim.models.keyedvectors.Word2VecKeyedVectors object at 0x10d159fa0>
+
+-------Similarity Tests-------
+SG: Similarity between 'print' and 'in': 0.43367276
+SG: Similarity between 'for' and 'in': 0.88732374
+SG: Similarity between 'if' and 'else': 0.7605286
+SG: Similarity between 'import' and 'from': 0.76700205
+
+-------Most Similar Tokens Tests-------
+Most similar tokens to "for":
+1. in: 0.8873237371444702
+2. enumerate: 0.6787867546081543
+3. TMP: 0.6549941301345825
+4. players: 0.6544159650802612
+5. Light: 0.646833062171936
+6. "found": 0.6452924609184265
+7. ({},{}): 0.6415368318557739
+8. x+: 0.6397614479064941
+9. LABEL TEXT 1: 0.6397356986999512
+10. Rest is %s: 0.6386398077011108
+
+
+Most similar tokens to "import":
+1. from: 0.7670021057128906
+2. "somefile.xls": 0.6547969579696655
+3. .: 0.6288027763366699
+4. "Excel.Application": 0.6209414005279541
+5. utctimetuple: 0.593436062335968
+6. ): 0.5875173211097717
+7. cassandra: 0.5832457542419434
+8. (: 0.5753453373908997
+9. 9051: 0.5726429224014282
+10. "\\w+": 0.5714640021324158
+
+
+
+
