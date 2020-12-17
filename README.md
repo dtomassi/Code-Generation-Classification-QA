@@ -34,3 +34,19 @@ These scripts output final dataset used for project from Conala and StaQC
 `generate_negative_data.py`: the script to create negative code snippet samples from the combined dataset dataset. Creates pos_neg_final_dataset.json.
 
 `dataset_intent_cleanup.py`: takes in input from data/pos_neg_final_dataset.json. Cleans punctuation from input intent questions, and outputs overall-pos_neg_final-dataset.json, the final dataset file used for the project.
+
+## Preprocessing_scripts
+
+`nlpParser.py`: the script is used for CodeSearchNet dataset in order to tokenize the each code snippet and normalizing the user defined variable to filter the junk variable as <varname>. It will takes in each JSON data files from CodeSearchNet that contain codesnipppet and output the normalized version of a huge vocab list.
+
+`code_parser.py`:  the script is used for Conala dataset in order to tokenize the each code snippet and normalizing the user defined variable to filter the junk variable as <varname>. It will read through code snippet from CodeSearchNet that contain Conala and output the normalized version of a huge vocab list.
+
+`scraper.py` : the script will reading through 14 JSON data files from CodeSearchNet Api. For each json files, it will access each url for the json object and web scripted in order to get the import libaries and modules. Then, it will store all the libraries in a dictionary with its count as the value. Then, this is the web scraper python script for the Code Search Net in order to get the top used Api.
+
+`snippet-vocab-check.py` : this parser takes in newest Conala Dataset and perform some cleaning on the tokenized vocal of the code snippet. Then , it will output the total tokens, token token per each tokenizer for each score snippet, number of deleted(bad) tokens and final numbers clean left out tokens.
+
+`generate_vocab.py`: this script will read through a clean overall Conala dataset and access “clean snippets” which is the list of tokenized vocab of code snippet. It will output all the toknitized tokens to a single text file that contain all vocabulary.
+
+`check_word_surrounding.py`: This file takes in a simple word and picks all those samples which have this word in the intent and then find the most common words that appear in these samples. in short which words are very close to each other.
+
+`intent_analysis_API.py`: this script will do some cleaning of the intent from the Conala dataset which the intent is the question that user will ask. It will filter out based on stop words and replace common terms. It will also  provide a plot that shows distribution on the intent vocab.
