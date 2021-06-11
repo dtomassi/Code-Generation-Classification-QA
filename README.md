@@ -1,5 +1,7 @@
 # Code-Generation-Classification-QA
 
+Final Report: [report.pdf](https://github.com/dtomassi/Code-Generation-Classification-QA/blob/main/report.pdf)
+
 Dataset found at: https://drive.google.com/drive/u/1/folders/17EXFRp9fd3f7O3mjjsC_KJK6hLgw6WbK
 
 
